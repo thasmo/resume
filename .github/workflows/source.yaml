@@ -1,0 +1,57 @@
+name: SOURCE
+
+on:
+  workflow_call:
+  merge_group:
+  pull_request:
+  push:
+    branches:
+      - main
+
+jobs:
+  lint:
+    name: lint source
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: setup package manager
+        uses: pnpm/action-setup@v4
+        with:
+          run_install: false
+      - name: install node
+        uses: actions/setup-node@v4
+        with:
+          cache: 'pnpm'
+          check-latest: true
+          node-version-file: '.nvmrc'
+      - name: install dependencies
+        run: pnpm install
+      - name: lint source
+        run: pnpm lint
+  build:
+    name: build source
+    runs-on: ubuntu-latest
+    env:
+      APPLICATION_SITE: ${{ vars.APPLICATION_SITE }}
+    steps:
+      - name: checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: setup package manager
+        uses: pnpm/action-setup@v4
+        with:
+          run_install: false
+      - name: install node
+        uses: actions/setup-node@v4
+        with:
+          cache: 'pnpm'
+          check-latest: true
+          node-version-file: '.nvmrc'
+      - name: install dependencies
+        run: pnpm install
+      - name: build source
+        run: pnpm build

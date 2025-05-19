@@ -1,0 +1,30 @@
+name: TITLE
+
+on:
+  merge_group:
+  pull_request:
+    types: [opened, reopened, edited, synchronize]
+
+jobs:
+  lint:
+    name: lint title
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: setup package manager
+        uses: pnpm/action-setup@v4
+        with:
+          run_install: false
+      - name: install node
+        uses: actions/setup-node@v4
+        with:
+          cache: 'pnpm'
+          check-latest: true
+          node-version-file: '.nvmrc'
+      - name: install dependencies
+        run: pnpm install
+      - name: lint title
+        run: echo "${{ github.event.pull_request.title }}" | pnpm exec commitlint --extends @somehow-digital/commitlint-config/conventional
