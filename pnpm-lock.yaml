@@ -46,8 +46,8 @@ importers:
         specifier: ^2.0.0
         version: 2.5.1(typescript@5.8.3)
       '@somehow-digital/unocss-preset':
-        specifier: ^1.0.1
-        version: 1.0.1(unocss@66.2.3(postcss@8.5.6)(vite@6.3.5(@types/node@22.15.32)(jiti@2.4.2)(yaml@2.8.0))(vue@3.5.17(typescript@5.8.3)))
+        specifier: ^2.0.0
+        version: 2.0.0(unocss@66.2.3(postcss@8.5.6)(vite@6.3.5(@types/node@22.15.32)(jiti@2.4.2)(yaml@2.8.0))(vue@3.5.17(typescript@5.8.3)))
       '@types/node':
         specifier: ^22.8.7
         version: 22.15.32
@@ -1239,9 +1239,9 @@ packages:
     peerDependencies:
       typescript: ^5.4.5
 
-  '@somehow-digital/unocss-preset@1.0.1':
-    resolution: {integrity: sha512-ee1UQsEcUAQBYeimUkAhCmx465Ebxt27ShKhuLLf7loBcGidgadZkg+XPkuqbu9QKS8MH8CzSEdyGGstVjj+Fg==}
-    engines: {node: '>=22', pnpm: '>=9'}
+  '@somehow-digital/unocss-preset@2.0.0':
+    resolution: {integrity: sha512-IfEzojYt3qxr9rIOtx+LaizPJUTZRTmPKibwKSVERWb1L/UQCDTg72tGQvcilaiyOteLwENAW1NUOFqcWWAiAQ==}
+    engines: {node: '>=22', pnpm: '>=10'}
     peerDependencies:
       unocss: ^66.0.0
 
@@ -5076,7 +5076,7 @@ snapshots:
     dependencies:
       typescript: 5.8.3
 
-  '@somehow-digital/unocss-preset@1.0.1(unocss@66.2.3(postcss@8.5.6)(vite@6.3.5(@types/node@22.15.32)(jiti@2.4.2)(yaml@2.8.0))(vue@3.5.17(typescript@5.8.3)))':
+  '@somehow-digital/unocss-preset@2.0.0(unocss@66.2.3(postcss@8.5.6)(vite@6.3.5(@types/node@22.15.32)(jiti@2.4.2)(yaml@2.8.0))(vue@3.5.17(typescript@5.8.3)))':
     dependencies:
       unocss: 66.2.3(postcss@8.5.6)(vite@6.3.5(@types/node@22.15.32)(jiti@2.4.2)(yaml@2.8.0))(vue@3.5.17(typescript@5.8.3))
 
