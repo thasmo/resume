@@ -40,8 +40,8 @@ importers:
         specifier: ^3.0.0
         version: 3.0.3(eslint@9.29.0(jiti@2.4.2))(prettier@3.5.3)(typescript@5.8.3)
       '@somehow-digital/prettier-config':
-        specifier: ^2.0.0
-        version: 2.0.0(prettier@3.5.3)
+        specifier: ^3.0.0
+        version: 3.0.0(prettier@3.5.3)
       '@somehow-digital/typescript-config':
         specifier: ^2.0.0
         version: 2.5.1(typescript@5.8.3)
@@ -1228,8 +1228,9 @@ packages:
       prettier: ^3.2.0
       typescript: ^5.4.0
 
-  '@somehow-digital/prettier-config@2.0.0':
-    resolution: {integrity: sha512-6QwCArvScVHIIX35uNCbjnqhy5z+pyIMk6UL+8tJ6ThQ/kIUY3azgauo+Ww5ujWllYGAQ0+Qd/mZhkjkHFYlQQ==}
+  '@somehow-digital/prettier-config@3.0.0':
+    resolution: {integrity: sha512-T+bO2tmp5AwkIcYf/k/f2J/0S2jSOXDSexHJiKe27SUbWI6SlXb8fMgfq8sdOfR+KiHPtp39UwauFzGu1Skcgg==}
+    engines: {node: '>=22', pnpm: '>=10'}
     peerDependencies:
       prettier: ^3.0.3
 
@@ -5068,7 +5069,7 @@ snapshots:
       - '@types/eslint'
       - supports-color
 
-  '@somehow-digital/prettier-config@2.0.0(prettier@3.5.3)':
+  '@somehow-digital/prettier-config@3.0.0(prettier@3.5.3)':
     dependencies:
       prettier: 3.5.3
 
