@@ -39,7 +39,7 @@
 		"@somehow-digital/cspell-dictionary": "^2.0.0",
 		"@somehow-digital/eslint-config": "^3.0.0",
 		"@somehow-digital/prettier-config": "^3.0.0",
-		"@somehow-digital/typescript-config": "^2.0.0",
+		"@somehow-digital/typescript-config": "^3.0.0",
 		"@somehow-digital/unocss-preset": "^2.0.0",
 		"@types/node": "^22.8.7",
 		"concurrently": "^9.1.0",
