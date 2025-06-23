@@ -38,10 +38,10 @@ importers:
         version: 2.7.0(cspell@9.1.1)
       '@somehow-digital/eslint-config':
         specifier: ^3.0.0
-        version: 3.0.3(eslint@9.29.0(jiti@2.4.2))(prettier@3.5.3)(typescript@5.8.3)
+        version: 3.0.3(eslint@9.29.0(jiti@2.4.2))(prettier@3.6.0)(typescript@5.8.3)
       '@somehow-digital/prettier-config':
         specifier: ^3.0.0
-        version: 3.0.0(prettier@3.5.3)
+        version: 3.0.0(prettier@3.6.0)
       '@somehow-digital/typescript-config':
         specifier: ^3.0.0
         version: 3.0.0(typescript@5.8.3)
@@ -70,8 +70,8 @@ importers:
         specifier: ^16.0.0
         version: 16.1.2
       prettier:
-        specifier: 3.5.3
-        version: 3.5.3
+        specifier: 3.6.0
+        version: 3.6.0
       typescript:
         specifier: ^5.4.5
         version: 5.8.3
@@ -3092,8 +3092,8 @@ packages:
     resolution: {integrity: sha512-GbK2cP9nraSSUF9N2XwUwqfzlAFlMNYYl+ShE/V+H8a9uNl/oUqB1w2EL54Jh0OlyRSd8RfWYJ3coVS4TROP2w==}
     engines: {node: '>=6.0.0'}
 
-  prettier@3.5.3:
-    resolution: {integrity: sha512-QQtaxnoDJeAkDvDKWCLiwIXkTgRhwYDEQCghU9Z6q03iyek/rxRh/2lC3HB7P8sWT2xC/y5JDctPLBIGzHKbhw==}
+  prettier@3.6.0:
+    resolution: {integrity: sha512-ujSB9uXHJKzM/2GBuE0hBOUgC77CN3Bnpqa+g80bkv3T3A93wL/xlzDATHhnhkzifz/UE2SNOvmbTz5hSkDlHw==}
     engines: {node: '>=14'}
     hasBin: true
 
@@ -5052,26 +5052,26 @@ snapshots:
       '@cspell/dict-de-de': 4.1.0
       cspell: 9.1.1
 
-  '@somehow-digital/eslint-config@3.0.3(eslint@9.29.0(jiti@2.4.2))(prettier@3.5.3)(typescript@5.8.3)':
+  '@somehow-digital/eslint-config@3.0.3(eslint@9.29.0(jiti@2.4.2))(prettier@3.6.0)(typescript@5.8.3)':
     dependencies:
       '@cspell/eslint-plugin': 8.19.4(eslint@9.29.0(jiti@2.4.2))
       '@eslint/js': 9.29.0
       eslint: 9.29.0(jiti@2.4.2)
       eslint-config-prettier: 9.1.0(eslint@9.29.0(jiti@2.4.2))
       eslint-plugin-perfectionist: 4.15.0(eslint@9.29.0(jiti@2.4.2))(typescript@5.8.3)
-      eslint-plugin-prettier: 5.5.0(eslint-config-prettier@9.1.0(eslint@9.29.0(jiti@2.4.2)))(eslint@9.29.0(jiti@2.4.2))(prettier@3.5.3)
+      eslint-plugin-prettier: 5.5.0(eslint-config-prettier@9.1.0(eslint@9.29.0(jiti@2.4.2)))(eslint@9.29.0(jiti@2.4.2))(prettier@3.6.0)
       eslint-plugin-promise: 7.2.1(eslint@9.29.0(jiti@2.4.2))
       eslint-plugin-unicorn: 56.0.1(eslint@9.29.0(jiti@2.4.2))
-      prettier: 3.5.3
+      prettier: 3.6.0
       typescript: 5.8.3
       typescript-eslint: 8.34.1(eslint@9.29.0(jiti@2.4.2))(typescript@5.8.3)
     transitivePeerDependencies:
       - '@types/eslint'
       - supports-color
 
-  '@somehow-digital/prettier-config@3.0.0(prettier@3.5.3)':
+  '@somehow-digital/prettier-config@3.0.0(prettier@3.6.0)':
     dependencies:
-      prettier: 3.5.3
+      prettier: 3.6.0
 
   '@somehow-digital/typescript-config@3.0.0(typescript@5.8.3)':
     dependencies:
@@ -6214,10 +6214,10 @@ snapshots:
       - supports-color
       - typescript
 
-  eslint-plugin-prettier@5.5.0(eslint-config-prettier@9.1.0(eslint@9.29.0(jiti@2.4.2)))(eslint@9.29.0(jiti@2.4.2))(prettier@3.5.3):
+  eslint-plugin-prettier@5.5.0(eslint-config-prettier@9.1.0(eslint@9.29.0(jiti@2.4.2)))(eslint@9.29.0(jiti@2.4.2))(prettier@3.6.0):
     dependencies:
       eslint: 9.29.0(jiti@2.4.2)
-      prettier: 3.5.3
+      prettier: 3.6.0
       prettier-linter-helpers: 1.0.0
       synckit: 0.11.8
     optionalDependencies:
@@ -7455,7 +7455,7 @@ snapshots:
     dependencies:
       fast-diff: 1.3.0
 
-  prettier@3.5.3: {}
+  prettier@3.6.0: {}
 
   pretty-ms@9.2.0:
     dependencies:
