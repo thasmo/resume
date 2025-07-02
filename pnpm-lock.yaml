@@ -16,7 +16,7 @@ importers:
         version: 5.1.0(@types/node@22.16.0)(astro@5.10.1(@types/node@22.16.0)(jiti@2.4.2)(rollup@4.44.0)(typescript@5.8.3)(yaml@2.8.0))(jiti@2.4.2)(rollup@4.44.0)(vue@3.5.17(typescript@5.8.3))(yaml@2.8.0)
       '@dotenvx/dotenvx':
         specifier: ^1.36.0
-        version: 1.45.1
+        version: 1.45.2
       '@unocss/reset':
         specifier: ^66.0.0
         version: 66.3.2
@@ -596,8 +596,8 @@ packages:
     resolution: {integrity: sha512-PMJBuLYQIdFnEfPHQXaVE5hHUkbbOxOIRmHyZwWEc9+79tIaIkiwLpjZvbm8p6f9WXAaESqXs/uK2tUC/bjwmw==}
     engines: {node: '>=20'}
 
-  '@dotenvx/dotenvx@1.45.1':
-    resolution: {integrity: sha512-wKHPD+/NMMJVBPg3i98uD9jsURDy+Ck6RQRiWf39TlOAzC+Ge1FkmDk3sgeljYZxA3qF6E7SJmvRqC70XQuuVA==}
+  '@dotenvx/dotenvx@1.45.2':
+    resolution: {integrity: sha512-dljVOZTZhwF3G6E1ifDviOOF/vdHqf37xHVWYzNWW+Zk8Mm8KSJiKvWnFze1KknuWUPNb1jDL53I1f8XXKHEYg==}
     hasBin: true
 
   '@ecies/ciphers@0.2.3':
@@ -1987,8 +1987,8 @@ packages:
     resolution: {integrity: sha512-QM8q3zDe58hqUqjraQOmzZ1LIH9SWQJTlEKCH4kJ2oQvLZk7RbQXvtDM2XEq3fwkV9CCvvH4LA0AV+ogFsBM2Q==}
     engines: {node: '>=8'}
 
-  dotenv@16.5.0:
-    resolution: {integrity: sha512-m/C+AwOAr9/W1UOIZUo232ejMNnJAJtYQjUbHoNTBNTJSvqzzDh7vnrei3o3r3m9blf6ZoDkvcw0VmozNRFJxg==}
+  dotenv@16.6.1:
+    resolution: {integrity: sha512-uBq4egWHTcTt33a72vpSG0z3HnPuIl6NqYcTrKEg2azoEyl2hpW0zqlxysq2pK9HlDIHyHyakeYaYnSAwd8bow==}
     engines: {node: '>=12'}
 
   dset@3.1.4:
@@ -4574,10 +4574,10 @@ snapshots:
 
   '@cspell/url@9.1.2': {}
 
-  '@dotenvx/dotenvx@1.45.1':
+  '@dotenvx/dotenvx@1.45.2':
     dependencies:
       commander: 11.1.0
-      dotenv: 16.5.0
+      dotenv: 16.6.1
       eciesjs: 0.4.15
       execa: 5.1.1
       fdir: 6.4.6(picomatch@4.0.2)
@@ -6127,7 +6127,7 @@ snapshots:
     dependencies:
       is-obj: 2.0.0
 
-  dotenv@16.5.0: {}
+  dotenv@16.6.1: {}
 
   dset@3.1.4: {}
 
