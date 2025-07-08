@@ -1,0 +1,35 @@
+---
+interface Props {
+	curvature?: number;
+	class: string;
+}
+
+const { curvature = 0.5, class: classes } = Astro.props as Props;
+
+const width = 1;
+const height = 1;
+
+const point = Math.max(0, Math.min(1, curvature)) * width * 0.225;
+
+const instructions = `
+		M ${width / 2},0
+		C ${width - point}, 0 ${width}, ${point} ${width}, ${height / 2}
+		  ${width}, ${height - point} ${width - point}, ${height} ${width / 2}, ${height}
+		  ${point}, ${height} 0, ${height - point} 0, ${height / 2}
+		  0, ${point} ${point}, 0 ${width / 2}, 0
+	  `;
+
+const path = instructions.replaceAll(/\s+/g, ' ').trim();
+
+const image =
+	`<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 ${width} ${height}'><path d='${path}'/></svg>`
+		.replaceAll('#', '%23')
+		.replaceAll('<', '%3C')
+		.replaceAll('>', '%3E');
+
+const mask = `url("data:image/svg+xml;utf8,${image}")`;
+
+---
+<div class={classes} style={`mask-image: ${mask};`}>
+	<slot />
+</div>

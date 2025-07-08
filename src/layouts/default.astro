@@ -1,11 +1,49 @@
 ---
 import Head from '../components/head.astro';
+import Body from '../components/body.astro';
+
+interface Props {
+	title?: string;
+}
+
+const { title } = Astro.props as Props;
 ---
 <html lang="en">
-	<head>
-		<Head />
-	</head>
-	<body>
-		<slot />
-	</body>
+	<Head>
+		<slot name="head" />
+
+		<script>
+			import Lenis from 'lenis';
+			import 'lenis/dist/lenis.css';
+
+			new Lenis({
+				autoRaf: true,
+				duration: 0.5,
+			});
+		</script>
+	</Head>
+
+	<Body>
+		<div class="w-full max-w-80rem m-auto flex flex-col gap-5rem md:flex-row">
+			<div class="w-15rem shrink-0 grow-0 invisible"></div>
+
+			<main class="flex flex-col gap-3rem grow-1">
+				{title && (
+					<h1 class="font-serif font-500 text-4rem text-gray-900">
+						{title}
+					</h1>
+				)}
+
+				<div>
+					<slot />
+				</div>
+			</main>
+
+			<aside class="w-15rem shrink-0 grow-0">
+				<div class="sticky top-2.5vw">
+					<slot name="aside" />
+				</div>
+			</aside>
+		</div>
+	</Body>
 </html>

@@ -1,4 +1,4 @@
 export default {
-	ignoreDependencies: ['@unocss/reset'],
+	ignoreDependencies: ['@iconify-json/ri', '@iconify-json/noto'],
 	project: ['src/**'],
 };

@@ -1,7 +1,10 @@
 ---
-const { title = 'My Astro Website', ...props } = Astro.props;
+const { title = 'Resume · Thomas Deinhamer' } = Astro.props;
 ---
-<meta charset="utf-8">
-<title>{title}</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="sitemap" href="/sitemap-index.xml">
+<head>
+	<meta charset="utf-8" />
+	<title>{title}</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link href="https://avatar.thasmo.com/" rel="icon" />
+	<slot />
+</head>

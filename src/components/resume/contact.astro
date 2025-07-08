@@ -1,0 +1,72 @@
+---
+import { type Contact } from '../../types';
+import Squircle from '../common/squircle.astro';
+
+interface Props {
+	contact: Contact;
+}
+
+const { contact } = Astro.props as Props;
+
+const name = [contact.name.first, contact.name.last].join(' ');
+---
+<div class="flex flex-col gap-4rem">
+	<div class="flex flex-col gap-2rem items-start">
+		<a href="/" class="group">
+			<Squircle class="w-10rem aspect-square bg-white transition duration-250 ease-in-out group-hover:(scale-95 contrast-125)">
+				<img
+					src={contact.photo}
+					alt={`${name}'s portrait photo`}
+					class="w-full h-full object-cover"
+					loading="lazy"
+					decoding="async"
+				/>
+			</Squircle>
+		</a>
+
+		<div class="flex flex-col gap-1rem">
+			<p class="font-serif font-500 text-2.25rem leading-tight">
+				{name}
+			</p>
+
+			<div class="flex flex-col gap-0rem text-gray-600">
+				<p class="text-1.25rem">
+					{contact.role}
+				</p>
+
+				<p class="flex flex-row gap-0.25rem items-center text-1rem">
+					<span class="i-ri-global-line"></span>
+
+					<span>
+						{contact.location.city},
+						{contact.location.country}
+					</span>
+				</p>
+			</div>
+		</div>
+	</div>
+
+	<div class="flex flex-col gap-2.5rem">
+		<div class="flex flex-col gap-1rem text-1.25rem leading-snug">
+			<p class="flex flex-row items-center gap-0.5rem">
+				<b class="font-serif font-500 text-1.5rem">Hello!</b>
+				<span class="i-noto-waving-hand inline-block"></span>
+			</p>
+
+			<p>
+				I'm {contact.name.first} from {contact.location.city}
+				and I love building <a href="#projects" class="underline">things</a>.
+			</p>
+
+			<p>
+				Currently I'm looking for new opportunities and I'm open to new challenges.
+			</p>
+		</div>
+
+		<div class="flex flex-col gap-1rem">
+			<a href={contact.website} target="_blank" rel="noopener noreferrer" class="cursor-pointer text-align-center px-4 py-3 text-1.25rem text-white font-500 bg-gray-900 rounded-0.25rem hover:(bg-gray-700)">
+				Get in touch.
+			</a>
+		</div>
+	</div>
+</div>

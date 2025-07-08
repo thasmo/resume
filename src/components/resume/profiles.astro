@@ -1,0 +1,42 @@
+---
+import { type Profile } from '../../types';
+
+interface Props {
+	profiles: Profile[];
+}
+
+const { profiles } = Astro.props as Props;
+
+const icons = {
+	'github': 'i-ri-github-fill',
+	'xing': 'i-ri-xing-fill',
+	'linkedin': 'i-ri-linkedin-fill',
+	'bluesky': 'i-ri-bluesky-fill',
+	'stack overflow': 'i-ri-stack-overflow-fill',
+}
+
+const colors = {
+	'github': '#181717',
+	'xing': '#0698a0',
+	'linkedin': '#0a66c2',
+	'bluesky': '#0085ff',
+	'stack overflow': '#f48024',
+}
+
+const getIcon = (name: string): string => {
+	const key = name.toLowerCase() as keyof typeof icons;
+	return icons[key];
+}
+
+const getColor = (name: string): string => {
+	const key = name.toLowerCase() as keyof typeof colors;
+	return colors[key];
+}
+---
+<section class="flex flex-row justify-between">
+	{profiles.map((profile) => (
+		<a href={profile.url} target="_blank" rel="noopener noreferrer" class="block p-0.5rem grow-0 shrink-0 aspect-square rounded-full text-1.5rem text-gray-500 hover:(text-[--color] bg-white)" style={{ '--color': getColor(profile.name) }}>
+			<span class={[getIcon(profile.name), 'block'].join(' ')}></span>
+		</a>
+	))}
+</section>
