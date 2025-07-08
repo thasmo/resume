@@ -1,0 +1,21 @@
+---
+interface Props {
+	skills: string[];
+}
+
+const { skills } = Astro.props as Props;
+---
+<section class="flex flex-col gap-2.5rem">
+	<h2 class="flex flex-row items-center gap-1em font-serif font-500 text-2.25rem text-gray-900 text-nowrap">
+		<span>Acquired Skills</span>
+		<span class="w-full h-3px bg-current grow-1 rounded-full"></span>
+	</h2>
+
+	<div class="grid grid-cols-2 gap-0.5rem items-center">
+		{skills.map((skill) => (
+			<div class="p-0.75rem bg-gray-200 rounded-0.25rem text-1.25rem text-center text-gray-600 capitalize">
+				{skill}
+			</div>
+		))}
+	</div>
+</section>

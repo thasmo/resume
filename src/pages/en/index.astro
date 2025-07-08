@@ -1,0 +1,42 @@
+---
+import Layout from '../../layouts/default.astro';
+import Experience from '../../components/resume/experience.astro';
+import Projects from '../../components/resume/projects.astro';
+import Technologies from '../../components/resume/technologies.astro';
+import Languages from '../../components/resume/languages.astro';
+import Interests from '../../components/resume/interests.astro';
+import Values from '../../components/resume/values.astro';
+import Contact from '../../components/resume/contact.astro';
+import Skills from '../../components/resume/skills.astro';
+import Profiles from '../../components/resume/profiles.astro';
+
+const {
+	contact,
+	languages,
+	interests,
+	experiences,
+	projects,
+	technologies,
+	skills,
+	values,
+	profiles,
+} = await fetch('https://api.thasmo.com/').then((response) => response.json());
+---
+<Layout title="Resume">
+	<div class="flex flex-col gap-5rem">
+		<Experience experiences={experiences} />
+		<Projects projects={projects} />
+		<Technologies technologies={technologies} />
+		<Languages languages={languages} />
+		<Skills skills={skills} />
+		<Values values={values} />
+		<Interests interests={interests} />
+	</div>
+
+	<Fragment slot="aside">
+		<div class="flex flex-col gap-1.5rem">
+			<Contact contact={contact} />
+			<Profiles profiles={profiles} />
+		</div>
+	</Fragment>
+</Layout>
