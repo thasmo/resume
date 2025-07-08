@@ -1,17 +1,20 @@
 ---
-import { type Contact } from '../../types';
+import { type Contact, type Profile } from '../../types';
+import Button from '../common/button.astro';
 import Squircle from '../common/squircle.astro';
+import Profiles from './profiles.astro';
 
 interface Props {
 	contact: Contact;
+	profiles: Profile[];
 }
 
-const { contact } = Astro.props as Props;
+const { contact, profiles } = Astro.props as Props;
 
 const name = [contact.name.first, contact.name.last].join(' ');
 ---
-<div class="flex flex-col gap-4rem">
-	<div class="flex flex-col gap-2rem items-start">
+<div class="flex flex-col gap-4rem sm:(flex-row items-end) md:(flex-col items-center)">
+	<div class="flex flex-col gap-2rem items-start max-w-15rem">
 		<a href="/" class="group">
 			<Squircle class="w-10rem aspect-square bg-white transition duration-250 ease-in-out group-hover:(scale-95 contrast-125)">
 				<img
@@ -45,10 +48,12 @@ const name = [contact.name.first, contact.name.last].join(' ');
 					</span>
 				</p>
 			</div>
+
+			<Profiles profiles={profiles} />
 		</div>
 	</div>
 
-	<div class="flex flex-col gap-2.5rem">
+	<div class="flex flex-col gap-2.5rem items-start">
 		<div class="flex flex-col gap-1rem text-1.25rem leading-snug">
 			<p class="flex flex-row items-center gap-0.5rem">
 				<b class="font-serif font-500 text-1.5rem">Hello!</b>
@@ -65,10 +70,8 @@ const name = [contact.name.first, contact.name.last].join(' ');
 			</p>
 		</div>
 
-		<div class="flex flex-col gap-1rem">
-			<a href={contact.website} target="_blank" rel="noopener noreferrer" class="cursor-pointer text-align-center px-4 py-3 text-1.25rem text-white font-500 bg-gray-900 rounded-0.25rem hover:(bg-gray-700)">
-				Get in touch.
-			</a>
-		</div>
+		<Button href={contact.website} target="_blank" rel="noopener noreferrer">
+			Get in touch.
+		</Button>
 	</div>
 </div>

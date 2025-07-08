@@ -26,6 +26,11 @@ export default defineConfig({
 		}),
 	],
 	theme: {
+		breakpoint: {
+			lg: '1400px',
+			md: '1000px',
+			sm: '600px',
+		},
 		colors: {
 			primary: {
 				DEFAULT: '#27374D',
