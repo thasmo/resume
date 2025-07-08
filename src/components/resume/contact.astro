@@ -15,10 +15,12 @@ const name = [contact.name.first, contact.name.last].join(' ');
 		<a href="/" class="group">
 			<Squircle class="w-10rem aspect-square bg-white transition duration-250 ease-in-out group-hover:(scale-95 contrast-125)">
 				<img
-					src={contact.photo}
-					alt={`${name}'s portrait photo`}
 					class="w-full h-full object-cover"
-					loading="lazy"
+					src={contact.photo}
+					width="256"
+					height="256"
+					alt={`${name}'s portrait photo`}
+					fetchpriority="high"
 					decoding="async"
 				/>
 			</Squircle>
