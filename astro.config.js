@@ -1,5 +1,6 @@
 import sitemap from '@astrojs/sitemap';
 import { config } from '@dotenvx/dotenvx';
+import inline from '@playform/inline';
 import { defineConfig } from 'astro/config';
 import unocss from 'unocss/astro';
 
@@ -11,7 +12,7 @@ export default defineConfig({
 		defaultLocale: 'en',
 		locales: ['en', 'de'],
 	},
-	integrations: [unocss(), sitemap()],
+	integrations: [unocss(), sitemap(), inline()],
 	output: 'static',
 	prefetch: {
 		defaultStrategy: 'tap',
