@@ -9,7 +9,7 @@ interface Props {
 const { experiences } = Astro.props as Props;
 ---
 <section class="flex flex-col gap-2.5rem">
-	<h2 class="flex flex-row items-center gap-1em font-serif font-500 text-2.25rem text-gray-900">
+	<h2 class="flex flex-row items-center gap-1em font-serif font-500 text-2.25rem">
 		<span class="min-w-fit">Work Experiences</span>
 		<span class="w-full h-3px bg-current grow-1 rounded-full"></span>
 	</h2>
@@ -17,7 +17,7 @@ const { experiences } = Astro.props as Props;
 	<div class="flex flex-col gap-2.5rem">
 		{experiences.map((experience) => (
 			<div class="flex flex-col gap-0.5rem">
-				<h3 class="text-1.5rem font-500 text-gray-800">
+				<h3 class="text-1.5rem font-500">
 					<a href={experience.url} target="_blank" rel="noopener noreferrer" class="font-500 hover:underline">
 						{experience.company}
 					</a>
@@ -26,11 +26,11 @@ const { experiences } = Astro.props as Props;
 				<div class="flex flex-col gap-1rem">
 					{experience.positions.map((position) => (
 						<div class="">
-							<p class="text-1.25rem text-gray-600">
+							<p class="text-1.25rem text-gray-600 dark:(text-gray-300)">
 								{position.name}
 							</p>
 
-							<p class="flex flex-row items-center gap-0.5rem text-gray-600">
+							<p class="flex flex-row items-center gap-0.5rem text-gray-600 dark:(text-gray-300)">
 								<span class="i-ri-calendar-schedule-line"></span>
 								<span>{formatDate(position.start)}{position.end ? ` - ${formatDate(position.end)}` : ' - Present'}</span>
 							</p>

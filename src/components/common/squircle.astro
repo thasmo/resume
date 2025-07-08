@@ -28,7 +28,6 @@ const image =
 		.replaceAll('>', '%3E');
 
 const mask = `url("data:image/svg+xml;utf8,${image}")`;
-
 ---
 <div class={classes} style={`mask-image: ${mask};`}>
 	<slot />

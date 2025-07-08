@@ -1,4 +1,5 @@
 ---
+import Theme from './theme.astro';
 const { title = 'Resume · Thomas Deinhamer' } = Astro.props;
 ---
 <head>
@@ -7,4 +8,5 @@ const { title = 'Resume · Thomas Deinhamer' } = Astro.props;
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	<link href="https://avatar.thasmo.com/" rel="icon" />
 	<slot />
+	<Theme />
 </head>
