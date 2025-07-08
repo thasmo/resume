@@ -1,7 +1,7 @@
 ---
 import Layout from '../layouts/default.astro';
 import Contact from '../components/resume/contact.astro';
-import Profiles from '../components/resume/profiles.astro';
+import Button from '../components/common/button.astro';
 
 const {
 	contact,
@@ -16,17 +16,16 @@ const {
 			</p>
 
 			<p>
-				<a href="/" class="px-4 py-3 text-1.25rem text-gray-900 font-500 bg-gray-200 rounded-0.25rem hover:(bg-gray-300)">
+				<Button href="/">
 					Bring me home.
-				</a>
+				</Button>
 			</p>
 		</div>
 	</div>
 
 	<Fragment slot="aside">
 		<div class="flex flex-col gap-1.5rem">
-			<Contact contact={contact} />
-			<Profiles profiles={profiles} />
+			<Contact contact={contact} profiles={profiles} />
 		</div>
 	</Fragment>
 </Layout>
