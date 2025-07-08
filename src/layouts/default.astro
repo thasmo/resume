@@ -1,6 +1,7 @@
 ---
 import Head from '../components/head.astro';
 import Body from '../components/body.astro';
+import Switch from '../components/switch.astro';
 
 interface Props {
 	title?: string;
@@ -29,7 +30,7 @@ const { title } = Astro.props as Props;
 
 			<main class="flex flex-col gap-3rem grow-1">
 				{title && (
-					<h1 class="font-serif font-500 text-4rem text-gray-900">
+					<h1 class="font-serif font-500 text-4rem text-gray-900 dark:(text-gray-100)">
 						{title}
 					</h1>
 				)}
@@ -45,5 +46,7 @@ const { title } = Astro.props as Props;
 				</div>
 			</aside>
 		</div>
+
+		<Switch />
 	</Body>
 </html>

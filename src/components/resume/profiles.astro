@@ -35,7 +35,7 @@ const getColor = (name: string): string => {
 ---
 <section class="flex flex-row justify-between">
 	{profiles.map((profile) => (
-		<a href={profile.url} target="_blank" rel="noopener noreferrer" class="block p-0.5rem grow-0 shrink-0 aspect-square rounded-full text-1.5rem text-gray-500 hover:(text-[--color] bg-white)" style={{ '--color': getColor(profile.name) }}>
+		<a href={profile.url} target="_blank" rel="noopener noreferrer" class="block p-0.5rem grow-0 shrink-0 aspect-square rounded-full text-1.5rem text-gray-500 dark:(text-gray-300) hover:(text-[--color] bg-white dark:(text-[--color]))" style={{ '--color': getColor(profile.name) }}>
 			<span class={[getIcon(profile.name), 'block'].join(' ')}></span>
 		</a>
 	))}
