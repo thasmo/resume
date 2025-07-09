@@ -1,6 +1,7 @@
 ---
 import { type Experience } from '../../types';
 import { formatDate } from '../../utilities/date';
+import Icon from '../common/icon.astro';
 
 interface Props {
 	experiences: Experience[];
@@ -16,23 +17,24 @@ const { experiences } = Astro.props as Props;
 
 	<div class="flex flex-col gap-2.5rem">
 		{experiences.map((experience) => (
-			<div class="flex flex-col gap-0.5rem">
-				<h3 class="text-1.5rem font-500">
-					<a href={experience.url} target="_blank" rel="noopener noreferrer" class="font-500 hover:underline">
-						{experience.company}
+			<div class="flex flex-col gap-0.5rem items-start">
+				<h3 class="group flex flex-row items-center gap-0.5rem text-1.5rem font-500">
+					<a href={experience.url} target="_blank" rel="noopener noreferrer">
+						<span class="group-hover:(underline)">{experience.company}</span>
+						<Icon name="i-ri-arrow-right-up-long-line" class="align-middle pos-relative bottom-0.05em inline-block opacity-25 group-hover:(opacity-100)" />
 					</a>
 				</h3>
 
 				<div class="flex flex-col gap-1rem">
 					{experience.positions.map((position) => (
-						<div class="">
+						<div>
 							<p class="text-1.25rem text-gray-600 dark:(text-gray-300)">
 								{position.name}
 							</p>
 
 							<p class="flex flex-row items-center gap-0.5rem text-gray-600 dark:(text-gray-300)">
-								<span class="i-ri-calendar-schedule-line"></span>
-								<span>{formatDate(position.start)}{position.end ? ` - ${formatDate(position.end)}` : ' - Present'}</span>
+								<Icon name="i-ri-calendar-schedule-line" />
+								<span>{formatDate(position.start)}{position.end ? ` — ${formatDate(position.end)}` : ' - Present'}</span>
 							</p>
 						</div>
 					))}
