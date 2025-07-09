@@ -1,11 +1,13 @@
 ---
 import { type Profile } from '../../types';
+import Icon from '../common/icon.astro';
 
 interface Props {
 	profiles: Profile[];
+	class?: string;
 }
 
-const { profiles } = Astro.props as Props;
+const { profiles, class: classes } = Astro.props as Props;
 
 const icons = {
 	'github': 'i-ri-github-fill',
@@ -33,10 +35,10 @@ const getColor = (name: string): string => {
 	return colors[key];
 }
 ---
-<section class="flex flex-row justify-between">
+<section class:list={['flex flex-row justify-between', classes]}>
 	{profiles.map((profile) => (
-		<a href={profile.url} target="_blank" rel="noopener noreferrer" class="block p-0.5rem grow-0 shrink-0 aspect-square rounded-full text-1.5rem text-gray-500 dark:(text-gray-300) hover:(text-[--color] bg-white dark:(text-[--color]))" style={{ '--color': getColor(profile.name) }}>
-			<span class={[getIcon(profile.name), 'block'].join(' ')}></span>
+		<a href={profile.url} target="_blank" rel="noopener noreferrer" class="group block p-0.5rem grow-0 shrink-0 aspect-square rounded-full text-1.75rem text-gray-500 dark:(text-gray-300) hover:(text-[--color] bg-white dark:(text-[--color]))" style={{ '--color': getColor(profile.name) }}>
+			<Icon name={getIcon(profile.name)} />
 		</a>
 	))}
 </section>

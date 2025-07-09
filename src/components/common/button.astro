@@ -1,18 +1,24 @@
 ---
+import Icon from './icon.astro';
+
 export interface Props {
 	href: string;
 	target?: string;
 	rel?: string;
+	icon?: string;
 }
 
-const { href, target, rel } = Astro.props as Props;
+const { href, target, rel, icon } = Astro.props as Props;
 
 const classes = [
-	'inline-block',
+	'inline-flex',
+	'flex-row',
+	'items-center',
+	'gap-1rem',
 	'cursor-pointer',
 	'text-align-center',
 	'leading-snug',
-	'px-3rem',
+	'px-2rem',
 	'py-0.75rem',
 	'text-1.25rem',
 	'text-white',
@@ -23,6 +29,10 @@ const classes = [
 	'dark:(bg-gray-100 text-gray-900 hover:(bg-gray-300))',
 ];
 ---
-<a href={href} target={target} rel={rel} class={classes.join(' ')}>
-	<slot />
+<a href={href} target={target} rel={rel} class:list={classes}>
+	<span class="min-w-fit">
+		<slot />
+	</span>
+
+	{ icon && <Icon name={icon} class="inline-block shrink-0 grow-0" /> }
 </a>
