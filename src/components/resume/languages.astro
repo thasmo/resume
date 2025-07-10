@@ -5,14 +5,15 @@ import Section from '../common/section.astro';
 
 interface Properties {
 	languages: Language[];
+	class?: string;
 }
 
-const { languages } = Astro.props as Properties;
+const { languages, class: classes } = Astro.props as Properties;
 const locale = Astro.currentLocale;
 
 const m = useMessages(locale);
 ---
-<Section id="languages" title={m('section_languages')}>
+<Section id="languages" title={m('section_languages')} class={classes}>
 	<div class="flex flex-row gap-5rem">
 		{languages.map((language) => (
 			<div class="flex flex-col gap-0">

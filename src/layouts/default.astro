@@ -8,23 +8,21 @@ interface Properties {
 	title?: string;
 }
 
-const {title} = Astro.props as Properties;
+const { title } = Astro.props as Properties;
 const locale = Astro.currentLocale;
 ---
-<html lang={locale}>
+<html lang={locale} class="print:(text-75%)">
 	<Head>
 		<slot name="head"/>
 	</Head>
 
 	<Body>
-		<Switch class="print:hidden"/>
+		<div class="w-full max-w-60rem m-auto flex flex-col gap-5rem md:(flex-row) lg:(max-w-80rem) print:(flex-row gap-2.5rem)">
+			<div class="w-15rem shrink-0 grow-0 hidden lg:(block invisible) print:(hidden)"></div>
 
-		<div class="w-full max-w-60rem m-auto flex flex-col gap-5rem md:(flex-row) lg:(max-w-80rem)">
-			<div class="w-15rem shrink-0 grow-0 hidden lg:(block invisible)"></div>
-
-			<main class="flex flex-col gap-3rem grow-1">
+			<main class="flex flex-col gap-3rem grow-1 print:(gap-1rem)">
 				{title && (
-					<h1 class="font-serif font-500 text-4rem text-gray-900 dark:(text-gray-100)">
+					<h1 class="font-serif font-500 text-4rem text-gray-900 leading-tight dark:(text-gray-100)">
 						{title}
 					</h1>
 				)}
@@ -33,16 +31,18 @@ const locale = Astro.currentLocale;
 					<slot/>
 				</div>
 
-				<a id="top" href="#" class="self-center block p-0.5rem grow-0 shrink-0 aspect-square rounded-full text-1.75rem bg-white hover:(bg-gray-200) dark:(bg-black hover:(bg-gray-800))">
+				<a id="top" href="#" class="self-center block p-0.5rem grow-0 shrink-0 aspect-square rounded-full text-1.75rem bg-white hover:(bg-gray-200) print:(hidden) dark:(bg-black hover:(bg-gray-800))">
 					<Icon name="i-ri-skip-up-line" class="text-1.75rem"/>
 				</a>
 			</main>
 
-			<aside class="order-first md:(order-last) shrink-0 grow-0 md:(w-15rem)">
+			<aside class="order-first shrink-0 grow-0 md:(w-15rem order-last) print:(pos-absolute top-0 right-0)">
 				<div class="sticky top-2.5vw">
 					<slot name="aside"/>
 				</div>
 			</aside>
 		</div>
+
+		<Switch class="print:hidden"/>
 	</Body>
 </html>

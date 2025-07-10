@@ -2,14 +2,15 @@
 interface Properties {
 	id?: string;
 	title: string;
+	class?: string;
 }
 
-const { title, id } = Astro.props as Properties;
+const { title, id, class: classes } = Astro.props as Properties;
 ---
-<section id={id} class="flex flex-col gap-2.5rem">
-	<h2 class="flex flex-row items-center gap-1em font-serif font-500 text-2.25rem">
-		<span class="min-w-fit">{title}</span>
-		<span class="w-full h-3px bg-current grow-1 rounded-full"></span>
+<section id={id} class:list={['flex flex-col gap-2.25rem print:(gap-1.25rem)', classes]}>
+	<h2 class="flex flex-row items-center gap-1em font-serif font-500 text-2.25rem leading-tight">
+		<span class="sm:(min-w-fit)">{title}</span>
+		<span class="w-full h-3px bg-current grow-1 rounded-full print:(hidden)" aria-hidden="true"></span>
 	</h2>
 
 	<slot />
