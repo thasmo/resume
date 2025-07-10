@@ -1,7 +1,23 @@
 ---
 import Icon from './common/icon.astro';
+
+const locale = Astro.currentLocale;
+
+const newLocale = locale === 'en' ? 'de' : 'en';
 ---
-<button id="switch" class="block aspect-square p-0.5rem rounded-full bg-yellow-300 cursor-pointer pos-fixed top-1rem right-1rem z-1 text-1.5rem hover:(bg-yellow-400) sm:(top-2.5vw right-2.5vw) dark:(bg-yellow-950 hover:(bg-yellow-800))">
-	<Icon name="i-ri-lightbulb-line" class="block hidden dark:(block)" />
-	<Icon name="i-ri-lightbulb-flash-line" class="block dark:(hidden)" />
-</button>
+<div class="flex flex-row items-center gap-1rem pos-fixed top-1rem right-1rem z-1 sm:(top-2.5vw right-2.5vw)">
+	<a href=`/${newLocale}/` class="flex flex-row items-center gap-0.25rem p-r-1.25rem rounded-full bg-gray-200 text-1.5rem hover:(bg-gray-300) dark:(bg-gray-800 hover:(bg-gray-700))">
+		<span class="block grow-0 shrink-0 aspect-square p-0.5rem text-1.5rem opacity-50">
+			<Icon name="i-ri-translate" class="scale-90" />
+		</span>
+
+		<span class="font-serif font-500 grow-0 shrink-0 text-1.25rem text-align-center">
+			{newLocale}
+		</span>
+	</a>
+
+	<button id="switch" class="block aspect-square p-0.5rem rounded-full bg-yellow-300 cursor-pointer text-1.5rem hover:(bg-yellow-400) dark:(bg-yellow-950 hover:(bg-yellow-800))">
+		<Icon name="i-ri-lightbulb-line" class="block hidden dark:(block)" />
+		<Icon name="i-ri-lightbulb-flash-line" class="block dark:(hidden)" />
+	</button>
+</div>

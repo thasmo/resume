@@ -1,4 +1,6 @@
 ---
+import { useMessages } from '../../utilities/localization';
+
 import Layout from '../../layouts/default.astro';
 import Experience from '../../components/resume/experience.astro';
 import Projects from '../../components/resume/projects.astro';
@@ -8,6 +10,9 @@ import Interests from '../../components/resume/interests.astro';
 import Values from '../../components/resume/values.astro';
 import Contact from '../../components/resume/contact.astro';
 import Skills from '../../components/resume/skills.astro';
+
+const locale = Astro.currentLocale;
+const m = useMessages(locale);
 
 const {
 	contact,
@@ -19,9 +24,16 @@ const {
 	skills,
 	values,
 	profiles,
-} = await fetch('https://api.thasmo.com/').then((response) => response.json());
+} = await fetch(`https://api.thasmo.com/${locale}/`).then((response) => response.json());
+
+export const getStaticPaths = async () => {
+	return [
+		{ params: { locale: 'en' } },
+		{ params: { locale: 'de' } },
+	];
+}
 ---
-<Layout title="Resume">
+<Layout title={m('resume')}>
 	<div class="flex flex-col gap-5rem">
 		<Experience experiences={experiences} />
 		<Projects projects={projects} />

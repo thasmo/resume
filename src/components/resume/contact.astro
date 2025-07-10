@@ -1,16 +1,20 @@
 ---
 import { type Contact, type Profile } from '../../types';
+import { useMessages } from '../../utilities/localization';
 import Button from '../common/button.astro';
 import Squircle from '../common/squircle.astro';
 import Icon from '../common/icon.astro';
 import Profiles from './profiles.astro';
 
-interface Props {
+interface Properties {
 	contact: Contact;
 	profiles: Profile[];
 }
 
-const { contact, profiles } = Astro.props as Props;
+const { contact, profiles } = Astro.props as Properties;
+const locale = Astro.currentLocale;
+
+const m = useMessages(locale);
 
 const name = [contact.name.first, contact.name.last].join(' ');
 ---
@@ -57,22 +61,21 @@ const name = [contact.name.first, contact.name.last].join(' ');
 	<div class="flex flex-col gap-2.5rem items-start ">
 		<div class="flex flex-col gap-1rem text-1.25rem leading-snug">
 			<p class="flex flex-row items-center gap-0.5rem">
-				<b class="font-serif font-500 text-1.5rem">Hello!</b>
+				<b class="font-serif font-500 text-1.5rem">{m('hello')}</b>
 				<Icon name="i-noto-waving-hand" />
 			</p>
 
 			<p>
-				I'm a {contact.role} from {contact.location.city},
-				and I love building <a href="#projects" class="underline">things</a>.
+				{m('who')}
 			</p>
 
 			<p>
-				At the moment, I'm seeking new career opportunities to take on new challenges.
+				{m('status')}
 			</p>
 		</div>
 
 		<Button href={`mailto:${contact.email}`} target="_blank" rel="noopener noreferrer" icon="i-ri-mail-fill">
-			Get in touch.
+			{m('touch')}
 		</Button>
 	</div>
 </div>

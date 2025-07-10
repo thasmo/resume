@@ -1,10 +1,10 @@
 ---
-interface Props {
+interface Properties {
 	curvature?: number;
 	class: string;
 }
 
-const { curvature = 0.5, class: classes } = Astro.props as Props;
+const { curvature = 0.5, class: classes } = Astro.props as Properties;
 
 const width = 1;
 const height = 1;

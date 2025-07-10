@@ -1,18 +1,18 @@
 ---
 import { type Language } from '../../types';
+import { useMessages } from '../../utilities/localization';
+import Section from '../common/section.astro';
 
-interface Props {
+interface Properties {
 	languages: Language[];
 }
 
-const { languages } = Astro.props as Props;
----
-<section class="flex flex-col gap-2.5rem">
-	<h2 class="flex flex-row items-center gap-1em font-serif font-500 text-2.25rem">
-		<span class="min-w-fit">Languages</span>
-		<span class="w-full h-3px bg-current grow-1 rounded-full"></span>
-	</h2>
+const { languages } = Astro.props as Properties;
+const locale = Astro.currentLocale;
 
+const m = useMessages(locale);
+---
+<Section id="languages" title={m('section_languages')}>
 	<div class="flex flex-row gap-5rem">
 		{languages.map((language) => (
 			<div class="flex flex-col gap-0">
@@ -26,4 +26,4 @@ const { languages } = Astro.props as Props;
 			</div>
 		))}
 	</div>
-</section>
+</Section>

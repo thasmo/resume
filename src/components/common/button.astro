@@ -1,14 +1,14 @@
 ---
 import Icon from './icon.astro';
 
-export interface Props {
+export interface Properties {
 	href: string;
 	target?: string;
 	rel?: string;
 	icon?: string;
 }
 
-const { href, target, rel, icon } = Astro.props as Props;
+const { href, target, rel, icon } = Astro.props as Properties;
 
 const classes = [
 	'inline-flex',

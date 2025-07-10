@@ -1,20 +1,20 @@
 ---
 import { type Experience } from '../../types';
-import { formatDate } from '../../utilities/date';
+import { useMessages, useDate } from '../../utilities/localization';
 import Icon from '../common/icon.astro';
+import Section from '../common/section.astro';
 
-interface Props {
+interface Properties {
 	experiences: Experience[];
 }
 
-const { experiences } = Astro.props as Props;
----
-<section class="flex flex-col gap-2.5rem">
-	<h2 class="flex flex-row items-center gap-1em font-serif font-500 text-2.25rem">
-		<span class="min-w-fit">Work Experiences</span>
-		<span class="w-full h-3px bg-current grow-1 rounded-full"></span>
-	</h2>
+const { experiences } = Astro.props as Properties;
+const locale = Astro.currentLocale;
 
+const m = useMessages(locale);
+const d = useDate(locale);
+---
+<Section id="experiences" title={m('section_experiences')}>
 	<div class="flex flex-col gap-2.5rem">
 		{experiences.map((experience) => (
 			<div class="flex flex-col gap-0.5rem items-start">
@@ -34,7 +34,7 @@ const { experiences } = Astro.props as Props;
 
 							<p class="flex flex-row items-center gap-0.5rem text-gray-600 dark:(text-gray-300)">
 								<Icon name="i-ri-calendar-schedule-line" />
-								<span>{formatDate(position.start)}{position.end ? ` — ${formatDate(position.end)}` : ' - Present'}</span>
+								<span>{d(position.start)}{position.end ? ` — ${d(position.end)}` : ` — ${m('present')}`}</span>
 							</p>
 						</div>
 					))}
@@ -42,4 +42,4 @@ const { experiences } = Astro.props as Props;
 			</div>
 		))}
 	</div>
-</section>
+</Section>
