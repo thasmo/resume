@@ -1,0 +1,16 @@
+<script>
+	import Lenis from 'lenis';
+	import 'lenis/dist/lenis.css';
+
+	const lenis = new Lenis({
+		autoRaf: true,
+		duration: 0.5,
+	});
+
+	document.addEventListener('DOMContentLoaded', () => {
+		document.getElementById('top')?.addEventListener('click', (event) => {
+			event.preventDefault();
+			lenis.scrollTo('top');
+		});
+	});
+</script>
