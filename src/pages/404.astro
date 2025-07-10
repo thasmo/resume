@@ -2,22 +2,26 @@
 import Layout from '../layouts/default.astro';
 import Contact from '../components/resume/contact.astro';
 import Button from '../components/common/button.astro';
+import { useMessages } from '../utilities/localization';
+
+const locale = Astro.currentLocale;
+const m = useMessages(locale);
 
 const {
 	contact,
 	profiles,
-} = await fetch('https://api.thasmo.com/').then((response) => response.json());
+} = await fetch(`https://api.thasmo.com/${locale}/`).then((response) => response.json());
 ---
-<Layout title="&laquo; undefined &raquo;">
+<Layout title={`« ${m('undefined')} »`}>
 	<div class="flex flex-col gap-5rem">
 		<div class="flex flex-col gap-2rem">
 			<p class="text-1.25rem text-gray-600 dark:(text-gray-300)">
-				Oops, we've found a &laquo;page&raquo; that doesn't exist.
+				{m('not_found')}
 			</p>
 
 			<p>
-				<Button href="/">
-					Bring me home.
+				<Button href={`/${locale}/`}>
+					{m('back')}
 				</Button>
 			</p>
 		</div>

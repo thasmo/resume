@@ -2,12 +2,12 @@
 import { type Profile } from '../../types';
 import Icon from '../common/icon.astro';
 
-interface Props {
+interface Properties {
 	profiles: Profile[];
 	class?: string;
 }
 
-const { profiles, class: classes } = Astro.props as Props;
+const { profiles, class: classes } = Astro.props as Properties;
 
 const icons = {
 	'github': 'i-ri-github-fill',
