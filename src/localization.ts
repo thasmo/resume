@@ -3,6 +3,7 @@ export const defaultLocale = 'en';
 export const messages = {
 	de: {
 		back: 'Bring mich zurück.',
+		filename: 'lebenslauf-deinhamer.pdf',
 		hello: 'Hallo!',
 		not_found: 'Oh je, diese Seite existiert nicht.',
 		present: 'jetzt',
@@ -23,6 +24,7 @@ export const messages = {
 	},
 	en: {
 		back: 'Bring me home.',
+		filename: 'resume-deinhamer.pdf',
 		hello: 'Hello!',
 		not_found: "Oops, this page doesn't exist.",
 		present: 'present',
