@@ -4,3 +4,4 @@ squircle
 fontshare
 iconify
 playform
+opengraph
