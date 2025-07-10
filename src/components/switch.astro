@@ -1,11 +1,17 @@
 ---
 import Icon from './common/icon.astro';
 
+export interface Properties {
+	class?: string;
+}
+
+const { class: classes } = Astro.props as Properties;
+
 const locale = Astro.currentLocale;
 
 const newLocale = locale === 'en' ? 'de' : 'en';
 ---
-<div class="flex flex-row items-center gap-1rem pos-fixed top-1rem right-1rem z-1 sm:(top-2.5vw right-2.5vw)">
+<div class:list={['flex flex-row items-center gap-1rem pos-fixed top-1rem right-1rem z-1 sm:(top-2.5vw right-2.5vw)', classes]}>
 	<a href=`/${newLocale}/` class="flex flex-row items-center gap-0.25rem p-r-1.25rem rounded-full bg-gray-200 text-1.5rem hover:(bg-gray-300) dark:(bg-gray-800 hover:(bg-gray-700))">
 		<span class="block grow-0 shrink-0 aspect-square p-0.5rem text-1.5rem opacity-50">
 			<Icon name="i-ri-translate" class="scale-90" />

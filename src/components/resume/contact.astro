@@ -1,5 +1,5 @@
 ---
-import { type Contact, type Profile } from '../../types';
+import {type Contact, type Profile} from '../../types';
 import { useMessages } from '../../utilities/localization';
 import Button from '../common/button.astro';
 import Squircle from '../common/squircle.astro';
@@ -54,11 +54,11 @@ const name = [contact.name.first, contact.name.last].join(' ');
 				</p>
 			</div>
 
-			<Profiles profiles={profiles} />
+			<Profiles profiles={profiles} class="print:hidden" />
 		</div>
 	</div>
 
-	<div class="flex flex-col gap-2.5rem items-start ">
+	<div class="flex flex-col gap-2.5rem items-start print:(hidden)">
 		<div class="flex flex-col gap-1rem text-1.25rem leading-snug">
 			<p class="flex flex-row items-center gap-0.5rem">
 				<b class="font-serif font-500 text-1.5rem">{m('hello')}</b>

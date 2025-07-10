@@ -2,7 +2,7 @@
 import { useMessages } from '../../utilities/localization';
 
 import Layout from '../../layouts/default.astro';
-import Experience from '../../components/resume/experience.astro';
+import Experiences from '../../components/resume/experiences.astro';
 import Projects from '../../components/resume/projects.astro';
 import Technologies from '../../components/resume/technologies.astro';
 import Languages from '../../components/resume/languages.astro';
@@ -34,14 +34,17 @@ export const getStaticPaths = async () => {
 }
 ---
 <Layout title={m('resume')}>
-	<div class="flex flex-col gap-5rem">
-		<Experience experiences={experiences} />
+	<div class="flex flex-col gap-5rem print:(gap-2.5rem)">
+		<Experiences experiences={experiences} />
 		<Projects projects={projects} />
-		<Technologies technologies={technologies} />
 		<Languages languages={languages} />
-		<Skills skills={skills} />
-		<Values values={values} />
-		<Interests interests={interests} />
+
+		<div class="flex flex-col gap-5rem print:(grid grid-cols-2 gap-2.5rem)">
+			<Technologies technologies={technologies} />
+			<Skills skills={skills} />
+			<Values values={values} />
+			<Interests interests={interests} />
+		</div>
 	</div>
 
 	<Fragment slot="aside">

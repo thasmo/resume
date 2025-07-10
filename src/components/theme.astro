@@ -38,5 +38,6 @@
 
 	document.addEventListener('DOMContentLoaded', () => {
 		document.getElementById('switch')?.addEventListener('click', () => toggleDarkMode());
+		window.addEventListener('beforeprint', () => isDarkMode() && toggleDarkMode());
 	});
 </script>

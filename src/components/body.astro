@@ -1,3 +1,14 @@
-<body class="p-1rem bg-gray-100 cursor-default selection:(bg-gray-900 text-white) sm:(p-2.5vw) dark:(text-gray-100 bg-gray-900 selection:(text-white bg-white))">
+---
+const classes = [
+	'p-1rem',
+	'bg-gray-100',
+	'cursor-default',
+	'selection:(bg-gray-900 text-white)',
+	'sm:(p-2.5vw)',
+	'print:(bg-white)',
+	'dark:(text-gray-100 bg-gray-900 selection:(text-white bg-white) print:(bg-white))',
+];
+---
+<body class:list={classes}>
 	<slot />
 </body>

@@ -8,7 +8,7 @@ export const messages = {
 		present: 'jetzt',
 		resume: 'Lebenslauf',
 		section_experiences: 'Berufliche Erfahrung',
-		section_interests: 'Interessen und Aktivitäten',
+		section_interests: 'Interessen',
 		section_languages: 'Sprachen',
 		section_projects: 'Persönliche Projekte',
 		section_skills: 'Erworbene Fähigkeiten',
