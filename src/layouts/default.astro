@@ -2,30 +2,23 @@
 import Head from '../components/head.astro';
 import Body from '../components/body.astro';
 import Switch from '../components/switch.astro';
+import Icon from '../components/common/icon.astro';
 
 interface Properties {
 	title?: string;
 }
 
-const { title } = Astro.props as Properties;
+const {title} = Astro.props as Properties;
 const locale = Astro.currentLocale;
 ---
 <html lang={locale}>
 	<Head>
-		<slot name="head" />
-
-		<script>
-			import Lenis from 'lenis';
-			import 'lenis/dist/lenis.css';
-
-			new Lenis({
-				autoRaf: true,
-				duration: 0.5,
-			});
-		</script>
+		<slot name="head"/>
 	</Head>
 
 	<Body>
+		<Switch class="print:hidden"/>
+
 		<div class="w-full max-w-60rem m-auto flex flex-col gap-5rem md:(flex-row) lg:(max-w-80rem)">
 			<div class="w-15rem shrink-0 grow-0 hidden lg:(block invisible)"></div>
 
@@ -37,17 +30,19 @@ const locale = Astro.currentLocale;
 				)}
 
 				<div>
-					<slot />
+					<slot/>
 				</div>
+
+				<a id="top" href="#" class="self-center block p-0.5rem grow-0 shrink-0 aspect-square rounded-full text-1.75rem bg-white hover:(bg-gray-200) dark:(bg-black hover:(bg-gray-800))">
+					<Icon name="i-ri-skip-up-line" class="text-1.75rem"/>
+				</a>
 			</main>
 
 			<aside class="order-first md:(order-last) shrink-0 grow-0 md:(w-15rem)">
 				<div class="sticky top-2.5vw">
-					<slot name="aside" />
+					<slot name="aside"/>
 				</div>
 			</aside>
 		</div>
-
-		<Switch class="print:hidden" />
 	</Body>
 </html>

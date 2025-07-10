@@ -1,5 +1,6 @@
 ---
 import Theme from './theme.astro';
+import Scroll from './scroll.astro';
 import { useMessages } from '../utilities/localization';
 
 const locale = Astro.currentLocale;
@@ -22,4 +23,5 @@ const { title = m('site_title') } = Astro.props;
 	<slot />
 
 	<Theme />
+	<Scroll />
 </head>
