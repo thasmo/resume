@@ -37,7 +37,6 @@ export const getStaticPaths = async () => {
 	<div class="flex flex-col gap-5rem print:(gap-2.5rem)">
 		<Experiences experiences={experiences} />
 		<Projects projects={projects} />
-		<Languages languages={languages} />
 
 		<div class="flex flex-col gap-5rem print:(grid grid-cols-2 gap-2.5rem)">
 			<Technologies technologies={technologies} />
@@ -45,6 +44,8 @@ export const getStaticPaths = async () => {
 			<Values values={values} />
 			<Interests interests={interests} />
 		</div>
+
+		<Languages languages={languages} />
 	</div>
 
 	<Fragment slot="aside">

@@ -1,17 +1,33 @@
 ---
+import Icon from '../common/icon.astro';
+import { useMessages } from '../../utilities/localization';
+
 interface Properties {
 	id?: string;
 	title: string;
 	class?: string;
+	details: boolean;
 }
 
-const { title, id, class: classes } = Astro.props as Properties;
+const { title, id, class: classes, details = false } = Astro.props as Properties;
+
+const locale = Astro.currentLocale;
+const m = useMessages(locale);
 ---
-<section id={id} class:list={['flex flex-col gap-2.25rem print:(gap-1.25rem)', classes]}>
+<section id={id} class:list={['group/section flex flex-col gap-2.25rem print:(gap-1.25rem)', classes]}>
 	<h2 class="flex flex-row items-center gap-1em font-serif font-500 text-2.25rem leading-tight">
 		<span class="sm:(min-w-fit)">{title}</span>
 		<span class="w-full h-3px bg-current grow-1 rounded-full print:(hidden)" aria-hidden="true"></span>
+
+		{details && (
+			<button class="text-1.5rem cursor-pointer bg-yellow-300 rounded-full p-0.5rem hover:(bg-yellow-400) dark:(text-white bg-yellow-900 hover:(bg-yellow-800)) print:(hidden)" onclick="this.closest('section').toggleAttribute('data-open')" title={m('toggle_details')} aria-label={m('toggle_details')}>
+				<Icon name="i-ri-expand-up-down-line" class="scale-125 block group-data-[open]/section:hidden" />
+				<Icon name="i-ri-contract-up-down-line" class="scale-125 hidden group-data-[open]/section:block" />
+			</button>
+		)}
 	</h2>
 
-	<slot />
+	<div>
+		<slot />
+	</div>
 </section>
