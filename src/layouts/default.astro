@@ -3,6 +3,7 @@ import Head from '../components/head.astro';
 import Body from '../components/body.astro';
 import Switch from '../components/switch.astro';
 import Icon from '../components/common/icon.astro';
+import { useMessages } from '../utilities/localization';
 
 interface Properties {
 	title?: string;
@@ -10,6 +11,7 @@ interface Properties {
 
 const { title } = Astro.props as Properties;
 const locale = Astro.currentLocale;
+const m = useMessages(locale);
 ---
 <html lang={locale} class="print:(text-75%)">
 	<Head>
@@ -31,7 +33,7 @@ const locale = Astro.currentLocale;
 					<slot/>
 				</div>
 
-				<a id="top" href="#" class="self-center block p-0.5rem grow-0 shrink-0 aspect-square rounded-full text-1.75rem bg-white hover:(bg-gray-200) print:(hidden) dark:(bg-black hover:(bg-gray-800))">
+				<a id="top" href="#" class="self-center block p-0.5rem grow-0 shrink-0 aspect-square rounded-full text-1.75rem bg-white hover:(bg-gray-200) print:(hidden) dark:(bg-black hover:(bg-gray-800))" title={m('top')} aria-label={m('top')}>
 					<Icon name="i-ri-skip-up-line" class="text-1.75rem"/>
 				</a>
 			</main>
