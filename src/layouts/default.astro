@@ -1,7 +1,7 @@
 ---
 import Head from '../components/head.astro';
 import Body from '../components/body.astro';
-import Switch from '../components/switch.astro';
+import Navigation from '../components/navigation.astro';
 import Icon from '../components/common/icon.astro';
 import { useMessages } from '../utilities/localization';
 
@@ -19,6 +19,8 @@ const m = useMessages(locale);
 	</Head>
 
 	<Body>
+		<Navigation class="print:hidden"/>
+
 		<div class="w-full max-w-60rem m-auto flex flex-col gap-5rem md:(flex-row) lg:(max-w-80rem) print:(flex-row gap-2.5rem)">
 			<div class="w-15rem shrink-0 grow-0 hidden lg:(block invisible) print:(hidden)"></div>
 
@@ -44,7 +46,5 @@ const m = useMessages(locale);
 				</div>
 			</aside>
 		</div>
-
-		<Switch class="print:hidden"/>
 	</Body>
 </html>
