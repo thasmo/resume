@@ -1,6 +1,7 @@
 ---
 import { type Profile } from '../../types';
 import Icon from '../common/icon.astro';
+import { useMessages } from '../../utilities/localization';
 
 interface Properties {
 	profiles: Profile[];
@@ -8,6 +9,9 @@ interface Properties {
 }
 
 const { profiles, class: classes } = Astro.props as Properties;
+
+const locale = Astro.currentLocale;
+const m = useMessages(locale);
 
 const icons = {
 	'github': 'i-ri-github-fill',
@@ -25,19 +29,30 @@ const colors = {
 	'stack overflow': '#f48024',
 }
 
-const getIcon = (name: string): string => {
+const getIcon = (name: string) => {
 	const key = name.toLowerCase() as keyof typeof icons;
 	return icons[key];
 }
 
-const getColor = (name: string): string => {
+const getColor = (name: string) => {
 	const key = name.toLowerCase() as keyof typeof colors;
 	return colors[key];
+}
+
+const getMessageKey = (name: string): keyof typeof m => {
+	const key = name.toLowerCase().replace(' ', '_');
+	return `link_${key}` as keyof typeof m;
 }
 ---
 <section class:list={['flex flex-row justify-between', classes]}>
 	{profiles.map((profile) => (
-		<a href={profile.url} target="_blank" rel="noopener noreferrer" class="group block p-0.5rem grow-0 shrink-0 aspect-square rounded-full text-1.75rem text-gray-500 dark:(text-gray-300) hover:(text-[--color] bg-white dark:(text-[--color]))" style={{ '--color': getColor(profile.name) }}>
+		<a href={profile.url}
+		   target="_blank"
+		   rel="noopener noreferrer"
+		   title={m(getMessageKey(profile.name))}
+		   aria-label={m(getMessageKey(profile.name))}
+		   class="group block p-0.5rem grow-0 shrink-0 aspect-square rounded-full text-1.75rem text-gray-500 dark:(text-gray-300) hover:(text-[--color] bg-white dark:(text-[--color]))"
+		   style={{ '--color': getColor(profile.name) }}>
 			<Icon name={getIcon(profile.name)} />
 		</a>
 	))}
