@@ -14,4 +14,4 @@ X-Content-Type-Options = "nosniff"
 from = "/"
 to = "/en/"
 status = 301
-force = false
+force = true
