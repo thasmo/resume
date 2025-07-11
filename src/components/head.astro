@@ -1,6 +1,4 @@
 ---
-import Theme from './theme.astro';
-import Scroll from './scroll.astro';
 import { useMessages } from '../utilities/localization';
 
 const locale = Astro.currentLocale;
@@ -14,14 +12,18 @@ const { title = m('site_title') } = Astro.props;
 
 	<title>{title}</title>
 
+	<link rel="preconnect" href="https://avatar.thasmo.com/" />
+	<link href="https://avatar.thasmo.com/" rel="icon" />
+
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	<meta name="description" content={m('site_description')} />
 	<meta property="og:image" content="https://avatar.thasmo.com/" />
 
-	<link href="https://avatar.thasmo.com/" rel="icon" />
-
 	<slot />
 
-	<Theme />
-	<Scroll />
+	<script>
+		if (localStorage.getItem('dark') === '1' || (localStorage.getItem('dark') === null && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+			document.documentElement.classList.add('dark');
+		}
+	</script>
 </head>

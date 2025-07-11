@@ -1,4 +1,6 @@
 ---
+import Scroll from './scroll.astro';
+
 const classes = [
 	'p-1rem',
 	'bg-gray-100',
@@ -11,4 +13,5 @@ const classes = [
 ---
 <body class:list={classes}>
 	<slot />
+	<Scroll />
 </body>
