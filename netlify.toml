@@ -9,3 +9,9 @@ Referrer-Policy = "no-referrer"
 Permissions-Policy = ""
 X-Frame-Options = "DENY"
 X-Content-Type-Options = "nosniff"
+
+[[redirects]]
+from = "/"
+to = "/en/"
+status = 301
+force = false
