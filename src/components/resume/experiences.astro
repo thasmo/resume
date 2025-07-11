@@ -15,7 +15,7 @@ const locale = Astro.currentLocale;
 const m = useMessages(locale);
 const d = useDate(locale);
 ---
-<Section id="experiences" title={m('section_experiences')} class={classes} >
+<Section id="experiences" title={m('section_experiences')} class={[classes, 'print:(mr-17.5rem)']} details>
 	<div class="flex flex-col gap-2.5rem print:(gap-1rem)">
 		{experiences.map((experience) => (
 			<div class="flex flex-col gap-0.5rem items-start print:(break-inside-avoid gap-0.25rem)">
@@ -29,17 +29,42 @@ const d = useDate(locale);
 				<div class="flex flex-col gap-1rem print:(gap-0.5rem)">
 					{experience.positions.map((position) => (
 						<div>
-							<p class="text-1.25rem text-gray-600 dark:(text-gray-300)">
+							<p class="text-1.25rem dark:(text-gray-300)">
 								{position.name}
 							</p>
 
-							<p class="flex flex-row items-center gap-0.5rem text-gray-600 dark:(text-gray-300)">
+							<p class="flex flex-row items-center gap-0.75rem text-gray-600 dark:(text-gray-300)">
 								<Icon name="i-ri-calendar-schedule-line" />
 								<span>{d(position.start)}{position.end ? ` — ${d(position.end)}` : ` — ${m('present')}`}</span>
 							</p>
 						</div>
 					))}
 				</div>
+
+				{ experience.tasks && (
+					<div class="flex flex-col gap-1rem hidden group-data-[open]/section:(flex) mt-0.5rem bg-white p-1.25rem rounded-0.25rem dark:(bg-gray-950) print:(p-0)">
+						<ul class="flex flex-col gap-0.5rem text-1.1rem text-gray-600 dark:(text-gray-300)">
+							{experience.tasks.map((task) => (
+								<li class="flex flex-row items-start gap-0.75rem">
+									<Icon name="i-ri-checkbox-circle-line" class="mt-0.25em" />
+									{task}
+								</li>
+							))}
+						</ul>
+
+						<div class="flex flex-row items-start gap-0.75rem text-gray-600 dark:(text-gray-300)">
+							<Icon name="i-ri-tools-line" class="mt-0.25em" />
+
+							<ul class="flex flex-row flex-wrap gap-0.5rem">
+								{experience.technologies && experience.technologies.map((technology) => (
+									<li class="px-0.75em py-0.125em bg-gray-200 dark:(bg-gray-800 text-gray-300) rounded-0.25em">
+										{technology}
+									</li>
+								))}
+							</ul>
+						</div>
+					</div>
+				)}
 			</div>
 		))}
 	</div>
