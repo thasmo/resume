@@ -12,7 +12,15 @@ export default defineConfig({
 		defaultLocale: 'en',
 		locales: ['en', 'de'],
 	},
-	integrations: [unocss(), sitemap(), inline()],
+	integrations: [
+		unocss(),
+		sitemap(),
+		inline({
+			Beasties: {
+				preload: 'swap-high',
+			},
+		}),
+	],
 	output: 'static',
 	prefetch: {
 		defaultStrategy: 'tap',
