@@ -1,5 +1,6 @@
 ---
 import Scroll from './scroll.astro';
+import Theme from './theme.astro';
 
 const classes = [
 	'p-1rem',
@@ -13,5 +14,6 @@ const classes = [
 ---
 <body class:list={classes}>
 	<slot />
+	<Theme />
 	<Scroll />
 </body>

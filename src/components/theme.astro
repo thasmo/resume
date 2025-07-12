@@ -1,0 +1,5 @@
+<script>
+	if (localStorage.getItem('dark') === '1' || (localStorage.getItem('dark') === null && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+		document.documentElement.classList.add('dark');
+	}
+</script>
