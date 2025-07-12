@@ -20,10 +20,4 @@ const { title = m('site_title') } = Astro.props;
 	<meta property="og:image" content="https://avatar.thasmo.com/" />
 
 	<slot />
-
-	<script>
-		if (localStorage.getItem('dark') === '1' || (localStorage.getItem('dark') === null && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-			document.documentElement.classList.add('dark');
-		}
-	</script>
 </head>
