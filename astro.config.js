@@ -17,7 +17,7 @@ export default defineConfig({
 		sitemap(),
 		inline({
 			Beasties: {
-				preload: 'body',
+				preload: 'swap-high',
 			},
 		}),
 	],
