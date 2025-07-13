@@ -36,6 +36,8 @@ jobs:
     runs-on: ubuntu-latest
     env:
       APPLICATION_SITE: ${{ vars.APPLICATION_SITE }}
+      CLOUDFLARE_ACCOUNT_ID: ${{ vars.CLOUDFLARE_ACCOUNT_ID }}
+      CLOUDFLARE_API_TOKEN: ${{ vars.CLOUDFLARE_API_TOKEN }}
     steps:
       - name: checkout repository
         uses: actions/checkout@v4
