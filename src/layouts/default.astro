@@ -40,8 +40,10 @@ const m = useMessages(locale);
 				</a>
 			</main>
 
-			<aside class="order-first shrink-0 grow-0 md:(w-15rem order-last)">
-				<slot name="aside"/>
+			<aside class="order-first shrink-0 grow-0 md:(w-15rem order-last) print:(pos-absolute top-0 right-0)">
+				<div class="sticky top-2.5vw">
+					<slot name="aside"/>
+				</div>
 			</aside>
 		</div>
 	</Body>

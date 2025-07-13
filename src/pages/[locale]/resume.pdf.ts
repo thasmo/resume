@@ -4,16 +4,16 @@ import { getDeployStore } from '@netlify/blobs';
 
 export const prerender = false;
 
-export const GET: APIRoute = async ({ currentLocale }) => {
-	const key = `resume-${currentLocale}.pdf`;
+export const GET: APIRoute = async ({ currentLocale, site }) => {
 	const url = `https://api.cloudflare.com/client/v4/accounts/${process.env.CLOUDFLARE_ACCOUNT_ID}/browser-rendering/pdf`;
+	const key = `resume-${currentLocale}.pdf`;
 
 	const store = getDeployStore('files');
 
 	const data = await store.get(key, { consistency: 'eventual', type: 'blob' });
 
 	if (!data) {
-		const options = getFetchOptions(`https://deploy-preview-108--thasmo-resume.netlify.app/images/`);
+		const options = getFetchOptions(`${site}/${currentLocale}/`);
 		const data = await fetch(url, options).then(async (response) => await response.blob());
 
 		await store.set(key, data);
