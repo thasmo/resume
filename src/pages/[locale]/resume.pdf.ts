@@ -14,7 +14,7 @@ export const GET: APIRoute = async ({ currentLocale }) => {
 
 	if (!data) {
 		const options = getFetchOptions(`https://deploy-preview-108--thasmo-resume.netlify.app/${currentLocale}/`);
-		const data = await fetch(url, options).then((response) => response.blob());
+		const data = await fetch(url, options).then(async (response) => await response.blob());
 
 		await store.set(key, data);
 	}

@@ -20,17 +20,10 @@ const name = [contact.name.first, contact.name.last].join(' ');
 ---
 <div class="flex flex-col gap-4rem sm:(flex-row items-end) md:(flex-col items-center)">
 	<div class="flex flex-col gap-2rem items-start max-w-15rem dark:(text-gray-100)">
-		<a href="/" class="group">
-			<img
-				class="w-full h-full object-cover"
-				src={contact.photo}
-				width="256"
-				height="256"
-				alt={m('portrait')}
-				fetchpriority="high"
-				decoding="async"
-			/>
-		</a>
+		<img
+			src={contact.photo}
+			alt={m('portrait')}
+		/>
 
 		<div class="flex flex-col gap-1rem">
 			<p class="font-serif font-500 text-2.25rem leading-tight">
