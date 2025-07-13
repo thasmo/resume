@@ -13,7 +13,7 @@ export const GET: APIRoute = async ({ currentLocale }) => {
 	const data = await store.get(key, { consistency: 'eventual', type: 'blob' });
 
 	if (!data) {
-		const options = getFetchOptions(`https://deploy-preview-108--thasmo-resume.netlify.app/${currentLocale}/`);
+		const options = getFetchOptions(`https://deploy-preview-108--thasmo-resume.netlify.app/images/`);
 		const data = await fetch(url, options).then(async (response) => await response.blob());
 
 		await store.set(key, data);
