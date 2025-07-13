@@ -5,3 +5,4 @@ fontshare
 iconify
 playform
 opengraph
+networkidle
