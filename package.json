@@ -14,8 +14,8 @@
 		]
 	},
 	"scripts": {
-		"dev": "netlify dev",
-		"serve": "netlify serve",
+		"start": "netlify dev",
+		"dev": "astro dev",
 		"build": "astro build",
 		"preview": "astro preview",
 		"prepare": "concurrently --group --prefix-colors 'auto' 'pnpm:prepare:*'",

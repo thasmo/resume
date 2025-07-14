@@ -12,6 +12,6 @@ X-Content-Type-Options = "nosniff"
 
 [[redirects]]
 from = "/"
-to = "/en/"
+to = "/en"
 status = 301
 force = true

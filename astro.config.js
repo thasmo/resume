@@ -29,5 +29,5 @@ export default defineConfig({
 		prefetchAll: true,
 	},
 	site: process.env.APPLICATION_SITE,
-	trailingSlash: 'always',
+	trailingSlash: 'never',
 });

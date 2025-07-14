@@ -10,11 +10,11 @@ export const GET: APIRoute = async ({ currentLocale, site }) => {
 
 	const store = getDeployStore('files');
 
-	const data = await store.get(key, { consistency: 'eventual', type: 'blob' });
+	let data = await store.get(key, { consistency: 'eventual', type: 'blob' });
 
 	if (!data) {
-		const options = getFetchOptions(`${site}/${currentLocale}/`);
-		const data = await fetch(url, options).then(async (response) => await response.blob());
+		const options = getFetchOptions(`${site}/${currentLocale}`);
+		data = await fetch(url, options).then(async (response) => await response.blob());
 
 		await store.set(key, data);
 	}
@@ -30,7 +30,7 @@ const getFetchOptions = (url: string) => {
 	return {
 		body: JSON.stringify({
 			gotoOptions: {
-				waitUntil: 'networkidle0',
+				waitUntil: 'load',
 			},
 			pdfOptions: {
 				format: 'a4',
