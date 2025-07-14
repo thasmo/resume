@@ -1,4 +1,5 @@
 /.astro/
+/.netlify/
 /node_modules/
 /dist/
 /public/assets/fonts/

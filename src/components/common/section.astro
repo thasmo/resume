@@ -14,7 +14,7 @@ const { title, id, class: classes, details = false } = Astro.props as Properties
 const locale = Astro.currentLocale;
 const m = useMessages(locale);
 ---
-<section id={id} class:list={['group/section flex flex-col gap-2.25rem print:(gap-1.25rem)', classes]}>
+<section id={id} class:list={['group/section flex flex-col gap-2.25rem print:(gap-1.25rem)', classes]} data-section>
 	<h2 class="flex flex-row items-center gap-1em font-serif font-500 text-2.25rem leading-tight">
 		<span class="sm:(min-w-fit)">{title}</span>
 		<span class="w-full h-3px bg-current grow-1 rounded-full print:(hidden)" aria-hidden="true"></span>
@@ -31,3 +31,14 @@ const m = useMessages(locale);
 		<slot />
 	</div>
 </section>
+
+<script>
+	window.addEventListener('beforeprint', () => {
+		const buttons = [...document.querySelectorAll('[data-section]')]
+			.filter((element) => !element.hasAttribute('data-open'))
+			.map((element) => element.querySelector('button'))
+			.filter(Boolean);
+
+		buttons.forEach((button) => button?.click());
+	});
+</script>

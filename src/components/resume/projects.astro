@@ -16,7 +16,7 @@ const m = useMessages(locale);
 const d = useDate(locale);
 ---
 <Section id="projects" title={m('section_projects')} class={classes}>
-	<div class="flex flex-col gap-2.5rem print:(grid grid-cols-2 gap-1rem)">
+	<div class="flex flex-col gap-2.5rem print:(grid grid-cols-2 gap-y-1rem gap-x-2.5rem)">
 		{projects.map((project) => (
 			<div class="flex flex-col gap-0.5rem items-start print:(break-inside-avoid gap-0.25rem)">
 				<h3 class="group flex flex-row items-center gap-0.5rem text-1.5rem font-500">

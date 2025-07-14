@@ -1,78 +1,16 @@
 ---
-import Icon from './common/icon.astro';
-import { useMessages } from '../utilities/localization';
+import Locale from './navigation/locale.astro';
+import Theme from './navigation/theme.astro';
+import Download from './navigation/download.astro';
 
 export interface Properties {
 	class?: string;
 }
 
 const { class: classes } = Astro.props as Properties;
-
-const locale = Astro.currentLocale;
-
-const m = useMessages(locale);
-
-const newLocale = locale === 'en' ? 'de' : 'en';
 ---
 <nav class:list={['flex flex-row items-center gap-0.5rem pos-fixed top-1rem right-1rem z-1 sm:(gap-1rem top-2.5vw right-2.5vw)', classes]}>
-	<a href=`/${newLocale}/` class="flex flex-row items-center gap-0.25rem p-r-1.25rem rounded-full bg-gray-200 text-1.5rem hover:(bg-gray-300) dark:(bg-gray-800 hover:(bg-gray-700))" title={m('change_locale')} aria-label={m('change_locale')}>
-		<span class="block grow-0 shrink-0 aspect-square p-0.5rem text-1.5rem opacity-50">
-			<Icon name="i-ri-translate" class="scale-90" />
-		</span>
-
-		<span class="font-serif font-500 grow-0 shrink-0 text-1.25rem text-align-center">
-			{newLocale}
-		</span>
-	</a>
-
-	<button id="switch" class="block aspect-square p-0.5rem rounded-full bg-yellow-300 cursor-pointer text-1.5rem hover:(bg-yellow-400) dark:(bg-yellow-900 hover:(bg-yellow-800))" title={m('switch_theme')} aria-label={m('switch_theme')}>
-		<Icon name="i-ri-lightbulb-line" class="block hidden dark:(block)" />
-		<Icon name="i-ri-lightbulb-flash-line" class="block dark:(hidden)" />
-	</button>
-
-	<a href={`/assets/documents/resume-${locale}.pdf`} download={m('filename')} class="block aspect-square p-0.5rem rounded-full text-white bg-black cursor-pointer text-1.5rem hover:(bg-gray-700) dark:(text-black bg-white hover:(bg-gray-300))" title={m('download_resume')} aria-label={m('download_resume')}>
-		<Icon name="i-ri-download-line" class="block" />
-	</a>
+	<Locale />
+	<Theme />
+	<Download />
 </nav>
-
-<script>
-	const enableDarkMode = () => {
-		localStorage.setItem('dark', '1');
-	};
-
-	const disableDarkMode = () => {
-		localStorage.setItem('dark', '0');
-	};
-
-	const isDarkMode = () => {
-		return localStorage.getItem('dark') === '1' || (
-			localStorage.getItem('dark') === null &&
-			window.matchMedia('(prefers-color-scheme: dark)').matches
-		);
-	};
-
-	const applyDarkModeStyles = () => {
-		document.documentElement.classList.add('dark');
-	};
-
-	const revokeDarkModeStyles = () => {
-		document.documentElement.classList.remove('dark');
-	};
-
-	const toggleDarkMode = () => {
-		if (isDarkMode()) {
-			disableDarkMode();
-			revokeDarkModeStyles();
-		} else {
-			enableDarkMode();
-			applyDarkModeStyles();
-		}
-	};
-
-	if (isDarkMode()) {
-		applyDarkModeStyles();
-	}
-
-	document.getElementById('switch')?.addEventListener('click', () => toggleDarkMode());
-	window.addEventListener('beforeprint', () => isDarkMode() && toggleDarkMode());
-</script>

@@ -1,0 +1,34 @@
+---
+import Icon from '../common/icon.astro';
+
+import {useMessages} from '../../utilities/localization';
+
+const locale = Astro.currentLocale;
+
+const m = useMessages(locale);
+---
+<a data-ref-download href={`/${locale}/resume.pdf`} download={m('filename')} class="group/download block aspect-square p-0.5rem rounded-full text-white bg-black cursor-pointer text-1.5rem hover:(bg-gray-700) dark:(text-black bg-white hover:(bg-gray-300)) data-[loading]/download:(pointer-events-none)" title={m('download_resume')} aria-label={m('download_resume')}>
+	<Icon name="i-ri-download-line" class="block group-data-[loading]/download:hidden" />
+	<Icon name="i-ri-loader-4-line" class="block hidden group-data-[loading]/download:block animate-spin" />
+</a>
+
+<script>
+	const link = document.querySelector('[data-ref-download]');
+
+	link?.addEventListener('click', async (event) => {
+		event.preventDefault();
+
+		const url = link.getAttribute('href');
+
+		if (url) {
+			link.setAttribute('data-loading', '');
+
+			const response = await fetch(url, { method: 'HEAD' });
+
+			if (response.ok) {
+				link.removeAttribute('data-loading');
+				window.location.href = url;
+			}
+		}
+	});
+</script>
