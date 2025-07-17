@@ -42,7 +42,7 @@
 		"@playform/inline": "^0.1.2",
 		"@somehow-digital/commitlint-config": "^1.0.0",
 		"@somehow-digital/cspell-dictionary": "^2.0.0",
-		"@somehow-digital/eslint-config": "^3.0.0",
+		"@somehow-digital/eslint-config": "^4.0.0",
 		"@somehow-digital/prettier-config": "^3.0.0",
 		"@somehow-digital/typescript-config": "^3.0.0",
 		"@somehow-digital/unocss-preset": "^2.0.0",
