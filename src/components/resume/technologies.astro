@@ -1,5 +1,5 @@
 ---
-import { type Technology } from '../../types';
+import type { Technology } from '../../types';
 import { useMessages } from '../../utilities/localization';
 import Icon from '../common/icon.astro';
 import Section from '../common/section.astro';
@@ -16,7 +16,7 @@ const m = useMessages(locale);
 ---
 <Section id="technologies" title={m('section_technologies')} class={classes}>
 	<div class="flex flex-col gap-1rem">
-		<p class="flex flex-row flex-wrap gap-0.5rem text-gray-600 dark:(text-gray-300)">
+		<p class="text-gray-600 flex flex-row flex-wrap gap-0.5rem dark:(text-gray-300)">
 			{technologies && [...technologies]
 				.sort((a, b) => {
 					if (b.level !== a.level) {
@@ -25,8 +25,8 @@ const m = useMessages(locale);
 
 					return a.name.localeCompare(b.name);
 				})
-				.map((technology) => (
-					<a href={technology.url} target="_blank" rel="noopener noreferrer" class="flex flex-row items-center gap-0.35rem px-0.75em py-0.125em bg-gray-200 rounded-0.25em dark:(bg-gray-800 text-gray-300) hover:(text-gray-900 dark:(text-gray-100) bg-gray-300 dark:(bg-gray-700))">
+				.map(technology => (
+					<a href={technology.url} target="_blank" rel="noopener noreferrer" class="px-0.75em py-0.125em rounded-0.25em bg-gray-200 flex flex-row gap-0.35rem items-center dark:(text-gray-300 bg-gray-800) hover:(text-gray-900 bg-gray-300 dark:text-gray-100 dark:bg-gray-700)">
 						<span>{technology.name}</span>
 						<Icon name={['i-ri-arrow-up-s-line', 'i-ri-arrow-up-double-line'][technology.level - 2]} />
 					</a>

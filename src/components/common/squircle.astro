@@ -21,8 +21,8 @@ const instructions = `
 
 const path = instructions.replaceAll(/\s+/g, ' ').trim();
 
-const image =
-	`<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 ${width} ${height}'><path d='${path}'/></svg>`
+const image
+	= `<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 ${width} ${height}'><path d='${path}'/></svg>`
 		.replaceAll('#', '%23')
 		.replaceAll('<', '%3C')
 		.replaceAll('>', '%3E');

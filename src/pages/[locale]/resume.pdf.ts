@@ -1,11 +1,10 @@
 import type { APIRoute } from 'astro';
-
 import { getDeployStore } from '@netlify/blobs';
 
 export const prerender = false;
 
 export const GET: APIRoute = async ({ currentLocale, site }) => {
-	const url = `https://api.cloudflare.com/client/v4/accounts/${process.env.CLOUDFLARE_ACCOUNT_ID}/browser-rendering/pdf`;
+	const url = `https://api.cloudflare.com/client/v4/accounts/${import.meta.env.CLOUDFLARE_ACCOUNT_ID}/browser-rendering/pdf`;
 	const key = `resume-${currentLocale}.pdf`;
 
 	const store = getDeployStore('files');
@@ -14,7 +13,7 @@ export const GET: APIRoute = async ({ currentLocale, site }) => {
 
 	if (!data) {
 		const options = getFetchOptions(`${site}/${currentLocale}`);
-		data = await fetch(url, options).then(async (response) => await response.blob());
+		data = await fetch(url, options).then(async response => await response.blob());
 
 		await store.set(key, data);
 	}
@@ -26,7 +25,7 @@ export const GET: APIRoute = async ({ currentLocale, site }) => {
 	});
 };
 
-const getFetchOptions = (url: string) => {
+function getFetchOptions(url: string) {
 	return {
 		body: JSON.stringify({
 			gotoOptions: {
@@ -46,9 +45,9 @@ const getFetchOptions = (url: string) => {
 			url,
 		}),
 		headers: {
-			'authorization': `Bearer ${process.env.CLOUDFLARE_API_TOKEN}`,
+			'authorization': `Bearer ${import.meta.env.CLOUDFLARE_API_TOKEN}`,
 			'content-type': 'application/json',
 		},
 		method: 'POST',
 	};
-};
+}

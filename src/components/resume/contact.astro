@@ -1,9 +1,9 @@
 ---
-import {type Contact, type Profile} from '../../types';
+import type { Contact, Profile } from '../../types';
 import { useMessages } from '../../utilities/localization';
 import Button from '../common/button.astro';
-import Squircle from '../common/squircle.astro';
 import Icon from '../common/icon.astro';
+import Squircle from '../common/squircle.astro';
 import Profiles from './profiles.astro';
 
 interface Properties {
@@ -19,11 +19,11 @@ const m = useMessages(locale);
 const name = [contact.name.first, contact.name.last].join(' ');
 ---
 <div class="flex flex-col gap-4rem sm:(flex-row items-end) md:(flex-col items-center)">
-	<div class="flex flex-col gap-2rem items-start max-w-15rem dark:(text-gray-100)">
+	<div class="flex flex-col gap-2rem max-w-15rem items-start dark:(text-gray-100)">
 		<a href={`/${locale}`} class="group">
-			<Squircle class="w-10rem aspect-square bg-white transition duration-250 ease-in-out group-hover:(scale-95 contrast-125)">
+			<Squircle class="bg-white w-10rem aspect-square transition duration-250 ease-in-out group-hover:(scale-95 contrast-125)">
 				<img
-					class="w-full h-full object-cover"
+					class="h-full w-full object-cover"
 					src="https://gravatar.com/avatar/66cf7a45695ac4314ff45b4ec65ed765?s=512"
 					width="256"
 					height="256"
@@ -35,7 +35,7 @@ const name = [contact.name.first, contact.name.last].join(' ');
 		</a>
 
 		<div class="flex flex-col gap-1rem">
-			<p class="font-serif font-500 text-2.25rem leading-tight">
+			<p class="text-2.25rem leading-tight font-500 font-serif">
 				{name}
 			</p>
 
@@ -44,7 +44,7 @@ const name = [contact.name.first, contact.name.last].join(' ');
 					{contact.role}
 				</p>
 
-				<p class="flex flex-row gap-0.25rem items-center text-1rem text-gray-600 dark:(text-gray-300)">
+				<p class="text-1rem text-gray-600 flex flex-row gap-0.25rem items-center dark:(text-gray-300)">
 					<Icon name="i-ri-global-line" />
 
 					<span>
@@ -59,9 +59,9 @@ const name = [contact.name.first, contact.name.last].join(' ');
 	</div>
 
 	<div class="flex flex-col gap-2.5rem items-start print:(hidden)">
-		<div class="flex flex-col gap-1rem text-1.25rem leading-snug">
-			<p class="flex flex-row items-center gap-0.5rem">
-				<b class="font-serif font-500 text-1.5rem">{m('hello')}</b>
+		<div class="text-1.25rem leading-snug flex flex-col gap-1rem">
+			<p class="flex flex-row gap-0.5rem items-center">
+				<b class="text-1.5rem font-500 font-serif">{m('hello')}</b>
 				<Icon name="i-noto-waving-hand" />
 			</p>
 

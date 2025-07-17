@@ -1,7 +1,7 @@
 ---
-import Layout from '../layouts/default.astro';
-import Contact from '../components/resume/contact.astro';
 import Button from '../components/common/button.astro';
+import Contact from '../components/resume/contact.astro';
+import Layout from '../layouts/default.astro';
 import { useMessages } from '../utilities/localization';
 
 const locale = Astro.currentLocale;
@@ -10,7 +10,7 @@ const m = useMessages(locale);
 const {
 	contact,
 	profiles,
-} = await fetch(`https://api.thasmo.com/${locale}/`).then((response) => response.json());
+} = await fetch(`https://api.thasmo.com/${locale}/`).then(response => response.json());
 ---
 <Layout title={`« ${m('undefined')} »`}>
 	<div class="flex flex-col gap-5rem">

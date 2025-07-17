@@ -48,9 +48,6 @@ importers:
       '@somehow-digital/eslint-config':
         specifier: ^4.0.0
         version: 4.0.1(@vue/compiler-sfc@3.5.17)(astro-eslint-parser@1.2.2)(eslint@9.31.0(jiti@2.4.2))(prettier@3.6.2)(ts-api-utils@2.1.0(typescript@5.8.3))(typescript@5.8.3)
-      '@somehow-digital/prettier-config':
-        specifier: ^3.0.0
-        version: 3.0.0(prettier@3.6.2)
       '@somehow-digital/typescript-config':
         specifier: ^3.0.0
         version: 3.0.0(typescript@5.8.3)
@@ -84,9 +81,6 @@ importers:
       netlify-cli:
         specifier: ^22.2.2
         version: 22.3.0(@types/node@22.16.4)(picomatch@4.0.3)(rollup@4.45.1)
-      prettier:
-        specifier: 3.6.2
-        version: 3.6.2
       typescript:
         specifier: ^5.4.5
         version: 5.8.3
@@ -1951,12 +1945,6 @@ packages:
     engines: {node: '>=20', pnpm: '>=10'}
     peerDependencies:
       eslint: ^9.5.0
-
-  '@somehow-digital/prettier-config@3.0.0':
-    resolution: {integrity: sha512-T+bO2tmp5AwkIcYf/k/f2J/0S2jSOXDSexHJiKe27SUbWI6SlXb8fMgfq8sdOfR+KiHPtp39UwauFzGu1Skcgg==}
-    engines: {node: '>=22', pnpm: '>=10'}
-    peerDependencies:
-      prettier: ^3.0.3
 
   '@somehow-digital/typescript-config@3.0.0':
     resolution: {integrity: sha512-7UzoknMHZVFJJaQqV+GGbaEnURXFkJTbIYTDEoK4CPrlXsrsfT0LqpO8XB4+AP91dDZP00FNu77OTVgSKsPqsw==}
@@ -9103,10 +9091,6 @@ snapshots:
       - ts-api-utils
       - typescript
       - vitest
-
-  '@somehow-digital/prettier-config@3.0.0(prettier@3.6.2)':
-    dependencies:
-      prettier: 3.6.2
 
   '@somehow-digital/typescript-config@3.0.0(typescript@5.8.3)':
     dependencies:

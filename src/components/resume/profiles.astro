@@ -1,7 +1,7 @@
 ---
-import { type Profile } from '../../types';
-import Icon from '../common/icon.astro';
+import type { Profile } from '../../types';
 import { useMessages } from '../../utilities/localization';
+import Icon from '../common/icon.astro';
 
 interface Properties {
 	profiles: Profile[];
@@ -19,7 +19,7 @@ const icons = {
 	'linkedin': 'i-ri-linkedin-fill',
 	'bluesky': 'i-ri-bluesky-fill',
 	'stack overflow': 'i-ri-stack-overflow-fill',
-}
+};
 
 const colors = {
 	'github': '#181717',
@@ -27,32 +27,34 @@ const colors = {
 	'linkedin': '#0a66c2',
 	'bluesky': '#0085ff',
 	'stack overflow': '#f48024',
-}
+};
 
-const getIcon = (name: string) => {
+function getIcon(name: string) {
 	const key = name.toLowerCase() as keyof typeof icons;
 	return icons[key];
 }
 
-const getColor = (name: string) => {
+function getColor(name: string) {
 	const key = name.toLowerCase() as keyof typeof colors;
 	return colors[key];
 }
 
-const getMessageKey = (name: string): keyof typeof m => {
+function getMessageKey(name: string): keyof typeof m {
 	const key = name.toLowerCase().replace(' ', '_');
 	return `link_${key}` as keyof typeof m;
 }
 ---
 <section class:list={['flex flex-row justify-between', classes]}>
-	{profiles.map((profile) => (
-		<a href={profile.url}
-		   target="_blank"
-		   rel="noopener noreferrer"
-		   title={m(getMessageKey(profile.name))}
-		   aria-label={m(getMessageKey(profile.name))}
-		   class="group block p-0.5rem grow-0 shrink-0 aspect-square rounded-full text-1.75rem text-gray-500 dark:(text-gray-300) hover:(text-[--color] bg-white dark:(text-[--color]))"
-		   style={{ '--color': getColor(profile.name) }}>
+	{profiles.map(profile => (
+		<a
+			href={profile.url}
+			target="_blank"
+			rel="noopener noreferrer"
+			title={m(getMessageKey(profile.name))}
+			aria-label={m(getMessageKey(profile.name))}
+			class="group text-1.75rem text-gray-500 p-0.5rem rounded-full shrink-0 grow-0 aspect-square block dark:(text-gray-300) hover:(text-[--color] bg-white dark:text-[--color])"
+			style={{ '--color': getColor(profile.name) }}
+		>
 			<Icon name={getIcon(profile.name)} />
 		</a>
 	))}
