@@ -1,15 +1,14 @@
 ---
-import { useMessages } from '../../utilities/localization';
-
-import Layout from '../../layouts/default.astro';
-import Experiences from '../../components/resume/experiences.astro';
-import Projects from '../../components/resume/projects.astro';
-import Technologies from '../../components/resume/technologies.astro';
-import Languages from '../../components/resume/languages.astro';
-import Interests from '../../components/resume/interests.astro';
-import Values from '../../components/resume/values.astro';
 import Contact from '../../components/resume/contact.astro';
+import Experiences from '../../components/resume/experiences.astro';
+import Interests from '../../components/resume/interests.astro';
+import Languages from '../../components/resume/languages.astro';
+import Projects from '../../components/resume/projects.astro';
 import Skills from '../../components/resume/skills.astro';
+import Technologies from '../../components/resume/technologies.astro';
+import Values from '../../components/resume/values.astro';
+import Layout from '../../layouts/default.astro';
+import { useMessages } from '../../utilities/localization';
 
 const locale = Astro.currentLocale;
 const m = useMessages(locale);
@@ -24,9 +23,9 @@ const {
 	skills,
 	values,
 	profiles,
-} = await fetch(`https://api.thasmo.com/${locale}/`).then((response) => response.json());
+} = await fetch(`https://api.thasmo.com/${locale}/`).then(response => response.json());
 
-export const getStaticPaths = async () => {
+export async function getStaticPaths() {
 	return [
 		{ params: { locale: 'en' } },
 		{ params: { locale: 'de' } },
@@ -38,7 +37,7 @@ export const getStaticPaths = async () => {
 		<Experiences experiences={experiences} />
 		<Projects projects={projects} />
 
-		<div class="flex flex-col gap-5rem print:(grid grid-cols-2 gap-2.5rem)">
+		<div class="flex flex-col gap-5rem print:(gap-2.5rem grid grid-cols-2)">
 			<Technologies technologies={technologies} />
 			<Skills skills={skills} />
 			<Values values={values} />

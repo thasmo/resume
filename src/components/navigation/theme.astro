@@ -1,54 +1,55 @@
 ---
-import Icon from '../common/icon.astro';
 import { useMessages } from '../../utilities/localization';
+import Icon from '../common/icon.astro';
 
 const locale = Astro.currentLocale;
 
 const m = useMessages(locale);
 ---
-<button data-ref-switch class="block aspect-square p-0.5rem rounded-full bg-yellow-300 cursor-pointer text-1.5rem hover:(bg-yellow-400) dark:(bg-yellow-900 hover:(bg-yellow-800))" title={m('switch_theme')} aria-label={m('switch_theme')}>
+<button data-ref-switch class="text-1.5rem p-0.5rem rounded-full bg-yellow-300 aspect-square block cursor-pointer dark:(bg-yellow-900 hover:bg-yellow-800) hover:(bg-yellow-400)" title={m('switch_theme')} aria-label={m('switch_theme')}>
 	<Icon name="i-ri-lightbulb-line" class="block hidden dark:(block)" />
 	<Icon name="i-ri-lightbulb-flash-line" class="block dark:(hidden)" />
 </button>
 
 <script>
-	const enableDarkMode = () => {
-		localStorage.setItem('dark', '1');
-	};
+function enableDarkMode() {
+	localStorage.setItem('dark', '1');
+}
 
-	const disableDarkMode = () => {
-		localStorage.setItem('dark', '0');
-	};
+function disableDarkMode() {
+	localStorage.setItem('dark', '0');
+}
 
-	const isDarkMode = () => {
-		return localStorage.getItem('dark') === '1' || (
-			localStorage.getItem('dark') === null &&
-			window.matchMedia('(prefers-color-scheme: dark)').matches
-		);
-	};
+function isDarkMode() {
+	return localStorage.getItem('dark') === '1' || (
+		localStorage.getItem('dark') === null
+		&& window.matchMedia('(prefers-color-scheme: dark)').matches
+	);
+}
 
-	const applyDarkModeStyles = () => {
-		document.documentElement.classList.add('dark');
-	};
+function applyDarkModeStyles() {
+	document.documentElement.classList.add('dark');
+}
 
-	const revokeDarkModeStyles = () => {
-		document.documentElement.classList.remove('dark');
-	};
+function revokeDarkModeStyles() {
+	document.documentElement.classList.remove('dark');
+}
 
-	const toggleDarkMode = () => {
-		if (isDarkMode()) {
-			disableDarkMode();
-			revokeDarkModeStyles();
-		} else {
-			enableDarkMode();
-			applyDarkModeStyles();
-		}
-	};
-
+function toggleDarkMode() {
 	if (isDarkMode()) {
+		disableDarkMode();
+		revokeDarkModeStyles();
+	}
+	else {
+		enableDarkMode();
 		applyDarkModeStyles();
 	}
+}
 
-	document.querySelector('[data-ref-switch]')?.addEventListener('click', () => toggleDarkMode());
-	window.addEventListener('beforeprint', () => isDarkMode() && toggleDarkMode());
+if (isDarkMode()) {
+	applyDarkModeStyles();
+}
+
+document.querySelector('[data-ref-switch]')?.addEventListener('click', () => toggleDarkMode());
+window.addEventListener('beforeprint', () => isDarkMode() && toggleDarkMode());
 </script>

@@ -21,9 +21,9 @@ jobs:
       - name: install node
         uses: actions/setup-node@v4
         with:
-          cache: 'pnpm'
+          cache: pnpm
           check-latest: true
-          node-version-file: '.nvmrc'
+          node-version-file: .nvmrc
       - name: install dependencies
         run: pnpm install
       - name: lint title
