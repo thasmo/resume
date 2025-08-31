@@ -80,7 +80,7 @@ importers:
         version: 16.1.5
       netlify-cli:
         specifier: ^23.0.0
-        version: 23.4.2(@types/node@22.18.0)(picomatch@4.0.3)(rollup@4.50.0)
+        version: 23.4.3(@types/node@22.18.0)(picomatch@4.0.3)(rollup@4.50.0)
       typescript:
         specifier: ^5.4.5
         version: 5.9.2
@@ -5042,8 +5042,8 @@ packages:
     resolution: {integrity: sha512-Z4SmBUweYa09+o6pG+eASabEpP6QkQ70yHj351pQoEXIs8uHbaU2DWVmzBANKgflPa47A50PtB2+NgRpQvr7vA==}
     engines: {node: '>= 10'}
 
-  netlify-cli@23.4.2:
-    resolution: {integrity: sha512-I1j3D3whlq7aEqkkgTiTGiwLVANbubME0fxygUQxpZvNI6UbPAzqWvsHr+ekw4aWY3IehMlmOJAylnJvGkG14w==}
+  netlify-cli@23.4.3:
+    resolution: {integrity: sha512-Dn6CavJNgJNW6CrRWYJX9+OIVyRwOpNEL/IM2Ov0EqGSRI8YFnZUNeZHVQ54NEsMvi0B+lZjjDbdhRNJfY10qw==}
     engines: {node: '>=20.12.2'}
     hasBin: true
 
@@ -12807,7 +12807,7 @@ snapshots:
 
   neotraverse@0.6.18: {}
 
-  netlify-cli@23.4.2(@types/node@22.18.0)(picomatch@4.0.3)(rollup@4.50.0):
+  netlify-cli@23.4.3(@types/node@22.18.0)(picomatch@4.0.3)(rollup@4.50.0):
     dependencies:
       '@fastify/static': 7.0.4
       '@netlify/api': 14.0.4
