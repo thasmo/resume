@@ -22,7 +22,7 @@ jobs:
         with:
           run_install: false
       - name: install node
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v5
         with:
           cache: pnpm
           check-latest: true
@@ -48,7 +48,7 @@ jobs:
         with:
           run_install: false
       - name: install node
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v5
         with:
           cache: pnpm
           check-latest: true
