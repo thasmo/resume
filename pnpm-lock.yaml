@@ -19,7 +19,7 @@ importers:
         version: 1.49.0
       '@iconify-json/noto':
         specifier: ^1.2.3
-        version: 1.2.6
+        version: 1.2.7
       '@iconify-json/ri':
         specifier: ^1.2.5
         version: 1.2.5
@@ -889,8 +889,8 @@ packages:
   '@iarna/toml@2.2.5':
     resolution: {integrity: sha512-trnsAYxU3xnS1gPHPyU961coFyLkh4gAD/0zQ5mymY4yOZ+CYvsPqUbOFSw0aDM4y0tV7tiFxL/1XfXPNC6IPg==}
 
-  '@iconify-json/noto@1.2.6':
-    resolution: {integrity: sha512-/op9JHrJv8RZgM0trdlLoedcx9jBNZ6kYvTTRQrp9t8OWpqR60k0tHZ5Nt9SxT/ebQsrPbtVPUuv+odWwlQkUQ==}
+  '@iconify-json/noto@1.2.7':
+    resolution: {integrity: sha512-2pNHliXnMLpnepNTZwR9hPBSl6GmhIfXPnudFCHY5v9pJhmA7LoVb/pFY0qLDY/k+3ikET8RXRf7XFxc/pHObA==}
 
   '@iconify-json/ri@1.2.5':
     resolution: {integrity: sha512-kWGimOXMZrlYusjBKKXYOWcKhbOHusFsmrmRGmjS7rH0BpML5A9/fy8KHZqFOwZfC4M6amObQYbh8BqO5cMC3w==}
@@ -7602,7 +7602,7 @@ snapshots:
 
   '@iarna/toml@2.2.5': {}
 
-  '@iconify-json/noto@1.2.6':
+  '@iconify-json/noto@1.2.7':
     dependencies:
       '@iconify/types': 2.0.0
 
