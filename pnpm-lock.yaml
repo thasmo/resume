@@ -16,7 +16,7 @@ importers:
         version: 3.6.0
       '@dotenvx/dotenvx':
         specifier: ^1.36.0
-        version: 1.49.1
+        version: 1.50.1
       '@iconify-json/noto':
         specifier: ^1.2.3
         version: 1.2.7
@@ -551,8 +551,8 @@ packages:
     resolution: {integrity: sha512-Y6+WUMsTFWE5jb20IFP4YGa5IrGY/+a/FbOSjDF/wz9gepU2hwCYSXRHP/vPwBvwcY3SVMASt4yXxbXNXigmZQ==}
     engines: {node: '>=18'}
 
-  '@dotenvx/dotenvx@1.49.1':
-    resolution: {integrity: sha512-LQ8cem3RU/mI2iz5Sy+ypnhfhVge3bc9tsLJg5rdf7j7u1RRTfmmSdLwSjeYI7sL9ToN7rgFkOGSBJqaBT+gSQ==}
+  '@dotenvx/dotenvx@1.50.1':
+    resolution: {integrity: sha512-0hymEluMsQwwukPcnF7IjhmgA6j2jaZtfOtFafOgeZi24BJHY1lHlqwD7dO46KF9WCfpBB3J5uAEwlgBOzAAxg==}
     hasBin: true
 
   '@dprint/formatter@0.3.0':
@@ -7412,7 +7412,7 @@ snapshots:
       gonzales-pe: 4.3.0
       node-source-walk: 7.0.1
 
-  '@dotenvx/dotenvx@1.49.1':
+  '@dotenvx/dotenvx@1.50.1':
     dependencies:
       commander: 11.1.0
       dotenv: 17.2.2
