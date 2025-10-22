@@ -77,7 +77,7 @@ importers:
         version: 5.66.2(@types/node@22.18.12)(typescript@5.9.3)
       lint-staged:
         specifier: ^16.0.0
-        version: 16.2.5
+        version: 16.2.6
       netlify-cli:
         specifier: ^23.0.0
         version: 23.9.2(@types/node@22.18.12)(picomatch@4.0.3)(rollup@4.52.5)
@@ -4719,8 +4719,8 @@ packages:
   lines-and-columns@1.2.4:
     resolution: {integrity: sha512-7ylylesZQ/PV29jhEDl3Ufjo6ZX7gCqJr5F7PKrqc93v7fzSymt1BpwEU8nAUXs8qzzvqhbjhK5QZg6Mt/HkBg==}
 
-  lint-staged@16.2.5:
-    resolution: {integrity: sha512-o36wH3OX0jRWqDw5dOa8a8x6GXTKaLM+LvhRaucZxez0IxA+KNDUCiyjBfNgsMNmchwSX6urLSL7wShcUqAang==}
+  lint-staged@16.2.6:
+    resolution: {integrity: sha512-s1gphtDbV4bmW1eylXpVMk2u7is7YsrLl8hzrtvC70h4ByhcMLZFY01Fx05ZUDNuv1H8HO4E+e2zgejV1jVwNw==}
     engines: {node: '>=20.17'}
     hasBin: true
 
@@ -12489,7 +12489,7 @@ snapshots:
 
   lines-and-columns@1.2.4: {}
 
-  lint-staged@16.2.5:
+  lint-staged@16.2.6:
     dependencies:
       commander: 14.0.1
       listr2: 9.0.5
