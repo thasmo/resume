@@ -41,7 +41,7 @@
 		"@somehow-digital/eslint-config": "^4.0.0",
 		"@somehow-digital/typescript-config": "^3.0.0",
 		"@somehow-digital/unocss-preset": "^2.0.0",
-		"@types/node": "^22.8.7",
+		"@types/node": "^24.0.0",
 		"@unocss/preset-web-fonts": "^66.3.3",
 		"concurrently": "^9.1.0",
 		"cspell": "^9.0.0",
