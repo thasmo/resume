@@ -44,7 +44,7 @@ function getMessageKey(name: string): keyof typeof m {
 	return `link_${key}` as keyof typeof m;
 }
 ---
-<section class:list={['flex flex-row justify-between', classes]}>
+<section class:list={['flex flex-row gap-1', classes]}>
 	{profiles.map(profile => (
 		<a
 			href={profile.url}
