@@ -55,8 +55,12 @@
 	},
 	"pnpm": {
 		"onlyBuiltDependencies": [
+			"@parcel/watcher",
 			"esbuild",
-			"sharp"
+			"netlify-cli",
+			"protobufjs",
+			"sharp",
+			"unix-dgram"
 		]
 	}
 }
