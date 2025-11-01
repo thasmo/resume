@@ -13,6 +13,7 @@ export interface Experience {
 	tasks?: string[];
 	technologies: string[];
 	url: string;
+	testimonial: boolean;
 }
 
 export interface Language {

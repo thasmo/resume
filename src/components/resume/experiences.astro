@@ -26,8 +26,8 @@ const d = useDate(locale);
 					</a>
 				</h3>
 
-				<div class="flex flex-col gap-1rem print:(gap-0.5rem)">
-					{experience.positions.map(position => (
+				<div class="flex flex-col gap-1rem items-start print:(gap-0.5rem)">
+					{ experience.positions.map(position => (
 						<div>
 							<p class="text-1.25rem dark:(text-gray-300)">
 								{position.name}
@@ -39,6 +39,13 @@ const d = useDate(locale);
 							</p>
 						</div>
 					))}
+
+					{ experience.testimonial && (
+						<p class="text-gray-600 px-0.75em py-0.125em rounded-0.25em bg-gray-200 flex flex-row gap-0.35rem items-center dark:(text-gray-300 bg-gray-800)">
+							<span>{m('testimonial')}</span>
+							<span class="i-ri-lock-fill shrink-0 grow-0 block print:hidden" aria-hidden="true"></span>
+						</p>
+					)}
 				</div>
 
 				{ experience.tasks && (

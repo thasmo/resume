@@ -32,6 +32,7 @@ export const messages = {
 		touch: 'kontaktieren',
 		undefined: 'undefiniert',
 		who: 'Ich bin ein Frontend Entwickler aus Salzburg und liebe es, Dinge zu bauen.',
+		testimonial: 'Dienstzeugnis',
 	},
 	en: {
 		back: 'Bring me home.',
@@ -64,5 +65,6 @@ export const messages = {
 		touch: 'Get in touch.',
 		undefined: 'undefined',
 		who: 'I\'m a Frontend Engineer from Salzburg, and I love building things.',
+		testimonial: 'Employment Reference Letter',
 	},
 };
