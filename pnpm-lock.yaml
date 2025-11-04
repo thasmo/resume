@@ -10,7 +10,7 @@ importers:
     dependencies:
       '@astrojs/netlify':
         specifier: ^6.4.1
-        version: 6.6.0(@types/node@24.10.0)(astro@5.15.3(@netlify/blobs@10.3.1)(@types/node@24.10.0)(jiti@2.6.1)(rollup@4.52.5)(typescript@5.9.3)(yaml@2.8.1))(jiti@2.6.1)(rollup@4.52.5)(yaml@2.8.1)
+        version: 6.6.0(@types/node@24.10.0)(astro@5.15.3(@netlify/blobs@10.3.2)(@types/node@24.10.0)(jiti@2.6.1)(rollup@4.52.5)(typescript@5.9.3)(yaml@2.8.1))(jiti@2.6.1)(rollup@4.52.5)(yaml@2.8.1)
       '@astrojs/sitemap':
         specifier: ^3.2.1
         version: 3.6.0
@@ -25,10 +25,10 @@ importers:
         version: 1.2.6
       '@netlify/blobs':
         specifier: ^10.0.4
-        version: 10.3.1(supports-color@10.2.2)
+        version: 10.3.2(supports-color@10.2.2)
       astro:
         specifier: ^5.3.0
-        version: 5.15.3(@netlify/blobs@10.3.1)(@types/node@24.10.0)(jiti@2.6.1)(rollup@4.52.5)(typescript@5.9.3)(yaml@2.8.1)
+        version: 5.15.3(@netlify/blobs@10.3.2)(@types/node@24.10.0)(jiti@2.6.1)(rollup@4.52.5)(typescript@5.9.3)(yaml@2.8.1)
       lenis:
         specifier: ^1.3.4
         version: 1.3.13
@@ -38,7 +38,7 @@ importers:
         version: 20.1.0(@types/node@24.10.0)(typescript@5.9.3)
       '@playform/inline':
         specifier: ^0.1.2
-        version: 0.1.2(@netlify/blobs@10.3.1)(@types/node@24.10.0)(jiti@2.6.1)(rollup@4.52.5)(typescript@5.9.3)(yaml@2.8.1)
+        version: 0.1.2(@netlify/blobs@10.3.2)(@types/node@24.10.0)(jiti@2.6.1)(rollup@4.52.5)(typescript@5.9.3)(yaml@2.8.1)
       '@somehow-digital/commitlint-config':
         specifier: ^1.0.0
         version: 1.1.0(@commitlint/cli@20.1.0(@types/node@24.10.0)(typescript@5.9.3))(cspell@9.2.2)
@@ -1310,8 +1310,8 @@ packages:
     resolution: {integrity: sha512-G7MAvZqhPLGUqZByS9n7g7TEwYDsneHpPi/ehzZVADzH0vF2DyeWUhG1ZkwvurgIuFuhmcHBlxoLlsvf9SNFqQ==}
     engines: {node: ^14.16.0 || >=16.0.0}
 
-  '@netlify/blobs@10.3.1':
-    resolution: {integrity: sha512-s3GokkzyZzZfGk5UjEcI1N/lDmUKYJ7K7WyHOBltqyVAO7Woo6D6eVH3vEeatN/FgSPA2WbDOmL1Tei6wku3kw==}
+  '@netlify/blobs@10.3.2':
+    resolution: {integrity: sha512-Q38o+QtA8+O55aT7Zv8klwEhNSEJCO9YBfZWNNvaoDG04MXWnygAKh64ogavTZxDMKaZy2GksFyjqyFTyIC4fA==}
     engines: {node: ^14.16.0 || >=16.0.0}
 
   '@netlify/build-info@10.0.9':
@@ -1514,6 +1514,10 @@ packages:
 
   '@netlify/runtime-utils@2.2.0':
     resolution: {integrity: sha512-K3kWIxIMucibzQsATU2xw2JI+OpS9PZfPW/a+81gmeLC8tLv5YAxTVT0NFY/3imk1kcOJb9g7658jPLqDJaiAw==}
+    engines: {node: ^18.14.0 || >=20}
+
+  '@netlify/runtime-utils@2.2.1':
+    resolution: {integrity: sha512-dyJeuggzQM8+Dsi0T8Z9UjfLJ6vCmNC36W6WE2aqzfTdTw4wPkh2xlEu4LoD75+TGuYK7jIhEoU2QcCXOzfyAQ==}
     engines: {node: ^18.14.0 || >=20}
 
   '@netlify/runtime@4.1.3':
@@ -2488,20 +2492,20 @@ packages:
     resolution: {integrity: sha512-LOtTn+JgJvX8WfBVJtF08TGrdjuFzGJc4mkP8EdDI8ADbvO7kiexYep1o8dwnt0okb0jYclCDXF13xU7Ge4zSw==}
     engines: {node: '>=18.0.0'}
 
-  '@whatwg-node/fetch@0.10.11':
-    resolution: {integrity: sha512-eR8SYtf9Nem1Tnl0IWrY33qJ5wCtIWlt3Fs3c6V4aAaTFLtkEQErXu3SSZg/XCHrj9hXSJ8/8t+CdMk5Qec/ZA==}
+  '@whatwg-node/fetch@0.10.12':
+    resolution: {integrity: sha512-XmsCdDgQxbM8ha7xvIbDQyO/iES2ga0wQcM5sb+mugll1F+IzSshOMPK6n1TuqDDgjTwoU01mMa6oRhHWnpDcw==}
     engines: {node: '>=18.0.0'}
 
-  '@whatwg-node/node-fetch@0.8.1':
-    resolution: {integrity: sha512-cQmQEo7IsI0EPX9VrwygXVzrVlX43Jb7/DBZSmpnC7xH4xkyOnn/HykHpTaQk7TUs7zh59A5uTGqx3p2Ouzffw==}
+  '@whatwg-node/node-fetch@0.8.2':
+    resolution: {integrity: sha512-1PihEl0a8hm/AZD/LVRs1lEWCZCo2Q65Xm1goaHeqR314e+/Z7NI7YE10Yser8+2iZFGtv542IYr685o3aaZ/g==}
     engines: {node: '>=18.0.0'}
 
   '@whatwg-node/promise-helpers@1.3.2':
     resolution: {integrity: sha512-Nst5JdK47VIl9UcGwtv2Rcgyn5lWtZ0/mhRQ4G8NN2isxpq2TO30iqHzmwoJycjWuyUfg3GFXqP/gFHXeV57IA==}
     engines: {node: '>=16.0.0'}
 
-  '@whatwg-node/server@0.10.13':
-    resolution: {integrity: sha512-Otmxo+0mp8az3B48pLI1I4msNOXPIoP7TLm6h5wOEQmynqHt8oP9nR6NJUeJk6iI5OtFpQtkbJFwfGkmplvc3Q==}
+  '@whatwg-node/server@0.10.15':
+    resolution: {integrity: sha512-/BqffJYRIbX1HfNUZkPvtiSloC3QCvxAYC82g0uo3ruiJ44GOiCGH1q/XWF0/l5tWBvFsgX5VBA8l7IhQkCNfA==}
     engines: {node: '>=18.0.0'}
 
   '@xhmikosr/archive-type@6.0.1':
@@ -7146,15 +7150,15 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@astrojs/netlify@6.6.0(@types/node@24.10.0)(astro@5.15.3(@netlify/blobs@10.3.1)(@types/node@24.10.0)(jiti@2.6.1)(rollup@4.52.5)(typescript@5.9.3)(yaml@2.8.1))(jiti@2.6.1)(rollup@4.52.5)(yaml@2.8.1)':
+  '@astrojs/netlify@6.6.0(@types/node@24.10.0)(astro@5.15.3(@netlify/blobs@10.3.2)(@types/node@24.10.0)(jiti@2.6.1)(rollup@4.52.5)(typescript@5.9.3)(yaml@2.8.1))(jiti@2.6.1)(rollup@4.52.5)(yaml@2.8.1)':
     dependencies:
       '@astrojs/internal-helpers': 0.7.4
       '@astrojs/underscore-redirects': 1.0.0
-      '@netlify/blobs': 10.3.1(supports-color@10.2.2)
+      '@netlify/blobs': 10.3.2(supports-color@10.2.2)
       '@netlify/functions': 4.3.0(rollup@4.52.5)
       '@netlify/vite-plugin': 2.7.6(rollup@4.52.5)(vite@6.4.1(@types/node@24.10.0)(jiti@2.6.1)(yaml@2.8.1))
       '@vercel/nft': 0.30.3(rollup@4.52.5)
-      astro: 5.15.3(@netlify/blobs@10.3.1)(@types/node@24.10.0)(jiti@2.6.1)(rollup@4.52.5)(typescript@5.9.3)(yaml@2.8.1)
+      astro: 5.15.3(@netlify/blobs@10.3.2)(@types/node@24.10.0)(jiti@2.6.1)(rollup@4.52.5)(typescript@5.9.3)(yaml@2.8.1)
       esbuild: 0.25.11
       tinyglobby: 0.2.15
       vite: 6.4.1(@types/node@24.10.0)(jiti@2.6.1)(yaml@2.8.1)
@@ -8375,11 +8379,11 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@netlify/blobs@10.3.1(supports-color@10.2.2)':
+  '@netlify/blobs@10.3.2(supports-color@10.2.2)':
     dependencies:
       '@netlify/dev-utils': 4.3.0
       '@netlify/otel': 4.3.2(supports-color@10.2.2)
-      '@netlify/runtime-utils': 2.2.0
+      '@netlify/runtime-utils': 2.2.1
     transitivePeerDependencies:
       - supports-color
 
@@ -8398,7 +8402,7 @@ snapshots:
   '@netlify/build@35.2.7(@opentelemetry/api@1.8.0)(@types/node@24.10.0)(picomatch@4.0.3)(rollup@4.52.5)':
     dependencies:
       '@bugsnag/js': 8.6.0
-      '@netlify/blobs': 10.3.1(supports-color@10.2.2)
+      '@netlify/blobs': 10.3.2(supports-color@10.2.2)
       '@netlify/cache-utils': 6.0.4
       '@netlify/config': 24.0.6
       '@netlify/edge-bundler': 14.8.0
@@ -8530,7 +8534,7 @@ snapshots:
 
   '@netlify/dev-utils@4.3.0':
     dependencies:
-      '@whatwg-node/server': 0.10.13
+      '@whatwg-node/server': 0.10.15
       ansis: 4.2.0
       chokidar: 4.0.3
       decache: 4.6.2
@@ -8819,9 +8823,11 @@ snapshots:
 
   '@netlify/runtime-utils@2.2.0': {}
 
+  '@netlify/runtime-utils@2.2.1': {}
+
   '@netlify/runtime@4.1.3':
     dependencies:
-      '@netlify/blobs': 10.3.1(supports-color@10.2.2)
+      '@netlify/blobs': 10.3.2(supports-color@10.2.2)
       '@netlify/cache': 3.3.0
       '@netlify/runtime-utils': 2.2.0
       '@netlify/types': 2.1.0
@@ -9215,10 +9221,10 @@ snapshots:
 
   '@pkgr/core@0.2.9': {}
 
-  '@playform/inline@0.1.2(@netlify/blobs@10.3.1)(@types/node@24.10.0)(jiti@2.6.1)(rollup@4.52.5)(typescript@5.9.3)(yaml@2.8.1)':
+  '@playform/inline@0.1.2(@netlify/blobs@10.3.2)(@types/node@24.10.0)(jiti@2.6.1)(rollup@4.52.5)(typescript@5.9.3)(yaml@2.8.1)':
     dependencies:
       '@playform/pipe': 0.1.3
-      astro: 5.15.3(@netlify/blobs@10.3.1)(@types/node@24.10.0)(jiti@2.6.1)(rollup@4.52.5)(typescript@5.9.3)(yaml@2.8.1)
+      astro: 5.15.3(@netlify/blobs@10.3.2)(@types/node@24.10.0)(jiti@2.6.1)(rollup@4.52.5)(typescript@5.9.3)(yaml@2.8.1)
       beasties: 0.2.0
       deepmerge-ts: 7.1.5
     transitivePeerDependencies:
@@ -9984,12 +9990,12 @@ snapshots:
       '@whatwg-node/promise-helpers': 1.3.2
       tslib: 2.8.1
 
-  '@whatwg-node/fetch@0.10.11':
+  '@whatwg-node/fetch@0.10.12':
     dependencies:
-      '@whatwg-node/node-fetch': 0.8.1
+      '@whatwg-node/node-fetch': 0.8.2
       urlpattern-polyfill: 10.1.0
 
-  '@whatwg-node/node-fetch@0.8.1':
+  '@whatwg-node/node-fetch@0.8.2':
     dependencies:
       '@fastify/busboy': 3.2.0
       '@whatwg-node/disposablestack': 0.0.6
@@ -10000,11 +10006,11 @@ snapshots:
     dependencies:
       tslib: 2.8.1
 
-  '@whatwg-node/server@0.10.13':
+  '@whatwg-node/server@0.10.15':
     dependencies:
       '@envelop/instrumentation': 1.0.0
       '@whatwg-node/disposablestack': 0.0.6
-      '@whatwg-node/fetch': 0.10.11
+      '@whatwg-node/fetch': 0.10.12
       '@whatwg-node/promise-helpers': 1.3.2
       tslib: 2.8.1
 
@@ -10237,7 +10243,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  astro@5.15.3(@netlify/blobs@10.3.1)(@types/node@24.10.0)(jiti@2.6.1)(rollup@4.52.5)(typescript@5.9.3)(yaml@2.8.1):
+  astro@5.15.3(@netlify/blobs@10.3.2)(@types/node@24.10.0)(jiti@2.6.1)(rollup@4.52.5)(typescript@5.9.3)(yaml@2.8.1):
     dependencies:
       '@astrojs/compiler': 2.13.0
       '@astrojs/internal-helpers': 0.7.4
@@ -10291,7 +10297,7 @@ snapshots:
       ultrahtml: 1.6.0
       unifont: 0.6.0
       unist-util-visit: 5.0.0
-      unstorage: 1.17.2(@netlify/blobs@10.3.1)
+      unstorage: 1.17.2(@netlify/blobs@10.3.2)
       vfile: 6.0.3
       vite: 6.4.1(@types/node@24.10.0)(jiti@2.6.1)(yaml@2.8.1)
       vitefu: 1.1.1(vite@6.4.1(@types/node@24.10.0)(jiti@2.6.1)(yaml@2.8.1))
@@ -15106,7 +15112,7 @@ snapshots:
     optionalDependencies:
       '@netlify/blobs': 10.2.1
 
-  unstorage@1.17.2(@netlify/blobs@10.3.1):
+  unstorage@1.17.2(@netlify/blobs@10.3.2):
     dependencies:
       anymatch: 3.1.3
       chokidar: 4.0.3
@@ -15117,7 +15123,7 @@ snapshots:
       ofetch: 1.5.1
       ufo: 1.6.1
     optionalDependencies:
-      '@netlify/blobs': 10.3.1(supports-color@10.2.2)
+      '@netlify/blobs': 10.3.2(supports-color@10.2.2)
 
   untildify@4.0.0: {}
 
