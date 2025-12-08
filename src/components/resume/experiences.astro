@@ -48,16 +48,18 @@ const d = useDate(locale);
 					)}
 				</div>
 
-				{ experience.tasks && (
+				{ (experience.tasks || experience.technologies) && (
 					<div class="mt-0.5rem p-1.25rem rounded-0.25rem bg-white flex flex-col gap-1rem hidden print:(p-0) dark:(bg-gray-950) group-data-[open]/section:flex">
-						<ul class="text-1.1rem text-gray-600 flex flex-col gap-0.5rem dark:(text-gray-300)">
-							{experience.tasks.map(task => (
-								<li class="flex flex-row gap-0.75rem items-start">
-									<Icon name="i-ri-checkbox-circle-line" class="mt-0.25em" />
-									{task}
-								</li>
-							))}
-						</ul>
+						{ experience.tasks && (
+							<ul class="text-1.1rem text-gray-600 flex flex-col gap-0.5rem dark:(text-gray-300)">
+								{ experience.tasks.map(task => (
+									<li class="flex flex-row gap-0.75rem items-start">
+										<Icon name="i-ri-checkbox-circle-line" class="mt-0.25em" />
+										{task}
+									</li>
+								))}
+							</ul>
+						)}
 
 						<div class="text-gray-600 flex flex-row gap-0.75rem items-start dark:(text-gray-300)">
 							<Icon name="i-ri-tools-line" class="mt-0.25em" />
