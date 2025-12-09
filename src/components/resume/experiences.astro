@@ -21,7 +21,7 @@ const d = useDate(locale);
 			<div class="flex flex-col gap-0.5rem items-start print:(gap-0.25rem break-inside-avoid)">
 				<h3 class="group text-1.5rem font-500 flex flex-row gap-0.5rem items-center">
 					<a href={experience.url} target="_blank" rel="noopener noreferrer">
-						<span class="group-hover:(underline)">{experience.company}</span>
+						<span class="decoration-2px underline-offset-0.25em group-hover:(underline)">{experience.company}</span>
 						<Icon name="i-ri-arrow-right-up-long-line" class="align-middle opacity-25 inline-block bottom-0.05em pos-relative group-hover:(opacity-100) print:(hidden)" />
 					</a>
 				</h3>
@@ -41,14 +41,29 @@ const d = useDate(locale);
 					))}
 
 					{ experience.testimonial && (
-						<p class="text-gray-600 px-0.75em py-0.125em rounded-0.25em bg-gray-200 flex flex-row gap-0.35rem items-center dark:(text-gray-300 bg-gray-800)">
-							<span>{m('testimonial')}</span>
-							<span class="i-ri-lock-fill shrink-0 grow-0 block print:hidden" aria-hidden="true"></span>
-						</p>
+						<div class="text-gray-600 flex flex-row gap-0.5rem items-center dark:(text-gray-300)">
+							<Icon name="i-ri-lock-fill" />
+
+							<p class="text-gray-600 px-0.5em py-0.125em border-1px rounded-0.25em flex flex-row gap-0.35rem items-center dark:(text-gray-300)">
+								<span>{m('testimonial')}</span>
+							</p>
+						</div>
 					)}
+
+					<div class="text-gray-600 flex flex-row gap-0.5rem items-start dark:(text-gray-300)">
+						<Icon class="my-0.375em" name="i-ri-tools-line" />
+
+						<ul class="flex flex-row flex-wrap gap-0.5rem">
+							{experience.technologies && experience.technologies.map(technology => (
+								<li class="px-0.5em py-0.125em rounded-0.25em bg-gray-200 dark:(text-gray-300 bg-gray-800)">
+									{technology}
+								</li>
+							))}
+						</ul>
+					</div>
 				</div>
 
-				{ (experience.tasks || experience.technologies) && (
+				{ experience.tasks && (
 					<div class="mt-0.5rem p-1.25rem rounded-0.25rem bg-white flex flex-col gap-1rem hidden print:(p-0) dark:(bg-gray-950) group-data-[open]/section:flex">
 						{ experience.tasks && (
 							<ul class="text-1.1rem text-gray-600 flex flex-col gap-0.5rem dark:(text-gray-300)">
@@ -60,18 +75,6 @@ const d = useDate(locale);
 								))}
 							</ul>
 						)}
-
-						<div class="text-gray-600 flex flex-row gap-0.75rem items-start dark:(text-gray-300)">
-							<Icon name="i-ri-tools-line" class="mt-0.25em" />
-
-							<ul class="flex flex-row flex-wrap gap-0.5rem">
-								{experience.technologies && experience.technologies.map(technology => (
-									<li class="px-0.75em py-0.125em rounded-0.25em bg-gray-200 dark:(text-gray-300 bg-gray-800)">
-										{technology}
-									</li>
-								))}
-							</ul>
-						</div>
 					</div>
 				)}
 			</div>

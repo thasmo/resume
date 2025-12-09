@@ -15,4 +15,6 @@ const classes = [
 	properties.class,
 ];
 ---
-<span class:list={classes} aria-hidden="true"></span>
+{properties.name && (
+	<span class:list={classes} aria-hidden="true"></span>
+)}
