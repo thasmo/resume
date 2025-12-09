@@ -26,7 +26,7 @@ const m = useMessages(locale);
 					return a.name.localeCompare(b.name);
 				})
 				.map(technology => (
-					<a href={technology.url} target="_blank" rel="noopener noreferrer" class="px-0.75em py-0.125em rounded-0.25em bg-gray-200 flex flex-row gap-0.35rem items-center dark:(text-gray-300 bg-gray-800) hover:(text-gray-900 bg-gray-300 dark:text-gray-100 dark:bg-gray-700)">
+					<a href={technology.url} target="_blank" rel="noopener noreferrer" class="px-0.5em py-0.125em rounded-0.25em bg-gray-200 flex flex-row gap-0.25rem items-center dark:(text-gray-300 bg-gray-800) hover:(text-gray-900 bg-gray-300 dark:text-gray-100 dark:bg-gray-700)">
 						<span>{technology.name}</span>
 						<Icon name={['i-ri-arrow-up-s-line', 'i-ri-arrow-up-double-line'][technology.level - 2]} />
 					</a>

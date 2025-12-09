@@ -21,7 +21,7 @@ const d = useDate(locale);
 			<div class="flex flex-col gap-0.5rem items-start print:(gap-0.25rem break-inside-avoid)">
 				<h3 class="group text-1.5rem font-500 flex flex-row gap-0.5rem items-center">
 					<a href={project.url} target="_blank" rel="noopener noreferrer">
-						<span class="group-hover:(underline)">{project.name}</span>
+						<span class="decoration-2px underline-offset-0.25em group-hover:(underline)">{project.name}</span>
 						<Icon name="i-ri-arrow-right-up-long-line" class="align-middle opacity-25 inline-block bottom-0.05em pos-relative group-hover:(opacity-100) print:(hidden)" />
 					</a>
 				</h3>
@@ -32,23 +32,23 @@ const d = useDate(locale);
 					</p>
 				)}
 
+				<p class="text-gray-600 flex flex-row gap-0.5rem items-center dark:(text-gray-300)">
+					<Icon name="i-ri-calendar-schedule-line" />
+					<span>{d(project.start)}{project.end ? ` — ${d(project.end)}` : ` — ${m('present')}`}</span>
+				</p>
+
 				<div class="flex flex-col gap-0.5rem">
-					<div class="text-gray-600 flex flex-row gap-1rem items-center dark:(text-gray-300)">
+					<div class="text-gray-600 flex flex-row gap-0.5rem items-center dark:(text-gray-300)">
 						<Icon name="i-ri-tools-line" />
 
 						<ul class="flex flex-row flex-wrap gap-0.5rem">
 							{project.technologies && project.technologies.map(technology => (
-								<li class="px-0.75em py-0.125em rounded-0.25em bg-gray-200 dark:(text-gray-300 bg-gray-800)">
+								<li class="px-0.5em py-0.125em rounded-0.25em bg-gray-200 dark:(text-gray-300 bg-gray-800)">
 									{technology}
 								</li>
 							))}
 						</ul>
 					</div>
-
-					<p class="text-gray-600 flex flex-row gap-1rem items-center dark:(text-gray-300)">
-						<Icon name="i-ri-calendar-schedule-line" />
-						<span>{d(project.start)}{project.end ? ` — ${d(project.end)}` : ` — ${m('present')}`}</span>
-					</p>
 				</div>
 			</div>
 		))}
