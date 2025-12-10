@@ -10,7 +10,7 @@ importers:
     dependencies:
       '@astrojs/netlify':
         specifier: ^6.4.1
-        version: 6.6.3(@netlify/api@14.0.12)(@types/node@24.10.1)(astro@5.16.4(@netlify/blobs@10.4.3)(@types/node@24.10.1)(jiti@2.6.1)(rollup@4.53.3)(typescript@5.9.3)(yaml@2.8.2))(jiti@2.6.1)(rollup@4.53.3)(yaml@2.8.2)
+        version: 6.6.3(@netlify/api@14.0.12)(@types/node@24.10.1)(astro@5.16.5(@netlify/blobs@10.4.3)(@types/node@24.10.1)(jiti@2.6.1)(rollup@4.53.3)(typescript@5.9.3)(yaml@2.8.2))(jiti@2.6.1)(rollup@4.53.3)(yaml@2.8.2)
       '@astrojs/sitemap':
         specifier: ^3.2.1
         version: 3.6.0
@@ -28,7 +28,7 @@ importers:
         version: 10.4.3(supports-color@10.2.2)
       astro:
         specifier: ^5.3.0
-        version: 5.16.4(@netlify/blobs@10.4.3)(@types/node@24.10.1)(jiti@2.6.1)(rollup@4.53.3)(typescript@5.9.3)(yaml@2.8.2)
+        version: 5.16.5(@netlify/blobs@10.4.3)(@types/node@24.10.1)(jiti@2.6.1)(rollup@4.53.3)(typescript@5.9.3)(yaml@2.8.2)
       lenis:
         specifier: ^1.3.4
         version: 1.3.15
@@ -154,8 +154,8 @@ packages:
   '@astrojs/internal-helpers@0.7.5':
     resolution: {integrity: sha512-vreGnYSSKhAjFJCWAwe/CNhONvoc5lokxtRoZims+0wa3KbHBdPHSSthJsKxPd8d/aic6lWKpRTYGY/hsgK6EA==}
 
-  '@astrojs/markdown-remark@6.3.9':
-    resolution: {integrity: sha512-hX2cLC/KW74Io1zIbn92kI482j9J7LleBLGCVU9EP3BeH5MVrnFawOnqD0t/q6D1Z+ZNeQG2gNKMslCcO36wng==}
+  '@astrojs/markdown-remark@6.3.10':
+    resolution: {integrity: sha512-kk4HeYR6AcnzC4QV8iSlOfh+N8TZ3MEStxPyenyCtemqn8IpEATBFMTJcfrNW32dgpt6MY3oCkMM/Tv3/I4G3A==}
 
   '@astrojs/netlify@6.6.3':
     resolution: {integrity: sha512-vGfdu5qapcqJPJHxJHr2pdyPefoAAkjxT057J16k49/kkRENzALGx8tN/sdzKj7nBOcVbtfJBxXBTC9VjBBEdA==}
@@ -2803,8 +2803,8 @@ packages:
     resolution: {integrity: sha512-JepyLROIad6f44uyqMF6HKE2QbunNzp3mYKRcPoDGt0QkxXmH222FAFC64WTyQu2Kg8NNEXHTN/sWuUId9sSxw==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
 
-  astro@5.16.4:
-    resolution: {integrity: sha512-rgXI/8/tnO3Y9tfAaUyg/8beKhlIMltbiC8Q6jCoAfEidOyaue4KYKzbe0gJIb6qEdEaG3Kf3BY3EOSLkbWOLg==}
+  astro@5.16.5:
+    resolution: {integrity: sha512-QeuM4xzTR0QuXFDNlGVW0BW7rcquKFIkylaPeM4ufii0/RRiPTYtwxDYVZ3KfiMRuuc+nbLD0214kMKTvz/yvQ==}
     engines: {node: 18.20.8 || ^20.3.0 || >=22.0.0, npm: '>=9.6.5', pnpm: '>=7.1.0'}
     hasBin: true
 
@@ -3545,8 +3545,8 @@ packages:
   dettle@1.0.5:
     resolution: {integrity: sha512-ZVyjhAJ7sCe1PNXEGveObOH9AC8QvMga3HJIghHawtG7mE4K5pW9nz/vDGAr/U7a3LWgdOzEE7ac9MURnyfaTA==}
 
-  devalue@5.5.0:
-    resolution: {integrity: sha512-69sM5yrHfFLJt0AZ9QqZXGCPfJ7fQjvpln3Rq5+PS03LD32Ost1Q9N+eEnaQwGRIriKkMImXD56ocjQmfjbV3w==}
+  devalue@5.6.0:
+    resolution: {integrity: sha512-BaD1s81TFFqbD6Uknni42TrolvEWA1Ih5L+OiHWmi4OYMJVwAYPGtha61I9KxTf52OvVHozHyjPu8zljqdF3uA==}
 
   devlop@1.1.0:
     resolution: {integrity: sha512-RWmIqhcFf1lRYBvNmr7qTNuyCt/7/ns2jbpp1+PalgE/rDQcBT0fioSMUpJ93irlUhC5hrg4cYqe6U+0ImW0rA==}
@@ -5992,8 +5992,8 @@ packages:
   regex-utilities@2.3.0:
     resolution: {integrity: sha512-8VhliFJAWRaUiVvREIiW2NXXTmHs4vMNnSzuJVhscgmGav3g9VDxLrQndI3dZZVVdp0ZO/5v0xmX516/7M9cng==}
 
-  regex@6.0.1:
-    resolution: {integrity: sha512-uorlqlzAKjKQZ5P+kTJr3eeJGSVroLKoHmquUj4zHWuR+hEyNqlXsSKlYYF5F4NI6nl7tWCs0apKJ0lmfsXAPA==}
+  regex@6.1.0:
+    resolution: {integrity: sha512-6VwtthbV4o/7+OaAF9I5L5V3llLEsoPyq9P1JVXkedTP33c7MfCG0/5NOPcSJn0TzXcG9YUrR0gQSWioew3LDg==}
 
   regexp-ast-analysis@0.7.1:
     resolution: {integrity: sha512-sZuz1dYW/ZsfG17WSAG7eS85r5a0dDsvg+7BiiYR5o6lKCAtUrEwdmRmaGF6rwVj3LcmAeYkOWKEPlbPzN3Y3A==}
@@ -7218,7 +7218,7 @@ snapshots:
 
   '@astrojs/internal-helpers@0.7.5': {}
 
-  '@astrojs/markdown-remark@6.3.9':
+  '@astrojs/markdown-remark@6.3.10':
     dependencies:
       '@astrojs/internal-helpers': 0.7.5
       '@astrojs/prism': 3.3.0
@@ -7244,7 +7244,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@astrojs/netlify@6.6.3(@netlify/api@14.0.12)(@types/node@24.10.1)(astro@5.16.4(@netlify/blobs@10.4.3)(@types/node@24.10.1)(jiti@2.6.1)(rollup@4.53.3)(typescript@5.9.3)(yaml@2.8.2))(jiti@2.6.1)(rollup@4.53.3)(yaml@2.8.2)':
+  '@astrojs/netlify@6.6.3(@netlify/api@14.0.12)(@types/node@24.10.1)(astro@5.16.5(@netlify/blobs@10.4.3)(@types/node@24.10.1)(jiti@2.6.1)(rollup@4.53.3)(typescript@5.9.3)(yaml@2.8.2))(jiti@2.6.1)(rollup@4.53.3)(yaml@2.8.2)':
     dependencies:
       '@astrojs/internal-helpers': 0.7.5
       '@astrojs/underscore-redirects': 1.0.0
@@ -7252,7 +7252,7 @@ snapshots:
       '@netlify/functions': 5.1.0
       '@netlify/vite-plugin': 2.7.15(@netlify/api@14.0.12)(rollup@4.53.3)(vite@6.4.1(@types/node@24.10.1)(jiti@2.6.1)(yaml@2.8.2))
       '@vercel/nft': 0.30.4(rollup@4.53.3)
-      astro: 5.16.4(@netlify/blobs@10.4.3)(@types/node@24.10.1)(jiti@2.6.1)(rollup@4.53.3)(typescript@5.9.3)(yaml@2.8.2)
+      astro: 5.16.5(@netlify/blobs@10.4.3)(@types/node@24.10.1)(jiti@2.6.1)(rollup@4.53.3)(typescript@5.9.3)(yaml@2.8.2)
       esbuild: 0.25.12
       tinyglobby: 0.2.15
       vite: 6.4.1(@types/node@24.10.1)(jiti@2.6.1)(yaml@2.8.2)
@@ -9451,7 +9451,7 @@ snapshots:
   '@playform/inline@0.1.2(@netlify/blobs@10.4.3)(@types/node@24.10.1)(jiti@2.6.1)(rollup@4.53.3)(typescript@5.9.3)(yaml@2.8.2)':
     dependencies:
       '@playform/pipe': 0.1.3
-      astro: 5.16.4(@netlify/blobs@10.4.3)(@types/node@24.10.1)(jiti@2.6.1)(rollup@4.53.3)(typescript@5.9.3)(yaml@2.8.2)
+      astro: 5.16.5(@netlify/blobs@10.4.3)(@types/node@24.10.1)(jiti@2.6.1)(rollup@4.53.3)(typescript@5.9.3)(yaml@2.8.2)
       beasties: 0.2.0
       deepmerge-ts: 7.1.5
     transitivePeerDependencies:
@@ -10396,11 +10396,11 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  astro@5.16.4(@netlify/blobs@10.4.3)(@types/node@24.10.1)(jiti@2.6.1)(rollup@4.53.3)(typescript@5.9.3)(yaml@2.8.2):
+  astro@5.16.5(@netlify/blobs@10.4.3)(@types/node@24.10.1)(jiti@2.6.1)(rollup@4.53.3)(typescript@5.9.3)(yaml@2.8.2):
     dependencies:
       '@astrojs/compiler': 2.13.0
       '@astrojs/internal-helpers': 0.7.5
-      '@astrojs/markdown-remark': 6.3.9
+      '@astrojs/markdown-remark': 6.3.10
       '@astrojs/telemetry': 3.3.0
       '@capsizecss/unpack': 3.0.1
       '@oslojs/encoding': 1.1.0
@@ -10416,7 +10416,7 @@ snapshots:
       cssesc: 3.0.0
       debug: 4.4.3(supports-color@10.2.2)
       deterministic-object-hash: 2.0.2
-      devalue: 5.5.0
+      devalue: 5.6.0
       diff: 5.2.0
       dlv: 1.1.3
       dset: 3.1.4
@@ -11241,7 +11241,7 @@ snapshots:
 
   dettle@1.0.5: {}
 
-  devalue@5.5.0: {}
+  devalue@5.6.0: {}
 
   devlop@1.1.0:
     dependencies:
@@ -13867,7 +13867,7 @@ snapshots:
   oniguruma-to-es@4.3.4:
     dependencies:
       oniguruma-parser: 0.12.1
-      regex: 6.0.1
+      regex: 6.1.0
       regex-recursion: 6.0.2
 
   open@10.2.0:
@@ -14346,7 +14346,7 @@ snapshots:
 
   regex-utilities@2.3.0: {}
 
-  regex@6.0.1:
+  regex@6.1.0:
     dependencies:
       regex-utilities: 2.3.0
 
