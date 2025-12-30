@@ -59,7 +59,7 @@ importers:
         version: 24.10.4
       '@unocss/preset-web-fonts':
         specifier: ^66.3.3
-        version: 66.5.11
+        version: 66.5.12
       concurrently:
         specifier: ^9.1.0
         version: 9.2.1
@@ -2493,6 +2493,9 @@ packages:
   '@unocss/core@66.5.11':
     resolution: {integrity: sha512-Wavk2l7vjyd8SlQ8MmMQSSCPdiJEv+cF1l42fsiGSteoOFkbF6uNgmO2CqF5VlXbBjh1ovvQQkLc/0CGOZZXIA==}
 
+  '@unocss/core@66.5.12':
+    resolution: {integrity: sha512-/m6su0OXcCYRwIMf8sobBjZTC25iBLUnQVcfyvHOJwLJzOMr8dtNmZbqTs7+Kouz40jlPF7pR+ufFrN+s5ZD7g==}
+
   '@unocss/eslint-plugin@66.5.11':
     resolution: {integrity: sha512-484fCE64958z8kFY+iVjjnfv0SJ/634Nx/fVfuZyuLZRkk9YLq6Af6AVVlcKTjcmFqtH+jjNBCUXtf1SbyOpEA==}
     engines: {node: '>=14'}
@@ -2529,6 +2532,9 @@ packages:
 
   '@unocss/preset-web-fonts@66.5.11':
     resolution: {integrity: sha512-J1VLPOPejSiVcn5YssEufW4P6m3AWSZW8u0kDb25oltSeDab6mkZKA3psYPrliaYDb6DrMmhxFePb1NuycuGQw==}
+
+  '@unocss/preset-web-fonts@66.5.12':
+    resolution: {integrity: sha512-NSUf+H5X0jZ1PLWW6D5ldBERERpbH8VvkpJJhxNTCS54Lj5vJiZ1S06UYxBB57vuUOaHpQOGTbKUSc204LCqdw==}
 
   '@unocss/preset-wind3@66.5.11':
     resolution: {integrity: sha512-Ols2gGKdyx51tuugkjspN/ZNETnDm0jXu6EoNPcob4cPCyWlowS1EzaT1qKaUtVnaLVyVhGFziakTo9B0nwQzg==}
@@ -9931,6 +9937,8 @@ snapshots:
 
   '@unocss/core@66.5.11': {}
 
+  '@unocss/core@66.5.12': {}
+
   '@unocss/eslint-plugin@66.5.11(eslint@9.39.2(jiti@2.6.1))(typescript@5.9.3)':
     dependencies:
       '@typescript-eslint/utils': 8.50.1(eslint@9.39.2(jiti@2.6.1))(typescript@5.9.3)
@@ -10001,6 +10009,11 @@ snapshots:
       '@unocss/core': 66.5.11
       ofetch: 1.5.1
 
+  '@unocss/preset-web-fonts@66.5.12':
+    dependencies:
+      '@unocss/core': 66.5.12
+      ofetch: 1.5.1
+
   '@unocss/preset-wind3@66.5.11':
     dependencies:
       '@unocss/core': 66.5.11
@@ -10022,7 +10035,7 @@ snapshots:
 
   '@unocss/rule-utils@66.5.11':
     dependencies:
-      '@unocss/core': 66.5.11
+      '@unocss/core': 66.5.12
       magic-string: 0.30.21
 
   '@unocss/transformer-attributify-jsx@66.5.11':
