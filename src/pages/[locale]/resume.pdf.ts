@@ -1,21 +1,21 @@
 import type { APIRoute } from 'astro';
-import { getDeployStore } from '@netlify/blobs';
 
 export const prerender = false;
 
-export const GET: APIRoute = async ({ currentLocale, site }) => {
+export const GET: APIRoute = async ({ currentLocale, locals, site }) => {
 	const url = `https://api.cloudflare.com/client/v4/accounts/${import.meta.env.CLOUDFLARE_ACCOUNT_ID}/browser-rendering/pdf`;
 	const key = `resume-${currentLocale}.pdf`;
 
-	const store = getDeployStore('files');
+	const { env } = (locals as any).runtime;
+	const store = env.FILES;
 
-	let data = await store.get(key, { consistency: 'eventual', type: 'blob' });
+	let data = await store.get(key, { type: 'arrayBuffer' });
 
 	if (!data) {
 		const options = getFetchOptions(`${site}/${currentLocale}`);
-		data = await fetch(url, options).then(async response => await response.blob());
+		data = await fetch(url, options).then(async response => await response.arrayBuffer());
 
-		await store.set(key, data);
+		await store.put(key, data);
 	}
 
 	return new Response(data, {

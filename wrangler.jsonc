@@ -1,0 +1,30 @@
+{
+	"$schema": "node_modules/wrangler/config-schema.json",
+	"name": "thasmo-resume",
+	"main": "dist/_worker.js/index.js",
+	"compatibility_date": "2025-12-31",
+	"compatibility_flags": [
+		"nodejs_compat",
+		"global_fetch_strictly_public"
+	],
+	"observability": {
+		"enabled": true,
+		"head_sampling_rate": 1
+	},
+	"assets": {
+		"binding": "ASSETS",
+		"directory": "./dist/"
+	},
+	"kv_namespaces": [
+		{
+			"binding": "FILES",
+			"id": "6fe535cdeca144be96e7bd265984c794"
+		}
+	],
+	"routes": [
+		{
+			"pattern": "resume.thasmo.com",
+			"custom_domain": true
+		}
+	]
+}
