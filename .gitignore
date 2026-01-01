@@ -1,5 +1,6 @@
 /.astro/
 /.netlify/
+/.wrangler/
 /node_modules/
 /dist/
 /public/assets/fonts/

@@ -19,6 +19,9 @@ export default defineConfig({
 	i18n: {
 		defaultLocale: 'en',
 		locales: ['en', 'de'],
+		routing: {
+			prefixDefaultLocale: true,
+		},
 	},
 	integrations: [
 		unocss(),
@@ -29,11 +32,11 @@ export default defineConfig({
 			},
 		}),
 	],
-	output: 'server',
+	output: 'static',
 	redirects: {
 		'/': {
 			status: 301,
-			destination: '/en/',
+			destination: '/en',
 		},
 	},
 	prefetch: {
@@ -41,5 +44,5 @@ export default defineConfig({
 		prefetchAll: true,
 	},
 	site: env.APPLICATION_SITE,
-	trailingSlash: 'always',
+	trailingSlash: 'never',
 });
