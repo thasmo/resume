@@ -8,7 +8,7 @@ const m = useMessages(locale);
 
 const newLocale = locale === 'en' ? 'de' : 'en';
 ---
-<a href=`/${newLocale}/` class="text-1.5rem p-r-1.25rem rounded-full bg-gray-200 flex flex-row gap-0.25rem items-center dark:(bg-gray-800 hover:bg-gray-700) hover:(bg-gray-300)" title={m('change_locale')} aria-label={m('change_locale')}>
+<a href=`/${newLocale}` class="text-1.5rem p-r-1.25rem rounded-full bg-gray-200 flex flex-row gap-0.25rem items-center dark:(bg-gray-800 hover:bg-gray-700) hover:(bg-gray-300)" title={m('change_locale')} aria-label={m('change_locale')}>
 	<span class="text-1.5rem p-0.5rem opacity-50 shrink-0 grow-0 aspect-square block">
 		<Icon name="i-ri-translate" class="scale-90" />
 	</span>
