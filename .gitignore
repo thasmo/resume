@@ -4,3 +4,4 @@
 /dist/
 /public/assets/fonts/
 .env
+worker-configuration.d.ts

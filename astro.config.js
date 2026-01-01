@@ -1,4 +1,4 @@
-import netlify from '@astrojs/netlify';
+import cloudflare from '@astrojs/cloudflare';
 import sitemap from '@astrojs/sitemap';
 import { config } from '@dotenvx/dotenvx';
 import inline from '@playform/inline';
@@ -9,7 +9,12 @@ import unocss from 'unocss/astro';
 config();
 
 export default defineConfig({
-	adapter: netlify(),
+	adapter: cloudflare({
+		imageService: 'compile',
+		platformProxy: {
+			enabled: true,
+		},
+	}),
 	base: '/',
 	i18n: {
 		defaultLocale: 'en',
@@ -24,11 +29,17 @@ export default defineConfig({
 			},
 		}),
 	],
-	output: 'static',
+	output: 'server',
+	redirects: {
+		'/': {
+			status: 301,
+			destination: '/en/',
+		},
+	},
 	prefetch: {
 		defaultStrategy: 'tap',
 		prefetchAll: true,
 	},
 	site: env.APPLICATION_SITE,
-	trailingSlash: 'never',
+	trailingSlash: 'always',
 });
