@@ -1,9 +1,7 @@
 ---
+import { Button, Heading, Icon, Label, Mask, Text } from '@thasmo/ui';
 import type { Contact, Profile } from '../../types';
 import { useMessages } from '../../utilities/localization';
-import Button from '../common/button.astro';
-import Icon from '../common/icon.astro';
-import Squircle from '../common/squircle.astro';
 import Profiles from './profiles.astro';
 
 interface Properties {
@@ -21,9 +19,9 @@ const name = [contact.name.first, contact.name.last].join(' ');
 <div class="flex flex-col gap-3rem sm:(flex-row items-end) md:(flex-col items-center)">
 	<div class="flex flex-col gap-2rem max-w-17.5rem items-start dark:(text-gray-100)">
 		<a href={`/${locale}`} class="group">
-			<Squircle class="bg-white w-10rem aspect-square transition duration-250 ease-in-out group-hover:(scale-95 contrast-125)">
+			<Mask shape="squircle" class="w-10rem transition duration-250 ease-in-out group-hover:(scale-95)">
 				<img
-					class="h-full w-full object-cover"
+					class="h-full w-full scale-105 transition duration-250 ease-in-out object-cover group-hover:(scale-100 contrast-125)"
 					src="https://gravatar.com/avatar/66cf7a45695ac4314ff45b4ec65ed765?s=512"
 					width="256"
 					height="256"
@@ -31,51 +29,45 @@ const name = [contact.name.first, contact.name.last].join(' ');
 					fetchpriority="high"
 					decoding="async"
 				/>
-			</Squircle>
+			</Mask>
 		</a>
 
 		<div class="flex flex-col gap-1rem">
-			<p class="text-2.25rem leading-tight font-500 font-serif">
+			<Heading size={3} tag="p">
 				{name}
-			</p>
+			</Heading>
 
-			<div class="flex flex-col gap-0rem">
-				<p class="text-1.25rem">
+			<div>
+				<Text tag="p">
 					{contact.role}
-				</p>
+				</Text>
 
-				<p class="text-1rem text-gray-600 flex flex-row gap-0.25rem items-center dark:(text-gray-300)">
-					<Icon name="i-ri-global-line" />
-
-					<span>
-						{contact.location.city},
-						{contact.location.country}
-					</span>
-				</p>
+				<Label icon="i-ri-global-line">
+					{contact.location.city},
+					{contact.location.country}
+				</Label>
 			</div>
 
-			<Profiles profiles={profiles} class="print:hidden" />
+			<Profiles profiles={profiles} class="print:(hidden)" />
 		</div>
 	</div>
 
-	<div class="flex flex-col gap-2.5rem items-start print:(hidden)">
-		<div class="text-1.25rem leading-snug flex flex-col gap-1rem">
-			<p class="flex flex-row gap-0.5rem items-center">
-				<b class="text-1.5rem font-500 font-serif">{m('hello')}</b>
-				<Icon name="i-noto-waving-hand" />
-			</p>
+	<Text class="print:(hidden)">
+		<Heading size={5} tag="p">
+			<span>{m('hello')}</span>
+			<Icon name="i-noto-waving-hand" class="top-0.125em relative" />
+		</Heading>
 
-			<p>
-				{m('who')}
-			</p>
+		<p>
+			{m('who')}
+		</p>
 
-			<p>
-				{m('status')}
-			</p>
-		</div>
+		<p>
+			{m('status')}
+		</p>
 
 		<Button href={`mailto:${contact.email}`} target="_blank" rel="noopener noreferrer" icon="i-ri-mail-fill">
 			{m('touch')}
 		</Button>
-	</div>
+	</Text>
 </div>

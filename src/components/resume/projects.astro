@@ -1,8 +1,7 @@
 ---
+import { Heading, Label, Link, Section, Tag, Text } from '@thasmo/ui';
 import type { Project } from '../../types';
 import { useDate, useMessages } from '../../utilities/localization';
-import Icon from '../common/icon.astro';
-import Section from '../common/section.astro';
 
 interface Properties {
 	projects: Project[];
@@ -15,41 +14,33 @@ const locale = Astro.currentLocale;
 const m = useMessages(locale);
 const d = useDate(locale);
 ---
-<Section id="projects" title={m('section_projects')} class={classes}>
+<Section client:load anchor="projects" heading={m('section_projects')} size={3} class={classes}>
 	<div class="flex flex-col gap-2.5rem print:(gap-x-2.5rem gap-y-1rem grid grid-cols-2)">
 		{projects.map(project => (
 			<div class="flex flex-col gap-0.5rem items-start print:(gap-0.25rem break-inside-avoid)">
-				<h3 class="group text-1.5rem font-500 flex flex-row gap-0.5rem items-center">
-					<a href={project.url} target="_blank" rel="noopener noreferrer">
-						<span class="decoration-2px underline-offset-0.25em group-hover:(underline)">{project.name}</span>
-						<Icon name="i-ri-arrow-right-up-long-line" class="align-middle opacity-25 inline-block bottom-0.05em pos-relative group-hover:(opacity-100) print:(hidden)" />
-					</a>
-				</h3>
+				<Heading level={3} size={5}>
+					<Link url={project.url} text={project.name} external />
+				</Heading>
 
 				{ project.description && (
-					<p class="text-1.1rem text-gray-600 mb-0.5rem dark:(text-gray-300)">
+					<Text small tag="p">
 						{project.description}
-					</p>
+					</Text>
 				)}
 
-				<p class="text-gray-600 flex flex-row gap-0.5rem items-center dark:(text-gray-300)">
-					<Icon name="i-ri-calendar-schedule-line" />
-					<span>{d(project.start)}{project.end ? ` — ${d(project.end)}` : ` — ${m('present')}`}</span>
-				</p>
+				<Label icon="i-ri-calendar-schedule-line">
+					{d(project.start)}{project.end ? ` — ${d(project.end)}` : ` — ${m('present')}`}
+				</Label>
 
-				<div class="flex flex-col gap-0.5rem">
-					<div class="text-gray-600 flex flex-row gap-0.5rem items-center dark:(text-gray-300)">
-						<Icon name="i-ri-tools-line" />
-
-						<ul class="flex flex-row flex-wrap gap-0.5rem">
-							{project.technologies && project.technologies.map(technology => (
-								<li class="px-0.5em py-0.125em rounded-0.25em bg-gray-200 dark:(text-gray-300 bg-gray-800)">
-									{technology}
-								</li>
-							))}
-						</ul>
-					</div>
-				</div>
+				<Label icon="i-ri-tools-line">
+					<ul class="flex flex-row flex-wrap gap-0.5rem">
+						{project.technologies && project.technologies.map(technology => (
+							<li>
+								<Tag label={technology} />
+							</li>
+						))}
+					</ul>
+				</Label>
 			</div>
 		))}
 	</div>

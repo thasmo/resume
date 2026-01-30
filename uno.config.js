@@ -1,12 +1,12 @@
-import presetBasic from '@somehow-digital/unocss-preset';
-import presetFonts from '@unocss/preset-web-fonts';
+import preset from '@thasmo/ui/preset';
+import fonts from '@unocss/preset-web-fonts';
 import { createLocalFontProcessor } from '@unocss/preset-web-fonts/local';
 import { defineConfig } from 'unocss';
 
 export default defineConfig({
 	presets: [
-		presetBasic(),
-		presetFonts({
+		preset(),
+		fonts({
 			fonts: {
 				sans: {
 					name: 'Fira Sans',
@@ -20,21 +20,13 @@ export default defineConfig({
 			processors: createLocalFontProcessor({
 				cacheDir: 'node_modules/.cache/unocss/fonts/',
 				fontAssetsDir: 'public/assets/fonts/',
-				fontServeBaseUrl: '/assets/fonts/',
+				fontServeBaseUrl: '/assets/fonts',
 			}),
 			provider: 'fontshare',
 		}),
 	],
-	theme: {
-		breakpoint: {
-			lg: '1400px',
-			md: '1000px',
-			sm: '600px',
-		},
-		colors: {
-			primary: {
-				DEFAULT: '#27374D',
-			},
-		},
-	},
+	safelist: [
+		'font-sans',
+		'font-serif',
+	],
 });

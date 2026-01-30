@@ -1,6 +1,6 @@
 ---
+import { Section, Tag } from '@thasmo/ui';
 import { useMessages } from '../../utilities/localization';
-import Section from '../common/section.astro';
 
 interface Properties {
 	interests: string[];
@@ -12,12 +12,12 @@ const locale = Astro.currentLocale;
 
 const m = useMessages(locale);
 ---
-<Section id="interests" title={m('section_interests')} class={classes}>
-	<div class="gap-0.5rem grid grid-cols-1 print:(flex flex-row flex-wrap gap-0.5rem) sm:(grid-cols-2)">
+<Section client:load anchor="interests" heading={m('section_interests')} size={3} class={classes}>
+	<ul class="gap-0.5rem grid grid-cols-1 print:(flex flex-row flex-wrap gap-0.5rem) sm:(grid-cols-2)">
 		{interests.map(interest => (
-			<div class="text-1.25rem text-gray-600 p-0.75rem text-center rounded-0.25rem bg-gray-200 capitalize print:(text-1rem px-0.75em py-0.125em rounded-0.25em bg-gray-200) dark:(text-gray-300 bg-gray-800)">
-				{interest}
-			</div>
+			<li>
+				<Tag label={interest} large />
+			</li>
 		))}
-	</div>
+	</ul>
 </Section>

@@ -1,14 +1,14 @@
 ---
+import { Pill } from '@thasmo/ui';
 import { useMessages } from '../../utilities/localization';
-import Icon from '../common/icon.astro';
 
 const locale = Astro.currentLocale;
 
 const m = useMessages(locale);
 ---
-<button data-ref-switch class="text-1.5rem p-0.5rem rounded-full bg-yellow-300 aspect-square block cursor-pointer dark:(bg-yellow-900 hover:bg-yellow-800) hover:(bg-yellow-400)" title={m('switch_theme')} aria-label={m('switch_theme')}>
-	<Icon name="i-ri-lightbulb-line" class="block hidden dark:(block)" />
-	<Icon name="i-ri-lightbulb-flash-line" class="block dark:(hidden)" />
+<button data-ref-switch class="block cursor-pointer" title={m('switch_theme')} aria-label={m('switch_theme')}>
+	<Pill icon="i-ri-lightbulb-flash-line" class="text-yellow-900 bg-yellow-400 block hover:(bg-yellow-500) dark:(hidden)" />
+	<Pill icon="i-ri-lightbulb-line" class="text-yellow-300 bg-yellow-900 block hidden hover:(bg-yellow-800) dark:(block)" />
 </button>
 
 <script>
