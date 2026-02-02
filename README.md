@@ -1,3 +1,3 @@
-# resume.thasmo.com
+# Resume
 
 > Personal resume.
