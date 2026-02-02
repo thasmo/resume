@@ -1,7 +1,7 @@
 ---
+import { Pill } from '@thasmo/ui';
 import type { Profile } from '../../types';
 import { useMessages } from '../../utilities/localization';
-import Icon from '../common/icon.astro';
 
 interface Properties {
 	profiles: Profile[];
@@ -44,7 +44,7 @@ function getMessageKey(name: string): keyof typeof m {
 	return `link_${key}` as keyof typeof m;
 }
 ---
-<section class:list={['flex flex-row gap-1', classes]}>
+<section class:list={['flex flex-row gap-2', classes]}>
 	{profiles.map(profile => (
 		<a
 			href={profile.url}
@@ -52,10 +52,9 @@ function getMessageKey(name: string): keyof typeof m {
 			rel="noopener noreferrer"
 			title={m(getMessageKey(profile.name))}
 			aria-label={m(getMessageKey(profile.name))}
-			class="group text-1.75rem text-gray-500 p-0.5rem rounded-full shrink-0 grow-0 aspect-square block dark:(text-gray-300) hover:(text-[--color] bg-white dark:text-[--color])"
 			style={{ '--color': getColor(profile.name) }}
 		>
-			<Icon name={getIcon(profile.name)} />
+			<Pill icon={getIcon(profile.name)} label={profile.name} style={{ '--color': getColor(profile.name) }} class="hover:(text-[--color] bg-white)" />
 		</a>
 	))}
 </section>

@@ -8,9 +8,16 @@
 	});
 
 	document.addEventListener('DOMContentLoaded', () => {
-		document.getElementById('top')?.addEventListener('click', (event) => {
-			event.preventDefault();
-			lenis.scrollTo('top');
+		document.querySelectorAll<HTMLAnchorElement>('a[href^="#"]')?.forEach((link) => {
+			link.addEventListener('click', (event) => {
+				window.history.pushState(null, '', link.hash);
+
+				lenis.scrollTo(link.hash || 'top', {
+					offset: -50,
+				});
+
+				event.preventDefault();
+			});
 		});
 	});
 </script>

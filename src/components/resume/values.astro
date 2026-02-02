@@ -1,6 +1,6 @@
 ---
+import { Section, Tag } from '@thasmo/ui';
 import { useMessages } from '../../utilities/localization';
-import Section from '../common/section.astro';
 
 interface Properties {
 	values: string[];
@@ -12,12 +12,12 @@ const locale = Astro.currentLocale;
 
 const m = useMessages(locale);
 ---
-<Section id="values" title={m('section_values')} class={classes}>
-	<div class="gap-0.5rem grid grid-cols-1 print:(flex flex-row flex-wrap gap-0.5rem) sm:(grid-cols-2)">
+<Section client:load anchor="values" heading={m('section_values')} size={3} class={classes}>
+	<ul class="gap-0.5rem grid grid-cols-1 print:(flex flex-row flex-wrap gap-0.5rem) sm:(grid-cols-2)">
 		{values.map(value => (
-			<div class="text-1.25rem text-gray-600 p-0.75rem text-center rounded-0.25rem bg-gray-200 capitalize print:(text-1rem px-0.75em py-0.125em rounded-0.25em bg-gray-200) dark:(text-gray-300 bg-gray-800)">
-				{value}
-			</div>
+			<li>
+				<Tag label={value} large />
+			</li>
 		))}
-	</div>
+	</ul>
 </Section>

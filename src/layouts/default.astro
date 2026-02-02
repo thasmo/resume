@@ -1,6 +1,7 @@
 ---
+import '@thasmo/ui/styles';
+import { Heading, Pill } from '@thasmo/ui';
 import Body from '../components/body.astro';
-import Icon from '../components/common/icon.astro';
 import Head from '../components/head.astro';
 import Navigation from '../components/navigation.astro';
 import { useMessages } from '../utilities/localization';
@@ -13,7 +14,7 @@ const { title } = Astro.props as Properties;
 const locale = Astro.currentLocale;
 const m = useMessages(locale);
 ---
-<html lang={locale} class="print:(text-75%)">
+<html lang={locale} class="scroll-p-15 print:(text-75%)">
 	<Head>
 		<slot name="head" />
 	</Head>
@@ -26,17 +27,17 @@ const m = useMessages(locale);
 
 			<main class="flex grow-1 flex-col gap-3rem print:(gap-1rem)">
 				{title && (
-					<h1 class="text-4rem text-gray-900 leading-tight font-500 font-serif dark:(text-gray-100)">
+					<Heading level={1}>
 						{title}
-					</h1>
+					</Heading>
 				)}
 
 				<div>
 					<slot />
 				</div>
 
-				<a id="top" href="#" class="text-1.75rem p-0.5rem rounded-full bg-white shrink-0 grow-0 aspect-square block self-center dark:(bg-black hover:bg-gray-800) hover:(bg-gray-200) print:(hidden)" title={m('top')} aria-label={m('top')}>
-					<Icon name="i-ri-skip-up-line" class="text-1.75rem" />
+				<a id="top" href="#" class="mx-auto mt-auto">
+					<Pill icon="i-ri-skip-up-line" title={m('top')} aria-label={m('top')} />
 				</a>
 			</main>
 

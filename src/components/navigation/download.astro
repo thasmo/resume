@@ -1,14 +1,14 @@
 ---
+import { Pill } from '@thasmo/ui';
 import { useMessages } from '../../utilities/localization';
-import Icon from '../common/icon.astro';
 
 const locale = Astro.currentLocale;
 
 const m = useMessages(locale);
 ---
-<a data-ref-download href={`/${locale}/resume.pdf`} download={m('filename')} class="group/download text-1.5rem text-white p-0.5rem rounded-full bg-black aspect-square block cursor-pointer dark:(text-black bg-white hover:bg-gray-300) hover:(bg-gray-700) data-[loading]/download:pointer-events-none" title={m('download_resume')} aria-label={m('download_resume')}>
-	<Icon name="i-ri-download-line" class="block group-data-[loading]/download:hidden" />
-	<Icon name="i-ri-loader-4-line" class="block hidden animate-spin group-data-[loading]/download:block" />
+<a data-ref-download href={`/${locale}/resume.pdf`} download={m('filename')} class="group/download cursor-pointer data-[loading]/download:pointer-events-none" title={m('download_resume')} aria-label={m('download_resume')}>
+	<Pill icon="i-ri-download-line" class="text-white bg-gray-900 block dark:(text-gray-900 bg-white hover:bg-gray-300) hover:(bg-gray-600) group-data-[loading]/download:hidden" />
+	<Pill icon="i-ri-loader-4-line" class="text-white bg-gray-900 block hidden animate-spin dark:(text-gray-900 bg-white) group-data-[loading]/download:block" />
 </a>
 
 <script>

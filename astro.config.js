@@ -1,5 +1,6 @@
 import cloudflare from '@astrojs/cloudflare';
 import sitemap from '@astrojs/sitemap';
+import vue from '@astrojs/vue';
 import { config } from '@dotenvx/dotenvx';
 import inline from '@playform/inline';
 import { defineConfig } from 'astro/config';
@@ -24,6 +25,7 @@ export default defineConfig({
 		},
 	},
 	integrations: [
+		vue(),
 		unocss(),
 		sitemap(),
 		inline({
