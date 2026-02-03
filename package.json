@@ -10,7 +10,7 @@
 	"scripts": {
 		"dev": "astro dev",
 		"build": "astro build",
-		"preview": "astro preview",
+		"preview": "wrangler dev",
 		"deploy": "wrangler deploy",
 		"upload": "wrangler versions upload",
 		"prepare": "concurrently --group --prefix-colors 'auto' 'pnpm:prepare:*'",
@@ -31,7 +31,7 @@
 		"@dotenvx/dotenvx": "^1.36.0",
 		"@iconify-json/noto": "^1.2.3",
 		"@iconify-json/ri": "^1.2.5",
-		"@thasmo/ui": "^1.0.0",
+		"@thasmo/ui": "^1.0.1",
 		"astro": "^5.3.0",
 		"lenis": "^1.3.4",
 		"vue": "^3.5.27"
