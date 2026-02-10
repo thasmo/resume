@@ -25,7 +25,7 @@ importers:
         version: 1.2.7
       '@iconify-json/ri':
         specifier: ^1.2.5
-        version: 1.2.9
+        version: 1.2.10
       '@thasmo/ui':
         specifier: ^1.0.1
         version: 1.1.0(unocss@66.6.0(postcss@8.5.6)(vite@6.4.1(@types/node@24.10.11)(jiti@2.6.1)(yaml@2.8.2)))(vue@3.5.27(typescript@5.9.3))
@@ -1372,8 +1372,8 @@ packages:
   '@iconify-json/noto@1.2.7':
     resolution: {integrity: sha512-2pNHliXnMLpnepNTZwR9hPBSl6GmhIfXPnudFCHY5v9pJhmA7LoVb/pFY0qLDY/k+3ikET8RXRf7XFxc/pHObA==}
 
-  '@iconify-json/ri@1.2.9':
-    resolution: {integrity: sha512-r9z/Lh0f0At6O6AwO/fpmRAa8jHoL/wSqA188ognPL1whFIBXXbrp1IR4m6OcuPwa41jJdzjCNxLbg7uOt7kYg==}
+  '@iconify-json/ri@1.2.10':
+    resolution: {integrity: sha512-WWMhoncVVM+Xmu9T5fgu2lhYRrKTEWhKk3Com0KiM111EeEsRLiASjpsFKnC/SrB6covhUp95r2mH8tGxhgd5Q==}
 
   '@iconify/types@2.0.0':
     resolution: {integrity: sha512-+wluvCrRhXrhyOmRDJ3q8mux9JkKy5SJ/v8ol2tu4FVjyYvtEzkc/3pK15ET6RKg4b4w4BmTk1+gsCUhf21Ykg==}
@@ -6284,7 +6284,7 @@ snapshots:
     dependencies:
       '@iconify/types': 2.0.0
 
-  '@iconify-json/ri@1.2.9':
+  '@iconify-json/ri@1.2.10':
     dependencies:
       '@iconify/types': 2.0.0
 
