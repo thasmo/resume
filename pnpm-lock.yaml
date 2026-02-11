@@ -28,7 +28,7 @@ importers:
         version: 1.2.10
       '@thasmo/ui':
         specifier: ^1.0.1
-        version: 1.1.0(unocss@66.6.0(postcss@8.5.6)(vite@6.4.1(@types/node@24.10.13)(jiti@2.6.1)(yaml@2.8.2)))(vue@3.5.28(typescript@5.9.3))
+        version: 1.1.1(unocss@66.6.0(postcss@8.5.6)(vite@6.4.1(@types/node@24.10.13)(jiti@2.6.1)(yaml@2.8.2)))(vue@3.5.28(typescript@5.9.3))
       astro:
         specifier: ^5.3.0
         version: 5.17.1(@types/node@24.10.13)(jiti@2.6.1)(rollup@4.57.1)(typescript@5.9.3)(yaml@2.8.2)
@@ -2059,8 +2059,8 @@ packages:
     peerDependencies:
       eslint: '>=9.0.0'
 
-  '@thasmo/ui@1.1.0':
-    resolution: {integrity: sha512-YO6hIPcUTys6VU7+T9/YbcJTzTJBMm2e+cCoVEL0XCVn2JXvz/9FQ94DMOi8WKLhQtg5GHC6wvAMVQILWSpQuQ==}
+  '@thasmo/ui@1.1.1':
+    resolution: {integrity: sha512-7mfJSnX5Xxf1cyI4IHcNbv2cTnf+q4QXEkSqkAQTK6ZfBaNL3l3M3vqhP9ggFAkOzIjCuIGyI3HPptJbO2c8Fw==}
     engines: {node: '>=24', pnpm: '>=10'}
     peerDependencies:
       unocss: ^66.6.0
@@ -6840,7 +6840,7 @@ snapshots:
       estraverse: 5.3.0
       picomatch: 4.0.3
 
-  '@thasmo/ui@1.1.0(unocss@66.6.0(postcss@8.5.6)(vite@6.4.1(@types/node@24.10.13)(jiti@2.6.1)(yaml@2.8.2)))(vue@3.5.28(typescript@5.9.3))':
+  '@thasmo/ui@1.1.1(unocss@66.6.0(postcss@8.5.6)(vite@6.4.1(@types/node@24.10.13)(jiti@2.6.1)(yaml@2.8.2)))(vue@3.5.28(typescript@5.9.3))':
     dependencies:
       unocss: 66.6.0(postcss@8.5.6)(vite@6.4.1(@types/node@24.10.13)(jiti@2.6.1)(yaml@2.8.2))
       vue: 3.5.28(typescript@5.9.3)
