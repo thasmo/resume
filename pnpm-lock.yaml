@@ -10,13 +10,13 @@ importers:
     dependencies:
       '@astrojs/cloudflare':
         specifier: ^12.6.12
-        version: 12.6.12(@types/node@24.10.13)(astro@5.17.1(@types/node@24.10.13)(jiti@2.6.1)(rollup@4.57.1)(typescript@5.9.3)(yaml@2.8.2))(jiti@2.6.1)(yaml@2.8.2)
+        version: 12.6.12(@types/node@24.10.13)(astro@5.17.2(@types/node@24.10.13)(jiti@2.6.1)(rollup@4.57.1)(typescript@5.9.3)(yaml@2.8.2))(jiti@2.6.1)(yaml@2.8.2)
       '@astrojs/sitemap':
         specifier: ^3.2.1
         version: 3.7.0
       '@astrojs/vue':
         specifier: ^5.1.4
-        version: 5.1.4(@types/node@24.10.13)(astro@5.17.1(@types/node@24.10.13)(jiti@2.6.1)(rollup@4.57.1)(typescript@5.9.3)(yaml@2.8.2))(jiti@2.6.1)(rollup@4.57.1)(vue@3.5.28(typescript@5.9.3))(yaml@2.8.2)
+        version: 5.1.4(@types/node@24.10.13)(astro@5.17.2(@types/node@24.10.13)(jiti@2.6.1)(rollup@4.57.1)(typescript@5.9.3)(yaml@2.8.2))(jiti@2.6.1)(rollup@4.57.1)(vue@3.5.28(typescript@5.9.3))(yaml@2.8.2)
       '@dotenvx/dotenvx':
         specifier: ^1.36.0
         version: 1.52.0
@@ -31,7 +31,7 @@ importers:
         version: 1.1.1(unocss@66.6.0(postcss@8.5.6)(vite@6.4.1(@types/node@24.10.13)(jiti@2.6.1)(yaml@2.8.2)))(vue@3.5.28(typescript@5.9.3))
       astro:
         specifier: ^5.3.0
-        version: 5.17.1(@types/node@24.10.13)(jiti@2.6.1)(rollup@4.57.1)(typescript@5.9.3)(yaml@2.8.2)
+        version: 5.17.2(@types/node@24.10.13)(jiti@2.6.1)(rollup@4.57.1)(typescript@5.9.3)(yaml@2.8.2)
       lenis:
         specifier: ^1.3.4
         version: 1.3.17(vue@3.5.28(typescript@5.9.3))
@@ -159,8 +159,8 @@ packages:
     peerDependencies:
       astro: ^5.7.0
 
-  '@astrojs/compiler@2.13.0':
-    resolution: {integrity: sha512-mqVORhUJViA28fwHYaWmsXSzLO9osbdZ5ImUfxBarqsYdMlPbqAqGJCxsNzvppp1BEzc1mJNjOVvQqeDN8Vspw==}
+  '@astrojs/compiler@2.13.1':
+    resolution: {integrity: sha512-f3FN83d2G/v32ipNClRKgYv30onQlMZX1vCeZMjPsMMPl1mDpmbl0+N5BYo4S/ofzqJyS5hvwacEo0CCVDn/Qg==}
 
   '@astrojs/internal-helpers@0.7.5':
     resolution: {integrity: sha512-vreGnYSSKhAjFJCWAwe/CNhONvoc5lokxtRoZims+0wa3KbHBdPHSSthJsKxPd8d/aic6lWKpRTYGY/hsgK6EA==}
@@ -2429,8 +2429,8 @@ packages:
     resolution: {integrity: sha512-JepyLROIad6f44uyqMF6HKE2QbunNzp3mYKRcPoDGt0QkxXmH222FAFC64WTyQu2Kg8NNEXHTN/sWuUId9sSxw==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
 
-  astro@5.17.1:
-    resolution: {integrity: sha512-oD3tlxTaVWGq/Wfbqk6gxzVRz98xa/rYlpe+gU2jXJMSD01k6sEDL01ZlT8mVSYB/rMgnvIOfiQQ3BbLdN237A==}
+  astro@5.17.2:
+    resolution: {integrity: sha512-7jnMqGo53hOQNwo1N/wqeOvUp8wwW/p+DeerSjSkHNx8L/1mhy6P7rVo7EhdmF8DpKqw0tl/B5Fx1WcIzg1ysA==}
     engines: {node: 18.20.8 || ^20.3.0 || >=22.0.0, npm: '>=9.6.5', pnpm: '>=7.1.0'}
     hasBin: true
 
@@ -3761,8 +3761,8 @@ packages:
   longest-streak@3.1.0:
     resolution: {integrity: sha512-9Ri+o0JYgehTaVBBDoMqIl8GXtbWg711O3srftcHhZ0dqnETqLaoIK0x17fUw9rFSlK/0NlsKe0Ahhyl5pXE2g==}
 
-  lru-cache@11.2.5:
-    resolution: {integrity: sha512-vFrFJkWtJvJnD5hg+hJvVE8Lh/TcMzKnTgCWmtBipwI5yLX/iX+5UB2tfuyODF5E7k9xEzMdYgGqaSb1c0c5Yw==}
+  lru-cache@11.2.6:
+    resolution: {integrity: sha512-ESL2CrkS/2wTPfuend7Zhkzo2u0daGJ/A2VucJOgQ/C48S/zB8MMeMHSGKYpXhIjbPxfuezITkaBH1wqv00DDQ==}
     engines: {node: 20 || >=22}
 
   lru-cache@5.1.1:
@@ -3771,8 +3771,8 @@ packages:
   magic-string@0.30.21:
     resolution: {integrity: sha512-vd2F4YUyEXKGcLHoq+TEyCjxueSeHnFxyyjNp80yg0XV4vUhnDer/lvvlqM/arB5bXQN5K2/3oinyCRyx8T2CQ==}
 
-  magicast@0.5.1:
-    resolution: {integrity: sha512-xrHS24IxaLrvuo613F719wvOIv9xPHFWQHuvGUBmPnCA/3MQxKI3b+r7n1jAoDHmsbC5bRhTZYR77invLAxVnw==}
+  magicast@0.5.2:
+    resolution: {integrity: sha512-E3ZJh4J3S9KfwdjZhe2afj6R9lGIN5Pher1pF39UGrXRqq/VDaGVIGN13BjHd2u8B61hArAGOnso7nBOouW3TQ==}
 
   markdown-table@3.0.4:
     resolution: {integrity: sha512-wiYz4+JrLyb/DqW2hkFJxP7Vd7JuTDm77fvbM8VfEQdmSMqcImWeeRbHwZjBjIFki/VaMK2BhFi7oUUZeM5bqw==}
@@ -5113,12 +5113,12 @@ snapshots:
 
   '@antfu/utils@0.7.10': {}
 
-  '@astrojs/cloudflare@12.6.12(@types/node@24.10.13)(astro@5.17.1(@types/node@24.10.13)(jiti@2.6.1)(rollup@4.57.1)(typescript@5.9.3)(yaml@2.8.2))(jiti@2.6.1)(yaml@2.8.2)':
+  '@astrojs/cloudflare@12.6.12(@types/node@24.10.13)(astro@5.17.2(@types/node@24.10.13)(jiti@2.6.1)(rollup@4.57.1)(typescript@5.9.3)(yaml@2.8.2))(jiti@2.6.1)(yaml@2.8.2)':
     dependencies:
       '@astrojs/internal-helpers': 0.7.5
       '@astrojs/underscore-redirects': 1.0.0
       '@cloudflare/workers-types': 4.20260131.0
-      astro: 5.17.1(@types/node@24.10.13)(jiti@2.6.1)(rollup@4.57.1)(typescript@5.9.3)(yaml@2.8.2)
+      astro: 5.17.2(@types/node@24.10.13)(jiti@2.6.1)(rollup@4.57.1)(typescript@5.9.3)(yaml@2.8.2)
       tinyglobby: 0.2.15
       vite: 6.4.1(@types/node@24.10.13)(jiti@2.6.1)(yaml@2.8.2)
       wrangler: 4.50.0(@cloudflare/workers-types@4.20260131.0)
@@ -5137,7 +5137,7 @@ snapshots:
       - utf-8-validate
       - yaml
 
-  '@astrojs/compiler@2.13.0': {}
+  '@astrojs/compiler@2.13.1': {}
 
   '@astrojs/internal-helpers@0.7.5': {}
 
@@ -5191,12 +5191,12 @@ snapshots:
 
   '@astrojs/underscore-redirects@1.0.0': {}
 
-  '@astrojs/vue@5.1.4(@types/node@24.10.13)(astro@5.17.1(@types/node@24.10.13)(jiti@2.6.1)(rollup@4.57.1)(typescript@5.9.3)(yaml@2.8.2))(jiti@2.6.1)(rollup@4.57.1)(vue@3.5.28(typescript@5.9.3))(yaml@2.8.2)':
+  '@astrojs/vue@5.1.4(@types/node@24.10.13)(astro@5.17.2(@types/node@24.10.13)(jiti@2.6.1)(rollup@4.57.1)(typescript@5.9.3)(yaml@2.8.2))(jiti@2.6.1)(rollup@4.57.1)(vue@3.5.28(typescript@5.9.3))(yaml@2.8.2)':
     dependencies:
       '@vitejs/plugin-vue': 5.2.4(vite@6.4.1(@types/node@24.10.13)(jiti@2.6.1)(yaml@2.8.2))(vue@3.5.28(typescript@5.9.3))
       '@vitejs/plugin-vue-jsx': 4.2.0(vite@6.4.1(@types/node@24.10.13)(jiti@2.6.1)(yaml@2.8.2))(vue@3.5.28(typescript@5.9.3))
       '@vue/compiler-sfc': 3.5.28
-      astro: 5.17.1(@types/node@24.10.13)(jiti@2.6.1)(rollup@4.57.1)(typescript@5.9.3)(yaml@2.8.2)
+      astro: 5.17.2(@types/node@24.10.13)(jiti@2.6.1)(rollup@4.57.1)(typescript@5.9.3)(yaml@2.8.2)
       vite: 6.4.1(@types/node@24.10.13)(jiti@2.6.1)(yaml@2.8.2)
       vite-plugin-vue-devtools: 7.7.9(rollup@4.57.1)(vite@6.4.1(@types/node@24.10.13)(jiti@2.6.1)(yaml@2.8.2))(vue@3.5.28(typescript@5.9.3))
       vue: 3.5.28(typescript@5.9.3)
@@ -6587,7 +6587,7 @@ snapshots:
   '@playform/inline@0.1.2(@types/node@24.10.13)(jiti@2.6.1)(rollup@4.57.1)(typescript@5.9.3)(yaml@2.8.2)':
     dependencies:
       '@playform/pipe': 0.1.3
-      astro: 5.17.1(@types/node@24.10.13)(jiti@2.6.1)(rollup@4.57.1)(typescript@5.9.3)(yaml@2.8.2)
+      astro: 5.17.2(@types/node@24.10.13)(jiti@2.6.1)(rollup@4.57.1)(typescript@5.9.3)(yaml@2.8.2)
       beasties: 0.2.0
       deepmerge-ts: 7.1.5
     transitivePeerDependencies:
@@ -7351,10 +7351,10 @@ snapshots:
 
   astro-eslint-parser@1.2.2:
     dependencies:
-      '@astrojs/compiler': 2.13.0
+      '@astrojs/compiler': 2.13.1
       '@typescript-eslint/scope-manager': 8.54.0
       '@typescript-eslint/types': 8.54.0
-      astrojs-compiler-sync: 1.1.1(@astrojs/compiler@2.13.0)
+      astrojs-compiler-sync: 1.1.1(@astrojs/compiler@2.13.1)
       debug: 4.4.3
       entities: 6.0.1
       eslint-scope: 8.4.0
@@ -7366,9 +7366,9 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  astro@5.17.1(@types/node@24.10.13)(jiti@2.6.1)(rollup@4.57.1)(typescript@5.9.3)(yaml@2.8.2):
+  astro@5.17.2(@types/node@24.10.13)(jiti@2.6.1)(rollup@4.57.1)(typescript@5.9.3)(yaml@2.8.2):
     dependencies:
-      '@astrojs/compiler': 2.13.0
+      '@astrojs/compiler': 2.13.1
       '@astrojs/internal-helpers': 0.7.5
       '@astrojs/markdown-remark': 6.3.10
       '@astrojs/telemetry': 3.3.0
@@ -7391,7 +7391,7 @@ snapshots:
       dlv: 1.1.3
       dset: 3.1.4
       es-module-lexer: 1.7.0
-      esbuild: 0.25.12
+      esbuild: 0.27.3
       estree-walker: 3.0.3
       flattie: 1.1.1
       fontace: 0.4.1
@@ -7401,7 +7401,7 @@ snapshots:
       import-meta-resolve: 4.2.0
       js-yaml: 4.1.1
       magic-string: 0.30.21
-      magicast: 0.5.1
+      magicast: 0.5.2
       mrmime: 2.0.1
       neotraverse: 0.6.18
       p-limit: 6.2.0
@@ -7468,9 +7468,9 @@ snapshots:
       - uploadthing
       - yaml
 
-  astrojs-compiler-sync@1.1.1(@astrojs/compiler@2.13.0):
+  astrojs-compiler-sync@1.1.1(@astrojs/compiler@2.13.1):
     dependencies:
-      '@astrojs/compiler': 2.13.0
+      '@astrojs/compiler': 2.13.1
       synckit: 0.11.12
 
   axobject-query@4.1.0: {}
@@ -8993,7 +8993,7 @@ snapshots:
 
   longest-streak@3.1.0: {}
 
-  lru-cache@11.2.5: {}
+  lru-cache@11.2.6: {}
 
   lru-cache@5.1.1:
     dependencies:
@@ -9003,7 +9003,7 @@ snapshots:
     dependencies:
       '@jridgewell/sourcemap-codec': 1.5.5
 
-  magicast@0.5.1:
+  magicast@0.5.2:
     dependencies:
       '@babel/parser': 7.29.0
       '@babel/types': 7.29.0
@@ -10243,7 +10243,7 @@ snapshots:
       chokidar: 5.0.0
       destr: 2.0.5
       h3: 1.15.5
-      lru-cache: 11.2.5
+      lru-cache: 11.2.6
       node-fetch-native: 1.6.7
       ofetch: 1.5.1
       ufo: 1.6.3
