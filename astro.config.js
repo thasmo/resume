@@ -2,7 +2,6 @@ import cloudflare from '@astrojs/cloudflare';
 import sitemap from '@astrojs/sitemap';
 import vue from '@astrojs/vue';
 import { config } from '@dotenvx/dotenvx';
-import inline from '@playform/inline';
 import { defineConfig } from 'astro/config';
 import { env } from 'node:process';
 import unocss from 'unocss/astro';
@@ -28,11 +27,6 @@ export default defineConfig({
 		vue(),
 		unocss(),
 		sitemap(),
-		inline({
-			Beasties: {
-				preload: 'swap',
-			},
-		}),
 	],
 	output: 'static',
 	redirects: {
