@@ -13,7 +13,7 @@ export const GET: APIRoute = async ({ currentLocale, site }) => {
 
 	if (!data) {
 		const options = getFetchOptions(`${site}/${currentLocale}`);
-		data = await fetch(url, options).then(async response => await response.arrayBuffer());
+		data = await globalThis.fetch(url, options).then(async response => await response.arrayBuffer());
 
 		await store.put(key, data);
 	}
