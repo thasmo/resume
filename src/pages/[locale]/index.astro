@@ -23,7 +23,7 @@ const {
 	skills,
 	values,
 	profiles,
-} = await fetch(`https://api.thasmo.com/${locale}/`).then(response => response.json());
+} = await fetch(`${import.meta.env.API_ENDPOINT}${locale}/`).then(response => response.json());
 
 export async function getStaticPaths() {
 	return [

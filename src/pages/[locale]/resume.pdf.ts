@@ -2,11 +2,11 @@ import type { APIRoute } from 'astro';
 
 export const prerender = false;
 
-export const GET: APIRoute = async ({ currentLocale, locals, site }) => {
+export const GET: APIRoute = async ({ currentLocale, site }) => {
 	const url = `https://api.cloudflare.com/client/v4/accounts/${import.meta.env.CLOUDFLARE_ACCOUNT_ID}/browser-rendering/pdf`;
 	const key = `resume-${currentLocale}.pdf`;
 
-	const { env } = (locals as any).runtime;
+	const { env } = await import('cloudflare:workers');
 	const store = env.FILES;
 
 	let data = await store.get(key, { type: 'arrayBuffer' });
