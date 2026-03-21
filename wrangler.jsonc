@@ -6,6 +6,7 @@
 		"nodejs_compat",
 		"global_fetch_strictly_public"
 	],
+	"workers_dev": true,
 	"preview_urls": true,
 	"observability": {
 		"enabled": true,
