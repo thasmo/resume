@@ -1,12 +1,12 @@
 import cloudflare from '@astrojs/cloudflare';
 import sitemap from '@astrojs/sitemap';
 import vue from '@astrojs/vue';
-import { config } from '@dotenvx/dotenvx';
 import { defineConfig } from 'astro/config';
-import { env } from 'node:process';
+import process from 'node:process';
 import unocss from 'unocss/astro';
+import { loadEnv } from 'vite';
 
-config();
+const env = loadEnv(process.env.NODE_ENV, process.cwd(), '');
 
 export default defineConfig({
 	adapter: cloudflare({

@@ -1,12 +1,12 @@
 import type { APIRoute } from 'astro';
+import { env } from 'cloudflare:workers';
 
 export const prerender = false;
 
 export const GET: APIRoute = async ({ currentLocale, site }) => {
-	const url = `https://api.cloudflare.com/client/v4/accounts/${import.meta.env.CLOUDFLARE_ACCOUNT_ID}/browser-rendering/pdf`;
+	const url = `https://api.cloudflare.com/client/v4/accounts/${env.CLOUDFLARE_ACCOUNT_ID}/browser-rendering/pdf`;
 	const key = `resume-${currentLocale}.pdf`;
 
-	const { env } = await import('cloudflare:workers');
 	const store = env.FILES;
 
 	let data = await store.get(key, { type: 'arrayBuffer' });
@@ -45,7 +45,7 @@ function getFetchOptions(url: string) {
 			url,
 		}),
 		headers: {
-			'authorization': `Bearer ${import.meta.env.CLOUDFLARE_API_TOKEN}`,
+			'authorization': `Bearer ${env.CLOUDFLARE_API_TOKEN}`,
 			'content-type': 'application/json',
 		},
 		method: 'POST',
