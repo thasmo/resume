@@ -5,3 +5,5 @@ fontshare
 iconify
 playform
 opengraph
+esbuild
+workerd
