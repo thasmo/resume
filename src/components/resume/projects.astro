@@ -1,7 +1,7 @@
 ---
 import { Heading, Label, Link, Section, Tag, Text } from '@thasmo/ui';
 import type { Project } from '../../types';
-import { useDate, useMessages } from '../../utilities/localization';
+import { getCurrentLocale, useDate, useMessages } from '../../utilities/localization';
 
 interface Properties {
 	projects: Project[];
@@ -9,7 +9,7 @@ interface Properties {
 }
 
 const { projects, class: classes } = Astro.props as Properties;
-const locale = Astro.currentLocale;
+const locale = getCurrentLocale(Astro.currentLocale);
 
 const m = useMessages(locale);
 const d = useDate(locale);

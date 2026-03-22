@@ -1,7 +1,7 @@
 ---
 import { Pill } from '@thasmo/ui';
 import type { Profile } from '../../types';
-import { useMessages } from '../../utilities/localization';
+import { getCurrentLocale, useMessages } from '../../utilities/localization';
 
 interface Properties {
 	profiles: Profile[];
@@ -10,7 +10,7 @@ interface Properties {
 
 const { profiles, class: classes } = Astro.props as Properties;
 
-const locale = Astro.currentLocale;
+const locale = getCurrentLocale(Astro.currentLocale);
 const m = useMessages(locale);
 
 const icons = {

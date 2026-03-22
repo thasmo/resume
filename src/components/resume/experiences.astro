@@ -1,7 +1,7 @@
 ---
 import { Heading, Icon, Label, Pill, Section, Tag, Text } from '@thasmo/ui';
 import type { Experience } from '../../types';
-import { useDate, useMessages } from '../../utilities/localization';
+import { getCurrentLocale, useDate, useMessages } from '../../utilities/localization';
 
 interface Properties {
 	experiences: Experience[];
@@ -9,7 +9,7 @@ interface Properties {
 }
 
 const { experiences, class: classes } = Astro.props as Properties;
-const locale = Astro.currentLocale;
+const locale = getCurrentLocale(Astro.currentLocale);
 
 const m = useMessages(locale);
 const d = useDate(locale);

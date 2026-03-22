@@ -3,14 +3,14 @@ import { Heading, Pill } from '@thasmo/ui';
 import Body from '../components/body.astro';
 import Head from '../components/head.astro';
 import Navigation from '../components/navigation.astro';
-import { useMessages } from '../utilities/localization';
+import { getCurrentLocale, useMessages } from '../utilities/localization';
 
 interface Properties {
 	title?: string;
 }
 
 const { title } = Astro.props as Properties;
-const locale = Astro.currentLocale;
+const locale = getCurrentLocale(Astro.currentLocale);
 const m = useMessages(locale);
 ---
 <html lang={locale} class="scroll-p-15 print:(text-75%)">
