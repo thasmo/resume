@@ -1,6 +1,5 @@
 ---
 import { Button, Text } from '@thasmo/ui';
-import { env } from 'cloudflare:workers';
 import Contact from '../components/resume/contact.astro';
 import Layout from '../layouts/default.astro';
 import { useMessages } from '../utilities/localization';
@@ -11,7 +10,7 @@ const m = useMessages(locale);
 const {
 	contact,
 	profiles,
-} = await fetch(`${env.API_ENDPOINT}${locale}/`).then(response => response.json());
+} = await fetch(`${import.meta.env.API_ENDPOINT}${locale}/`).then(response => response.json());
 ---
 <Layout title={`« ${m('undefined')} »`}>
 	<Text>
