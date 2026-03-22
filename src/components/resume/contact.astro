@@ -1,7 +1,7 @@
 ---
 import { Button, Heading, Icon, Label, Mask, Text } from '@thasmo/ui';
 import type { Contact, Profile } from '../../types';
-import { useMessages } from '../../utilities/localization';
+import { getCurrentLocale, useMessages } from '../../utilities/localization';
 import Profiles from './profiles.astro';
 
 interface Properties {
@@ -10,7 +10,7 @@ interface Properties {
 }
 
 const { contact, profiles } = Astro.props as Properties;
-const locale = Astro.currentLocale;
+const locale = getCurrentLocale(Astro.currentLocale);
 
 const m = useMessages(locale);
 

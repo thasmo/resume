@@ -1,8 +1,8 @@
 ---
 import { Pill } from '@thasmo/ui';
-import { useMessages } from '../../utilities/localization';
+import { getCurrentLocale, useMessages } from '../../utilities/localization';
 
-const locale = Astro.currentLocale;
+const locale = getCurrentLocale(Astro.currentLocale);
 
 const m = useMessages(locale);
 

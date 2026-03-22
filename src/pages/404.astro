@@ -2,9 +2,9 @@
 import { Button, Text } from '@thasmo/ui';
 import Contact from '../components/resume/contact.astro';
 import Layout from '../layouts/default.astro';
-import { useMessages } from '../utilities/localization';
+import { getCurrentLocale, useMessages } from '../utilities/localization';
 
-const locale = Astro.currentLocale;
+const locale = getCurrentLocale(Astro.currentLocale);
 const m = useMessages(locale);
 
 const {

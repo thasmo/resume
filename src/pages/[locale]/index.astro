@@ -8,9 +8,9 @@ import Skills from '../../components/resume/skills.astro';
 import Technologies from '../../components/resume/technologies.astro';
 import Values from '../../components/resume/values.astro';
 import Layout from '../../layouts/default.astro';
-import { useMessages } from '../../utilities/localization';
+import { getCurrentLocale, useMessages } from '../../utilities/localization';
 
-const locale = Astro.currentLocale;
+const locale = getCurrentLocale(Astro.currentLocale);
 const m = useMessages(locale);
 
 const {

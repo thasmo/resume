@@ -1,7 +1,7 @@
 ---
 import { Definition, Section } from '@thasmo/ui';
 import type { Language } from '../../types';
-import { useMessages } from '../../utilities/localization';
+import { getCurrentLocale, useMessages } from '../../utilities/localization';
 
 interface Properties {
 	languages: Language[];
@@ -9,7 +9,7 @@ interface Properties {
 }
 
 const { languages, class: classes } = Astro.props as Properties;
-const locale = Astro.currentLocale;
+const locale = getCurrentLocale(Astro.currentLocale);
 
 const m = useMessages(locale);
 ---
