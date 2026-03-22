@@ -1,5 +1,4 @@
 ---
-import { env } from 'cloudflare:workers';
 import Contact from '../../components/resume/contact.astro';
 import Experiences from '../../components/resume/experiences.astro';
 import Interests from '../../components/resume/interests.astro';
@@ -24,7 +23,7 @@ const {
 	skills,
 	values,
 	profiles,
-} = await fetch(`${env.API_ENDPOINT}${locale}/`).then(response => response.json());
+} = await fetch(`${import.meta.env.API_ENDPOINT}${locale}/`).then(response => response.json());
 
 export async function getStaticPaths() {
 	return [
