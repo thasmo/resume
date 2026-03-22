@@ -15,7 +15,11 @@ export const GET: APIRoute = async ({ currentLocale, site }) => {
 		const options = getFetchOptions(`${site}/${currentLocale}`);
 		data = await globalThis.fetch(url, options).then(async response => await response.arrayBuffer());
 
-		await store.put(key, data);
+		if (data) {
+			await store.put(key, data, {
+				expirationTtl: 3600,
+			});
+		}
 	}
 
 	return new Response(data, {
