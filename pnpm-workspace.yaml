@@ -5,7 +5,6 @@ allowBuilds:
 blockExoticSubdeps: true
 enablePrePostScripts: false
 ignorePatchFailures: false
-minimumReleaseAge: 1440
 optimisticRepeatInstall: true
 shellEmulator: true
 trustPolicy: no-downgrade
