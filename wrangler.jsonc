@@ -6,6 +6,7 @@
 		"nodejs_compat",
 		"global_fetch_strictly_public"
 	],
+	"keep_vars": true,
 	"preview_urls": true,
 	"send_metrics": false,
 	"observability": {
