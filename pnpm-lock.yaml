@@ -25,7 +25,7 @@ importers:
         version: 1.2.10
       '@thasmo/ui':
         specifier: ^1.0.1
-        version: 1.1.1(unocss@66.6.7(@unocss/astro@66.6.7(vite@8.0.1(@types/node@24.12.0)(esbuild@0.27.4)(jiti@2.6.1)(yaml@2.8.3)))(vite@8.0.1(@types/node@24.12.0)(esbuild@0.27.4)(jiti@2.6.1)(yaml@2.8.3)))(vue@3.5.30(typescript@5.9.3))
+        version: 1.1.2(unocss@66.6.7(@unocss/astro@66.6.7(vite@8.0.1(@types/node@24.12.0)(esbuild@0.27.4)(jiti@2.6.1)(yaml@2.8.3)))(vite@8.0.1(@types/node@24.12.0)(esbuild@0.27.4)(jiti@2.6.1)(yaml@2.8.3)))(vue@3.5.30(typescript@5.9.3))
       astro:
         specifier: ^6.0.0
         version: 6.0.8(@types/node@24.12.0)(jiti@2.6.1)(lightningcss@1.32.0)(rollup@4.59.1)(typescript@5.9.3)(yaml@2.8.3)
@@ -2235,8 +2235,8 @@ packages:
     peerDependencies:
       eslint: ^9.0.0 || ^10.0.0
 
-  '@thasmo/ui@1.1.1':
-    resolution: {integrity: sha512-7mfJSnX5Xxf1cyI4IHcNbv2cTnf+q4QXEkSqkAQTK6ZfBaNL3l3M3vqhP9ggFAkOzIjCuIGyI3HPptJbO2c8Fw==}
+  '@thasmo/ui@1.1.2':
+    resolution: {integrity: sha512-KIYERwlO/ktlQcB0+7LdZrtda+D/A7zLeI0JzPVzlooPJlFGHUBncCyzxR5a3MmEZAtKZ5z2hQrsfLUbMbk1aA==}
     engines: {node: '>=24', pnpm: '>=10'}
     peerDependencies:
       unocss: ^66.6.0
@@ -6885,7 +6885,7 @@ snapshots:
       estraverse: 5.3.0
       picomatch: 4.0.3
 
-  '@thasmo/ui@1.1.1(unocss@66.6.7(@unocss/astro@66.6.7(vite@8.0.1(@types/node@24.12.0)(esbuild@0.27.4)(jiti@2.6.1)(yaml@2.8.3)))(vite@8.0.1(@types/node@24.12.0)(esbuild@0.27.4)(jiti@2.6.1)(yaml@2.8.3)))(vue@3.5.30(typescript@5.9.3))':
+  '@thasmo/ui@1.1.2(unocss@66.6.7(@unocss/astro@66.6.7(vite@8.0.1(@types/node@24.12.0)(esbuild@0.27.4)(jiti@2.6.1)(yaml@2.8.3)))(vite@8.0.1(@types/node@24.12.0)(esbuild@0.27.4)(jiti@2.6.1)(yaml@2.8.3)))(vue@3.5.30(typescript@5.9.3))':
     dependencies:
       unocss: 66.6.7(@unocss/astro@66.6.7(vite@8.0.1(@types/node@24.12.0)(esbuild@0.27.4)(jiti@2.6.1)(yaml@2.8.3)))(vite@8.0.1(@types/node@24.12.0)(esbuild@0.27.4)(jiti@2.6.1)(yaml@2.8.3))
       vue: 3.5.30(typescript@5.9.3)
