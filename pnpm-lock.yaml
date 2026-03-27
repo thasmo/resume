@@ -44,7 +44,7 @@ importers:
         version: 1.2.0(@commitlint/cli@20.5.0(@types/node@24.12.0)(conventional-commits-parser@6.3.0)(typescript@5.9.3))(cspell@9.7.0)
       '@somehow-digital/cspell-dictionary':
         specifier: ^2.0.0
-        version: 2.14.0(cspell@9.7.0)
+        version: 2.15.0(cspell@9.7.0)
       '@somehow-digital/eslint-config':
         specifier: ^5.0.0
         version: 5.0.2(@typescript-eslint/rule-tester@8.57.1(eslint@10.1.0(jiti@2.6.1))(typescript@5.9.3))(@typescript-eslint/typescript-estree@8.57.1(typescript@5.9.3))(@typescript-eslint/utils@8.57.1(eslint@10.1.0(jiti@2.6.1))(typescript@5.9.3))(@vue/compiler-sfc@3.5.31)(astro-eslint-parser@1.3.0)(eslint@10.1.0(jiti@2.6.1))(prettier@3.8.1)(typescript@5.9.3)
@@ -2211,8 +2211,8 @@ packages:
     peerDependencies:
       cspell: ^8.8.1 || ^9.0.0
 
-  '@somehow-digital/cspell-dictionary@2.14.0':
-    resolution: {integrity: sha512-x4VqzGCzrsMw5U6ZrE9+P4Vx+tTfDsy9+yln6R7QRURCUWot1D7znOgta8/H3Zc+NZ0NpsNP7gaX/w6F8SU/2Q==}
+  '@somehow-digital/cspell-dictionary@2.15.0':
+    resolution: {integrity: sha512-C8BludfRqKlhSbhEpalRBJNCyR3wiBEL68cxKx6rva9qpZVYyJKTeWmHATyP2ie7YE2a3D4vhTIEe8nSqBkQLg==}
     engines: {node: '>=22', pnpm: '>=10'}
     peerDependencies:
       cspell: ^8.13.0 || ^9.0.0
@@ -6835,7 +6835,7 @@ snapshots:
       cspell: 9.7.0
       cspell-lib: 9.7.0
 
-  '@somehow-digital/cspell-dictionary@2.14.0(cspell@9.7.0)':
+  '@somehow-digital/cspell-dictionary@2.15.0(cspell@9.7.0)':
     dependencies:
       '@cspell/dict-de-de': 4.1.2
       cspell: 9.7.0
