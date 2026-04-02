@@ -4,6 +4,7 @@ export interface Contact {
 	name: Name;
 	photo: string;
 	role: string;
+	status: string;
 	website: string;
 }
 
