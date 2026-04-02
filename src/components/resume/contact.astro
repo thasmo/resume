@@ -62,9 +62,11 @@ const name = [contact.name.first, contact.name.last].join(' ');
 			{m('who')}
 		</p>
 
-		<p>
-			{m('status')}
-		</p>
+		{ contact.status === 'available' && (
+			<p>
+				{m('status')}
+			</p>
+		)}
 
 		<Button href={`mailto:${contact.email}`} target="_blank" rel="noopener noreferrer" icon="i-ri-mail-fill">
 			{m('touch')}
