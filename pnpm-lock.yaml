@@ -44,7 +44,7 @@ importers:
         version: 1.2.0(@commitlint/cli@20.5.0(@types/node@24.12.2)(conventional-commits-parser@6.4.0)(typescript@6.0.2))(cspell@10.0.0)
       '@somehow-digital/cspell-dictionary':
         specifier: ^2.0.0
-        version: 2.15.0(cspell@10.0.0)
+        version: 2.16.0(cspell@10.0.0)
       '@somehow-digital/eslint-config':
         specifier: ^5.0.0
         version: 5.0.2(@typescript-eslint/rule-tester@8.58.0(eslint@10.2.0(jiti@2.6.1))(typescript@6.0.2))(@typescript-eslint/typescript-estree@8.58.0(typescript@6.0.2))(@typescript-eslint/utils@8.58.0(eslint@10.2.0(jiti@2.6.1))(typescript@6.0.2))(@vue/compiler-sfc@3.5.32)(astro-eslint-parser@1.4.0)(eslint@10.2.0(jiti@2.6.1))(prettier@3.8.1)(typescript@6.0.2)
@@ -2272,11 +2272,11 @@ packages:
     peerDependencies:
       cspell: ^8.8.1 || ^9.0.0
 
-  '@somehow-digital/cspell-dictionary@2.15.0':
-    resolution: {integrity: sha512-C8BludfRqKlhSbhEpalRBJNCyR3wiBEL68cxKx6rva9qpZVYyJKTeWmHATyP2ie7YE2a3D4vhTIEe8nSqBkQLg==}
+  '@somehow-digital/cspell-dictionary@2.16.0':
+    resolution: {integrity: sha512-tB7eCWZ0aCMyHX7CY5thNpxAdIQA1KANHAXnbkFJWSUetBguGskrlo1uGUj9i9C+V12EJIu+ov/cRnb0MRb0cQ==}
     engines: {node: '>=22', pnpm: '>=10'}
     peerDependencies:
-      cspell: ^8.13.0 || ^9.0.0
+      cspell: ^8.13.0 || ^9.0.0 || ^10.0.0
 
   '@somehow-digital/eslint-config@5.0.2':
     resolution: {integrity: sha512-khdqexs4B+n2ARiS0+IWZ41bA+gBOiaNjxQjsJP3lrfTtHNZF0vDnLQf8ElPtvZaV3/FeScuxj6WbpdUaz/YAQ==}
@@ -7103,7 +7103,7 @@ snapshots:
       cspell: 10.0.0
       cspell-lib: 9.8.0
 
-  '@somehow-digital/cspell-dictionary@2.15.0(cspell@10.0.0)':
+  '@somehow-digital/cspell-dictionary@2.16.0(cspell@10.0.0)':
     dependencies:
       '@cspell/dict-de-de': 4.1.2
       cspell: 10.0.0
