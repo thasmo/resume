@@ -1,0 +1,65 @@
+---
+import { Heading, Icon, Label, Link, Tag, Text } from '@thasmo/ui';
+import type { Experience } from '../../../types';
+import { getCurrentLocale, useDate, useMessages } from '../../../utilities/localization';
+
+interface Properties {
+	experience: Experience;
+}
+
+const { experience } = Astro.props as Properties;
+const locale = getCurrentLocale(Astro.currentLocale);
+
+const m = useMessages(locale);
+const d = useDate(locale);
+---
+<div class="flex flex-col gap-0.5rem items-start print:(gap-0.25rem break-inside-avoid)">
+	<Heading level={3} size={5} class="group flex flex-row gap-0.5rem items-center">
+		<Link url={experience.url} text={`${experience.name}${experience.name === 'Fredmansky' ? '😜' : ''}`} external />
+	</Heading>
+
+	<div class="flex flex-col gap-1rem items-start print:(gap-0.5rem)">
+		{ experience.positions.map(position => (
+			<div>
+				<Text tag="p">
+					{position.name}
+				</Text>
+
+				<Label icon="i-ri-calendar-schedule-line">
+					{d(position.start)}{position.end ? ` — ${d(position.end)}` : ` — ${m('present')}`}
+				</Label>
+			</div>
+		))}
+
+		<Label icon="i-ri-tools-line">
+			<ul class="flex flex-row flex-wrap gap-0.5rem">
+				{experience.technologies && experience.technologies.map(technology => (
+					<li>
+						<Tag label={technology} />
+					</li>
+				))}
+			</ul>
+		</Label>
+
+		{ experience.testimonial && (
+			<Label icon="i-ri-article-line">
+				<Tag label={m('testimonial')} icon="i-ri-lock-fill" class="bg-white dark:(bg-gray-950)" />
+			</Label>
+		)}
+	</div>
+
+	{ experience.tasks && (
+		<div class="mt-0.5rem p-1.25rem rounded-0.25rem bg-white flex flex-col gap-1rem hidden print:(p-0) dark:(bg-gray-950) group-data-[open]/section:flex">
+			{ experience.tasks && (
+				<ul class="text-1.1rem text-gray-600 flex flex-col gap-0.5rem dark:(text-gray-300)">
+					{ experience.tasks.map(task => (
+						<li class="flex flex-row gap-0.75rem items-start">
+							<Icon name="i-ri-checkbox-circle-line" class="mt-0.25em" />
+							{task}
+						</li>
+					))}
+				</ul>
+			)}
+		</div>
+	)}
+</div>

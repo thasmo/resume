@@ -1,0 +1,40 @@
+---
+import { Heading, Label, Link, Tag, Text } from '@thasmo/ui';
+import type { Project } from '../../../types';
+import { getCurrentLocale, useDate, useMessages } from '../../../utilities/localization';
+
+interface Properties {
+	project: Project;
+}
+
+const { project } = Astro.props as Properties;
+const locale = getCurrentLocale(Astro.currentLocale);
+
+const m = useMessages(locale);
+const d = useDate(locale);
+---
+<div class="flex flex-col gap-0.5rem items-start print:(gap-0.25rem break-inside-avoid)">
+	<Heading level={3} size={5}>
+		<Link url={project.url} text={project.name} external />
+	</Heading>
+
+	{ project.description && (
+		<Text small tag="p">
+			{project.description}
+		</Text>
+	)}
+
+	<Label icon="i-ri-calendar-schedule-line">
+		{d(project.start)}{project.end ? ` — ${d(project.end)}` : ` — ${m('present')}`}
+	</Label>
+
+	<Label icon="i-ri-tools-line">
+		<ul class="flex flex-row flex-wrap gap-0.5rem">
+			{project.technologies && project.technologies.map(technology => (
+				<li>
+					<Tag label={technology} />
+				</li>
+			))}
+		</ul>
+	</Label>
+</div>
