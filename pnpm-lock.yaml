@@ -25,7 +25,7 @@ importers:
         version: 1.2.10
       '@thasmo/ui':
         specifier: ^1.0.1
-        version: 1.2.0(unocss@66.6.8(@emnapi/core@1.9.2)(@emnapi/runtime@1.10.0)(@unocss/astro@66.6.8(vite@8.0.8(@types/node@24.12.2)(esbuild@0.27.7)(jiti@2.6.1)(yaml@2.8.3)))(vite@8.0.8(@types/node@24.12.2)(esbuild@0.27.7)(jiti@2.6.1)(yaml@2.8.3)))(vue@3.5.32(typescript@6.0.3))
+        version: 1.2.1(unocss@66.6.8(@emnapi/core@1.9.2)(@emnapi/runtime@1.10.0)(@unocss/astro@66.6.8(vite@8.0.8(@types/node@24.12.2)(esbuild@0.27.7)(jiti@2.6.1)(yaml@2.8.3)))(vite@8.0.8(@types/node@24.12.2)(esbuild@0.27.7)(jiti@2.6.1)(yaml@2.8.3)))(vue@3.5.32(typescript@6.0.3))
       astro:
         specifier: ^6.0.0
         version: 6.1.7(@types/node@24.12.2)(jiti@2.6.1)(lightningcss@1.32.0)(rollup@4.60.1)(typescript@6.0.3)(yaml@2.8.3)
@@ -2289,8 +2289,8 @@ packages:
     peerDependencies:
       typescript: ^5.8.2
 
-  '@somehow-digital/unocss-preset@2.3.0':
-    resolution: {integrity: sha512-LFp3Y6GVhmenziosyOgza0+fUdpHe9ZSgiMlhk9JlfIlfc1+NVbMC6GgGJ+1FqMxakzj29aEDXIWu3J+Mjnm0w==}
+  '@somehow-digital/unocss-preset@2.3.1':
+    resolution: {integrity: sha512-8FEdRBuGZYHiO5gVXaz/JWfjLdp8JeI3Yv9EP/O2G2FS86PVvO4okRYDv74dt79pb0YH4m/BaZqPB036uo3IUQ==}
     engines: {node: '>=22', pnpm: '>=10'}
     peerDependencies:
       unocss: ^66.0.0
@@ -2304,8 +2304,8 @@ packages:
     peerDependencies:
       eslint: ^9.0.0 || ^10.0.0
 
-  '@thasmo/ui@1.2.0':
-    resolution: {integrity: sha512-r1qeB2CNiwyy8GSbBYewJ1vxXrNXPn+nSDV8y59TwmukqxrH2eFHk7GuT/A9zv7q73+GwoZRcY2VW5HFowKcZw==}
+  '@thasmo/ui@1.2.1':
+    resolution: {integrity: sha512-ZiVJx/zetYIgCUJjtWyxlZ5jMbG4uRa1kV0Fm5fjYsaws/+gPjMRZLosiI//giQPrTXB89g3mClwlxjE2gG0ig==}
     engines: {node: '>=24', pnpm: '>=10'}
     peerDependencies:
       unocss: ^66.6.0
@@ -7136,7 +7136,7 @@ snapshots:
     dependencies:
       typescript: 6.0.3
 
-  '@somehow-digital/unocss-preset@2.3.0(unocss@66.6.8(@emnapi/core@1.9.2)(@emnapi/runtime@1.10.0)(@unocss/astro@66.6.8(vite@8.0.8(@types/node@24.12.2)(esbuild@0.27.7)(jiti@2.6.1)(yaml@2.8.3)))(vite@8.0.8(@types/node@24.12.2)(esbuild@0.27.7)(jiti@2.6.1)(yaml@2.8.3)))':
+  '@somehow-digital/unocss-preset@2.3.1(unocss@66.6.8(@emnapi/core@1.9.2)(@emnapi/runtime@1.10.0)(@unocss/astro@66.6.8(vite@8.0.8(@types/node@24.12.2)(esbuild@0.27.7)(jiti@2.6.1)(yaml@2.8.3)))(vite@8.0.8(@types/node@24.12.2)(esbuild@0.27.7)(jiti@2.6.1)(yaml@2.8.3)))':
     dependencies:
       '@somehow-digital/styles': 2.0.0
       unocss: 66.6.8(@emnapi/core@1.9.2)(@emnapi/runtime@1.10.0)(@unocss/astro@66.6.8(vite@8.0.8(@types/node@24.12.2)(esbuild@0.27.7)(jiti@2.6.1)(yaml@2.8.3)))(vite@8.0.8(@types/node@24.12.2)(esbuild@0.27.7)(jiti@2.6.1)(yaml@2.8.3))
@@ -7153,9 +7153,9 @@ snapshots:
       estraverse: 5.3.0
       picomatch: 4.0.4
 
-  '@thasmo/ui@1.2.0(unocss@66.6.8(@emnapi/core@1.9.2)(@emnapi/runtime@1.10.0)(@unocss/astro@66.6.8(vite@8.0.8(@types/node@24.12.2)(esbuild@0.27.7)(jiti@2.6.1)(yaml@2.8.3)))(vite@8.0.8(@types/node@24.12.2)(esbuild@0.27.7)(jiti@2.6.1)(yaml@2.8.3)))(vue@3.5.32(typescript@6.0.3))':
+  '@thasmo/ui@1.2.1(unocss@66.6.8(@emnapi/core@1.9.2)(@emnapi/runtime@1.10.0)(@unocss/astro@66.6.8(vite@8.0.8(@types/node@24.12.2)(esbuild@0.27.7)(jiti@2.6.1)(yaml@2.8.3)))(vite@8.0.8(@types/node@24.12.2)(esbuild@0.27.7)(jiti@2.6.1)(yaml@2.8.3)))(vue@3.5.32(typescript@6.0.3))':
     dependencies:
-      '@somehow-digital/unocss-preset': 2.3.0(unocss@66.6.8(@emnapi/core@1.9.2)(@emnapi/runtime@1.10.0)(@unocss/astro@66.6.8(vite@8.0.8(@types/node@24.12.2)(esbuild@0.27.7)(jiti@2.6.1)(yaml@2.8.3)))(vite@8.0.8(@types/node@24.12.2)(esbuild@0.27.7)(jiti@2.6.1)(yaml@2.8.3)))
+      '@somehow-digital/unocss-preset': 2.3.1(unocss@66.6.8(@emnapi/core@1.9.2)(@emnapi/runtime@1.10.0)(@unocss/astro@66.6.8(vite@8.0.8(@types/node@24.12.2)(esbuild@0.27.7)(jiti@2.6.1)(yaml@2.8.3)))(vite@8.0.8(@types/node@24.12.2)(esbuild@0.27.7)(jiti@2.6.1)(yaml@2.8.3)))
       unocss: 66.6.8(@emnapi/core@1.9.2)(@emnapi/runtime@1.10.0)(@unocss/astro@66.6.8(vite@8.0.8(@types/node@24.12.2)(esbuild@0.27.7)(jiti@2.6.1)(yaml@2.8.3)))(vite@8.0.8(@types/node@24.12.2)(esbuild@0.27.7)(jiti@2.6.1)(yaml@2.8.3))
       vue: 3.5.32(typescript@6.0.3)
 
