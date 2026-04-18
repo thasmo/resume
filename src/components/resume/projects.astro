@@ -1,7 +1,8 @@
 ---
-import { Heading, Label, Link, Section, Tag, Text } from '@thasmo/ui';
+import { Collapsible, Section } from '@thasmo/ui';
 import type { Project } from '../../types';
-import { getCurrentLocale, useDate, useMessages } from '../../utilities/localization';
+import { getCurrentLocale, useMessages } from '../../utilities/localization';
+import ProjectPartial from './partials/project.astro';
 
 interface Properties {
 	projects: Project[];
@@ -12,36 +13,15 @@ const { projects, class: classes } = Astro.props as Properties;
 const locale = getCurrentLocale(Astro.currentLocale);
 
 const m = useMessages(locale);
-const d = useDate(locale);
 ---
 <Section client:load anchor="projects" heading={m('section_projects')} size={3} class={classes}>
-	<div class="flex flex-col gap-2.5rem print:(gap-x-2.5rem gap-y-1rem grid grid-cols-2)">
-		{projects.map(project => (
-			<div class="flex flex-col gap-0.5rem items-start print:(gap-0.25rem break-inside-avoid)">
-				<Heading level={3} size={5}>
-					<Link url={project.url} text={project.name} external />
-				</Heading>
+	<Collapsible client:load label={m('show_all')}>
+		<div slot="default" class="flex flex-col gap-2.5rem print:(gap-x-2.5rem gap-y-1rem grid grid-cols-2)">
+			{projects.slice(0, 4).map(project => <ProjectPartial project={project} />)}
+		</div>
 
-				{ project.description && (
-					<Text small tag="p">
-						{project.description}
-					</Text>
-				)}
-
-				<Label icon="i-ri-calendar-schedule-line">
-					{d(project.start)}{project.end ? ` — ${d(project.end)}` : ` — ${m('present')}`}
-				</Label>
-
-				<Label icon="i-ri-tools-line">
-					<ul class="flex flex-row flex-wrap gap-0.5rem">
-						{project.technologies && project.technologies.map(technology => (
-							<li>
-								<Tag label={technology} />
-							</li>
-						))}
-					</ul>
-				</Label>
-			</div>
-		))}
-	</div>
+		<div slot="content" class="flex flex-col gap-2.5rem print:(gap-x-2.5rem gap-y-1rem grid grid-cols-2)">
+			{projects.slice(4).map(project => <ProjectPartial project={project} />)}
+		</div>
+	</Collapsible>
 </Section>

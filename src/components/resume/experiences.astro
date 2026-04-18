@@ -1,7 +1,8 @@
 ---
-import { Heading, Icon, Label, Pill, Section, Tag, Text } from '@thasmo/ui';
+import { Collapsible, Pill, Section } from '@thasmo/ui';
 import type { Experience } from '../../types';
-import { getCurrentLocale, useDate, useMessages } from '../../utilities/localization';
+import { getCurrentLocale, useMessages } from '../../utilities/localization';
+import ExperiencePartial from './partials/experience.astro';
 
 interface Properties {
 	experiences: Experience[];
@@ -12,7 +13,6 @@ const { experiences, class: classes } = Astro.props as Properties;
 const locale = getCurrentLocale(Astro.currentLocale);
 
 const m = useMessages(locale);
-const d = useDate(locale);
 ---
 <Section client:load anchor="experiences" heading={m('section_experiences')} size={3} class={[classes, 'print:(mr-17.5rem)']} details>
 	<button slot="suffix" class="cursor-pointer print:(hidden)" onclick="this.closest('section').toggleAttribute('data-open')" title={m('toggle_details')} aria-label={m('toggle_details')}>
@@ -20,65 +20,13 @@ const d = useDate(locale);
 		<Pill icon="i-ri-contract-up-down-line" class="text-yellow-900 bg-yellow-400 hidden dark:(text-yellow-300 bg-yellow-900 hover:bg-yellow-800) hover:(bg-yellow-500) group-data-[open]/section:block" />
 	</button>
 
-	<div class="flex flex-col gap-2.5rem print:(gap-1rem)">
-		{experiences.map(experience => (
-			<div class="flex flex-col gap-0.5rem items-start print:(gap-0.25rem break-inside-avoid)">
-				<Heading level={3} size={5} class="group flex flex-row gap-0.5rem items-center">
-					<a href={experience.url} target="_blank" rel="noopener noreferrer">
-						<span class="decoration-2px underline-offset-0.25em group-hover:(underline)">
-							{experience.name}
-							{ experience.name === 'Fredmansky' && '😜'}
-						</span>
+	<Collapsible client:load label={m('show_all')}>
+		<div slot="default" class="flex flex-col gap-2.5rem print:(gap-1rem)">
+			{experiences.slice(0, 4).map(experience => <ExperiencePartial experience={experience} />)}
+		</div>
 
-						<Icon name="i-ri-arrow-right-up-long-line" class="align-middle opacity-25 inline-block bottom-0.05em pos-relative group-hover:(opacity-100) print:(hidden)" />
-					</a>
-				</Heading>
-
-				<div class="flex flex-col gap-1rem items-start print:(gap-0.5rem)">
-					{ experience.positions.map(position => (
-						<div>
-							<Text tag="p">
-								{position.name}
-							</Text>
-
-							<Label icon="i-ri-calendar-schedule-line">
-								{d(position.start)}{position.end ? ` — ${d(position.end)}` : ` — ${m('present')}`}
-							</Label>
-						</div>
-					))}
-
-					<Label icon="i-ri-tools-line">
-						<ul class="flex flex-row flex-wrap gap-0.5rem">
-							{experience.technologies && experience.technologies.map(technology => (
-								<li>
-									<Tag label={technology} />
-								</li>
-							))}
-						</ul>
-					</Label>
-
-					{ experience.testimonial && (
-						<Label icon="i-ri-article-line">
-							<Tag label={m('testimonial')} icon="i-ri-lock-fill" class="bg-white dark:(bg-gray-950)" />
-						</Label>
-					)}
-				</div>
-
-				{ experience.tasks && (
-					<div class="mt-0.5rem p-1.25rem rounded-0.25rem bg-white flex flex-col gap-1rem hidden print:(p-0) dark:(bg-gray-950) group-data-[open]/section:flex">
-						{ experience.tasks && (
-							<ul class="text-1.1rem text-gray-600 flex flex-col gap-0.5rem dark:(text-gray-300)">
-								{ experience.tasks.map(task => (
-									<li class="flex flex-row gap-0.75rem items-start">
-										<Icon name="i-ri-checkbox-circle-line" class="mt-0.25em" />
-										{task}
-									</li>
-								))}
-							</ul>
-						)}
-					</div>
-				)}
-			</div>
-		))}
-	</div>
+		<div slot="content" class="flex flex-col gap-2.5rem print:(gap-1rem)">
+			{experiences.slice(4).map(experience => <ExperiencePartial experience={experience} />)}
+		</div>
+	</Collapsible>
 </Section>

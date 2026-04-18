@@ -33,6 +33,7 @@ export const messages = {
 		undefined: 'undefiniert',
 		who: 'Ich bin ein Frontend Entwickler aus Salzburg und liebe es, Dinge zu bauen.',
 		testimonial: 'Dienstzeugnis',
+		show_all: 'alle anzeigen',
 	},
 	en: {
 		back: 'Bring me home.',
@@ -66,5 +67,6 @@ export const messages = {
 		undefined: 'undefined',
 		who: 'I\'m a Frontend Engineer from Salzburg, and I love building things.',
 		testimonial: 'Employment Reference Letter',
+		show_all: 'show all',
 	},
 };
