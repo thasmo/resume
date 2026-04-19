@@ -20,7 +20,7 @@ const m = useMessages(locale);
 		<Pill icon="i-ri-contract-up-down-line" class="text-yellow-900 bg-yellow-400 hidden dark:(text-yellow-300 bg-yellow-900 hover:bg-yellow-800) hover:(bg-yellow-500) group-data-[open]/section:block" />
 	</button>
 
-	<Collapsible client:load label={m('show_all')}>
+	<Collapsible client:load label={m('show_all_experiences')}>
 		<div slot="default" class="flex flex-col gap-2.5rem print:(gap-1rem)">
 			{experiences.slice(0, 4).map(experience => <ExperiencePartial experience={experience} />)}
 		</div>

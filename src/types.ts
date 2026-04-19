@@ -24,6 +24,7 @@ export interface Language {
 
 export interface Profile {
 	name: string;
+	handle: string;
 	url: string;
 }
 

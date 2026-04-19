@@ -15,7 +15,7 @@ const locale = getCurrentLocale(Astro.currentLocale);
 const m = useMessages(locale);
 ---
 <Section client:load anchor="projects" heading={m('section_projects')} size={3} class={classes}>
-	<Collapsible client:load label={m('show_all')}>
+	<Collapsible client:load label={m('show_all_projects')}>
 		<div slot="default" class="flex flex-col gap-2.5rem print:(gap-x-2.5rem gap-y-1rem grid grid-cols-2)">
 			{projects.slice(0, 4).map(project => <ProjectPartial project={project} />)}
 		</div>

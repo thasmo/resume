@@ -14,33 +14,35 @@ const locale = getCurrentLocale(Astro.currentLocale);
 const m = useMessages(locale);
 
 const icons = {
-	'github': 'i-ri-github-fill',
-	'xing': 'i-ri-xing-fill',
-	'linkedin': 'i-ri-linkedin-fill',
-	'bluesky': 'i-ri-bluesky-fill',
-	'stack overflow': 'i-ri-stack-overflow-fill',
+	github: 'i-ri-github-fill',
+	xing: 'i-ri-xing-fill',
+	linkedin: 'i-ri-linkedin-fill',
+	bluesky: 'i-ri-bluesky-fill',
+	stackoverflow: 'i-ri-stack-overflow-fill',
+	website: 'i-ri-home-fill',
 };
 
 const colors = {
-	'github': '#181717',
-	'xing': '#0698a0',
-	'linkedin': '#0a66c2',
-	'bluesky': '#0085ff',
-	'stack overflow': '#f48024',
+	github: '#181717',
+	xing: '#0698a0',
+	linkedin: '#0a66c2',
+	bluesky: '#0085ff',
+	stackoverflow: '#f48024',
+	website: '#ff8da1',
 };
 
-function getIcon(name: string) {
-	const key = name.toLowerCase() as keyof typeof icons;
+function getIcon(handle: string) {
+	const key = handle.toLowerCase() as keyof typeof icons;
 	return icons[key];
 }
 
-function getColor(name: string) {
-	const key = name.toLowerCase() as keyof typeof colors;
+function getColor(handle: string) {
+	const key = handle.toLowerCase() as keyof typeof colors;
 	return colors[key];
 }
 
-function getMessageKey(name: string): keyof typeof m {
-	const key = name.toLowerCase().replace(' ', '_');
+function getMessageKey(handle: string): keyof typeof m {
+	const key = handle.toLowerCase();
 	return `link_${key}` as keyof typeof m;
 }
 ---
@@ -50,11 +52,11 @@ function getMessageKey(name: string): keyof typeof m {
 			href={profile.url}
 			target="_blank"
 			rel="noopener noreferrer"
-			title={m(getMessageKey(profile.name))}
-			aria-label={m(getMessageKey(profile.name))}
-			style={{ '--color': getColor(profile.name) }}
+			title={m(getMessageKey(profile.handle))}
+			aria-label={m(getMessageKey(profile.handle))}
+			style={{ '--color': getColor(profile.handle) }}
 		>
-			<Pill icon={getIcon(profile.name)} label={profile.name} style={{ '--color': getColor(profile.name) }} class="hover:(text-[--color] bg-white)" />
+			<Pill icon={getIcon(profile.handle)} label={profile.handle} style={{ '--color': getColor(profile.handle) }} class="hover:(text-[--color] bg-white)" />
 		</a>
 	))}
 </section>
