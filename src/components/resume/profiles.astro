@@ -1,5 +1,5 @@
 ---
-import { Pill } from '@thasmo/ui';
+import { Pill, Tooltip } from '@thasmo/ui';
 import type { Profile } from '../../types';
 import { getCurrentLocale, useMessages } from '../../utilities/localization';
 
@@ -48,15 +48,16 @@ function getMessageKey(handle: string): keyof typeof m {
 ---
 <section class:list={['flex flex-row gap-2', classes]}>
 	{profiles.map(profile => (
-		<a
-			href={profile.url}
-			target="_blank"
-			rel="noopener noreferrer"
-			title={m(getMessageKey(profile.handle))}
-			aria-label={m(getMessageKey(profile.handle))}
-			style={{ '--color': getColor(profile.handle) }}
-		>
-			<Pill icon={getIcon(profile.handle)} label={profile.handle} style={{ '--color': getColor(profile.handle) }} class="hover:(text-[--color] bg-white)" />
-		</a>
+		<Tooltip label={m(getMessageKey(profile.handle))} slot="suffix" class="font-400 font-sans">
+			<a
+				href={profile.url}
+				target="_blank"
+				rel="noopener noreferrer"
+				aria-label={m(getMessageKey(profile.handle))}
+				style={{ '--color': getColor(profile.handle) }}
+			>
+				<Pill icon={getIcon(profile.handle)} label={profile.handle} style={{ '--color': getColor(profile.handle) }} class="hover:(text-[--color] bg-white)" />
+			</a>
+		</Tooltip>
 	))}
 </section>

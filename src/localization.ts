@@ -4,7 +4,7 @@ export const messages = {
 	de: {
 		back: 'Bring mich zurück.',
 		change_locale: 'Englischsprachige Version',
-		download_resume: 'Lebenslauf als PDF Dokument herunterladen',
+		download_resume: 'PDF Version',
 		filename: 'lebenslauf-deinhamer.pdf',
 		hello: 'Hallo!',
 		link_bluesky: 'Bluesky Profil ansehen',
@@ -40,7 +40,7 @@ export const messages = {
 	en: {
 		back: 'Bring me home.',
 		change_locale: 'Deutschsprachige Version',
-		download_resume: 'Download resume as PDF document',
+		download_resume: 'PDF version',
 		filename: 'resume-deinhamer.pdf',
 		hello: 'Hello!',
 		link_bluesky: 'View Bluesky profile',

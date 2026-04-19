@@ -1,5 +1,5 @@
 ---
-import { Collapsible, Pill, Section } from '@thasmo/ui';
+import { Collapsible, Pill, Section, Tooltip } from '@thasmo/ui';
 import type { Experience } from '../../types';
 import { getCurrentLocale, useMessages } from '../../utilities/localization';
 import ExperiencePartial from './partials/experience.astro';
@@ -15,10 +15,12 @@ const locale = getCurrentLocale(Astro.currentLocale);
 const m = useMessages(locale);
 ---
 <Section client:load anchor="experiences" heading={m('section_experiences')} size={3} class={[classes, 'print:(mr-17.5rem)']} details>
-	<button slot="suffix" class="cursor-pointer print:(hidden)" onclick="this.closest('section').toggleAttribute('data-open')" title={m('toggle_details')} aria-label={m('toggle_details')}>
-		<Pill icon="i-ri-expand-up-down-line" class="text-yellow-900 bg-yellow-400 block dark:(text-yellow-300 bg-yellow-900 hover:bg-yellow-800) hover:(bg-yellow-500) group-data-[open]/section:hidden" />
-		<Pill icon="i-ri-contract-up-down-line" class="text-yellow-900 bg-yellow-400 hidden dark:(text-yellow-300 bg-yellow-900 hover:bg-yellow-800) hover:(bg-yellow-500) group-data-[open]/section:block" />
-	</button>
+	<Tooltip label={m('toggle_details')} slot="suffix" class="font-400 font-sans">
+		<button class="cursor-pointer print:(hidden)" onclick="this.closest('section').toggleAttribute('data-open')" aria-label={m('toggle_details')}>
+			<Pill icon="i-ri-expand-up-down-line" class="text-yellow-900 bg-yellow-400 block dark:(text-yellow-300 bg-yellow-900 hover:bg-yellow-800) hover:(bg-yellow-500) group-data-[open]/section:hidden" />
+			<Pill icon="i-ri-contract-up-down-line" class="text-yellow-900 bg-yellow-400 hidden dark:(text-yellow-300 bg-yellow-900 hover:bg-yellow-800) hover:(bg-yellow-500) group-data-[open]/section:block" />
+		</button>
+	</Tooltip>
 
 	<Collapsible client:load label={m('show_all_experiences')}>
 		<div slot="default" class="flex flex-col gap-2.5rem print:(gap-1rem)">
