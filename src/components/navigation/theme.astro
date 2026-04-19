@@ -1,15 +1,17 @@
 ---
-import { Pill } from '@thasmo/ui';
+import { Pill, Tooltip } from '@thasmo/ui';
 import { getCurrentLocale, useMessages } from '../../utilities/localization';
 
 const locale = getCurrentLocale(Astro.currentLocale);
 
 const m = useMessages(locale);
 ---
-<button data-ref-switch class="block cursor-pointer" title={m('switch_theme')} aria-label={m('switch_theme')}>
-	<Pill icon="i-ri-lightbulb-flash-line" class="text-yellow-900 bg-yellow-400 block hover:(bg-yellow-500) dark:(hidden)" />
-	<Pill icon="i-ri-lightbulb-line" class="text-yellow-300 bg-yellow-900 block hidden hover:(bg-yellow-800) dark:(block)" />
-</button>
+<Tooltip label={m('switch_theme')} slot="suffix" class="font-400 font-sans">
+	<button data-ref-switch class="block cursor-pointer" aria-label={m('switch_theme')}>
+		<Pill icon="i-ri-lightbulb-flash-line" class="text-yellow-900 bg-yellow-400 block hover:(bg-yellow-500) dark:(hidden)" />
+		<Pill icon="i-ri-lightbulb-line" class="text-yellow-300 bg-yellow-900 block hidden hover:(bg-yellow-800) dark:(block)" />
+	</button>
+</Tooltip>
 
 <script>
 function enableDarkMode() {

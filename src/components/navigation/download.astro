@@ -1,15 +1,17 @@
 ---
-import { Pill } from '@thasmo/ui';
+import { Pill, Tooltip } from '@thasmo/ui';
 import { getCurrentLocale, useMessages } from '../../utilities/localization';
 
 const locale = getCurrentLocale(Astro.currentLocale);
 
 const m = useMessages(locale);
 ---
-<a data-ref-download href={`/${locale}/resume.pdf`} download={m('filename')} class="group/download cursor-pointer data-[loading]/download:pointer-events-none" title={m('download_resume')} aria-label={m('download_resume')}>
-	<Pill icon="i-ri-download-line" class="text-white bg-gray-900 block dark:(text-gray-900 bg-white hover:bg-gray-300) hover:(bg-gray-600) group-data-[loading]/download:hidden" />
-	<Pill icon="i-ri-loader-4-line" class="text-white bg-gray-900 block hidden animate-spin dark:(text-gray-900 bg-white) group-data-[loading]/download:block" />
-</a>
+<Tooltip label={m('download_resume')} slot="suffix" class="font-400 font-sans">
+	<a data-ref-download href={`/${locale}/resume.pdf`} download={m('filename')} class="group/download cursor-pointer data-[loading]/download:pointer-events-none" aria-label={m('download_resume')}>
+		<Pill icon="i-ri-download-line" class="text-white bg-gray-900 block dark:(text-gray-900 bg-white hover:bg-gray-300) hover:(bg-gray-600) group-data-[loading]/download:hidden" />
+		<Pill icon="i-ri-loader-4-line" class="text-white bg-gray-900 block hidden animate-spin dark:(text-gray-900 bg-white) group-data-[loading]/download:block" />
+	</a>
+</Tooltip>
 
 <script>
 	const link = document.querySelector('[data-ref-download]');

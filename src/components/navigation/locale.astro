@@ -1,5 +1,5 @@
 ---
-import { Pill } from '@thasmo/ui';
+import { Pill, Tooltip } from '@thasmo/ui';
 import { getCurrentLocale, useMessages } from '../../utilities/localization';
 
 const locale = getCurrentLocale(Astro.currentLocale);
@@ -8,6 +8,8 @@ const m = useMessages(locale);
 
 const newLocale = locale === 'en' ? 'de' : 'en';
 ---
-<a href=`/${newLocale}` title={m('change_locale')} aria-label={m('change_locale')}>
-	<Pill icon="i-ri-translate" text={newLocale} />
-</a>
+<Tooltip label={m('change_locale')} slot="suffix" class="font-400 font-sans">
+	<a href=`/${newLocale}` aria-label={m('change_locale')}>
+		<Pill icon="i-ri-translate" text={newLocale} />
+	</a>
+</Tooltip>

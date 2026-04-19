@@ -1,5 +1,5 @@
 ---
-import { Heading, Pill } from '@thasmo/ui';
+import { Heading, Pill, Tooltip } from '@thasmo/ui';
 import Body from '../components/body.astro';
 import Head from '../components/head.astro';
 import Navigation from '../components/navigation.astro';
@@ -35,9 +35,11 @@ const m = useMessages(locale);
 					<slot />
 				</div>
 
-				<a id="top" href="#" class="mx-auto mt-auto">
-					<Pill icon="i-ri-skip-up-line" title={m('top')} aria-label={m('top')} />
-				</a>
+				<Tooltip label={m('top')} slot="suffix" class="font-400 font-sans mx-auto mt-auto">
+					<a id="top" href="#">
+						<Pill icon="i-ri-skip-up-line" aria-label={m('top')} />
+					</a>
+				</Tooltip>
 			</main>
 
 			<aside class="shrink-0 grow-0 order-first md:(w-17.5rem order-last) print:(right-0 top-0 pos-absolute)">
