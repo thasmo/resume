@@ -36,7 +36,7 @@
 		"vue": "^3.5.27"
 	},
 	"devDependencies": {
-		"@commitlint/cli": "^20.0.0",
+		"@commitlint/cli": "^21.0.0",
 		"@somehow-digital/commitlint-config": "^1.0.0",
 		"@somehow-digital/cspell-dictionary": "^2.0.0",
 		"@somehow-digital/eslint-config": "^5.0.0",
