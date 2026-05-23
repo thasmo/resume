@@ -44,7 +44,7 @@ importers:
         version: 1.2.0(@commitlint/cli@21.0.1(@types/node@24.12.4)(conventional-commits-parser@6.4.0)(typescript@6.0.3))(cspell@10.0.0)
       '@somehow-digital/cspell-dictionary':
         specifier: ^2.0.0
-        version: 2.17.0(cspell@10.0.0)
+        version: 2.18.0(cspell@10.0.0)
       '@somehow-digital/eslint-config':
         specifier: ^5.0.0
         version: 5.0.2(@typescript-eslint/rule-tester@8.59.1(eslint@10.4.0(jiti@2.7.0))(typescript@6.0.3))(@typescript-eslint/typescript-estree@8.59.1(typescript@6.0.3))(@typescript-eslint/utils@8.59.1(eslint@10.4.0(jiti@2.7.0))(typescript@6.0.3))(@vue/compiler-sfc@3.5.34)(astro-eslint-parser@1.4.0)(eslint@10.4.0(jiti@2.7.0))(prettier@3.8.3)(typescript@6.0.3)
@@ -2310,8 +2310,8 @@ packages:
     peerDependencies:
       cspell: ^8.8.1 || ^9.0.0
 
-  '@somehow-digital/cspell-dictionary@2.17.0':
-    resolution: {integrity: sha512-w5N2wfCpSHiKRi4xTxMLICm2xtfsPlL3PV6My56CgFJnTgoFN1tvveZ7/4pezg6Pdx2rIoYbmrqOz3im6ZP3nw==}
+  '@somehow-digital/cspell-dictionary@2.18.0':
+    resolution: {integrity: sha512-oChT++Hp4jiDSsMiMbMiP6ovpnDBMEuhyxhyGbtm0pHHvKoP8BDpsjMc/CbKHe4ZCBBK5vfoZKpxply1+jVR/w==}
     engines: {node: '>=22', pnpm: '>=10'}
     peerDependencies:
       cspell: ^8.13.0 || ^9.0.0 || ^10.0.0
@@ -7178,7 +7178,7 @@ snapshots:
       cspell: 10.0.0
       cspell-lib: 9.8.0
 
-  '@somehow-digital/cspell-dictionary@2.17.0(cspell@10.0.0)':
+  '@somehow-digital/cspell-dictionary@2.18.0(cspell@10.0.0)':
     dependencies:
       '@cspell/dict-de-de': 4.1.2
       cspell: 10.0.0
