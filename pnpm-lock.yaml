@@ -74,7 +74,7 @@ importers:
         version: 9.1.7
       knip:
         specifier: ^6.0.0
-        version: 6.21.0
+        version: 6.22.0
       lint-staged:
         specifier: ^17.0.0
         version: 17.0.8
@@ -3061,8 +3061,8 @@ packages:
   duplexer@0.1.2:
     resolution: {integrity: sha512-jtD6YG370ZCIi/9GTaJKQxWTZD045+4R4hTk/x1UyoqadyJ9x9CgSi1RlVDQF8U2sxLLSnFkCaMihqljHIWgMg==}
 
-  electron-to-chromium@1.5.379:
-    resolution: {integrity: sha512-v/qV5aV5EUA2pGilzUCq5/eyOloZAqDZBu9UMBIzgPpLlprjSR6zswsWBTv0KpqxLGUAZEwhO95ZCt7srymNVA==}
+  electron-to-chromium@1.5.380:
+    resolution: {integrity: sha512-W6d5AbuEoRayO447cqrg6lKJIlscgRnnxOZl/08kfV71BQDoEBC7Wwis68z87LjyK6f4kWyTaubuDbhHKrZkbA==}
 
   emoji-regex@10.6.0:
     resolution: {integrity: sha512-toUI84YS5YmxW219erniWD0CIVOo46xGKColeNQRgOzDorgBi1v4D71/OFzgD9GO2UGKIv1C3Sp8DAn0+j5w7A==}
@@ -3821,8 +3821,8 @@ packages:
     resolution: {integrity: sha512-o+NO+8WrRiQEE4/7nwRJhN1HWpVmJm511pBHUxPLtp0BUISzlBplORYSmTclCnJvQq2tKu/sgl3xVpkc7ZWuQQ==}
     engines: {node: '>=6'}
 
-  knip@6.21.0:
-    resolution: {integrity: sha512-q7K9VGSFfdVaCjhj9u+5aI2t5CZt3edZeLi+1wjnGAvYB2WfW6+T9UWAREsTR88aB8YeDqkKVZiVMV7va3oTmg==}
+  knip@6.22.0:
+    resolution: {integrity: sha512-HTqtalzPNERFiyTj/3pERGss8oBzgxL9ZWiEQ29N9/+cTMZ1guIIEtcczrYpaoE76//XSHO11uuc66O9feY8wA==}
     engines: {node: ^20.19.0 || >=22.12.0}
     hasBin: true
 
@@ -7711,7 +7711,7 @@ snapshots:
     dependencies:
       baseline-browser-mapping: 2.10.40
       caniuse-lite: 1.0.30001799
-      electron-to-chromium: 1.5.379
+      electron-to-chromium: 1.5.380
       node-releases: 2.0.50
       update-browserslist-db: 1.2.3(browserslist@4.28.2)
 
@@ -8047,7 +8047,7 @@ snapshots:
 
   duplexer@0.1.2: {}
 
-  electron-to-chromium@1.5.379: {}
+  electron-to-chromium@1.5.380: {}
 
   emoji-regex@10.6.0: {}
 
@@ -8972,7 +8972,7 @@ snapshots:
 
   kleur@4.1.5: {}
 
-  knip@6.21.0:
+  knip@6.22.0:
     dependencies:
       fdir: 6.5.0(picomatch@4.0.4)
       formatly: 0.3.0
