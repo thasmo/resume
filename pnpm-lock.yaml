@@ -10,7 +10,7 @@ importers:
     dependencies:
       '@astrojs/cloudflare':
         specifier: ^14.0.0
-        version: 14.1.7(@types/node@24.13.3)(astro@7.1.6(@emnapi/core@2.0.0-alpha.3)(@emnapi/runtime@2.0.0-alpha.3)(@types/node@24.13.3)(jiti@2.7.0)(yaml@2.9.0))(esbuild@0.28.1)(jiti@2.7.0)(wrangler@4.117.0)(yaml@2.9.0)
+        version: 14.1.7(@types/node@24.13.3)(astro@7.1.6(@emnapi/core@2.0.0-alpha.3)(@emnapi/runtime@2.0.0-alpha.3)(@types/node@24.13.3)(jiti@2.7.0)(yaml@2.9.0))(esbuild@0.28.1)(jiti@2.7.0)(wrangler@4.118.0)(yaml@2.9.0)
       '@astrojs/sitemap':
         specifier: ^3.2.1
         version: 3.7.3
@@ -89,7 +89,7 @@ importers:
         version: 8.2.0(@types/node@24.13.3)(esbuild@0.28.1)(jiti@2.7.0)(yaml@2.9.0)
       wrangler:
         specifier: ^4.54.0
-        version: 4.117.0
+        version: 4.118.0
 
 packages:
 
@@ -4806,8 +4806,8 @@ packages:
     engines: {node: '>=16'}
     hasBin: true
 
-  wrangler@4.117.0:
-    resolution: {integrity: sha512-pN1Jh9coa5HqtIH2V6sih9KznEtV6G/HeWup0qMRBSLKmT5OGjd8+fUI7TdnHlb3Udv/Z7RgoWyAZaWqBofvTQ==}
+  wrangler@4.118.0:
+    resolution: {integrity: sha512-9pkBw/b8zWqGx2S+oLhgHMR1M/4VOE8SynUFABnGWiSFGlcOQ4xiI/B71Xf66RYP2xzngU37IQFPtUruij3lYw==}
     engines: {node: '>=22.0.0'}
     hasBin: true
     peerDependencies:
@@ -4966,15 +4966,15 @@ snapshots:
       package-manager-detector: 1.8.0
       tinyexec: 1.2.4
 
-  '@astrojs/cloudflare@14.1.7(@types/node@24.13.3)(astro@7.1.6(@emnapi/core@2.0.0-alpha.3)(@emnapi/runtime@2.0.0-alpha.3)(@types/node@24.13.3)(jiti@2.7.0)(yaml@2.9.0))(esbuild@0.28.1)(jiti@2.7.0)(wrangler@4.117.0)(yaml@2.9.0)':
+  '@astrojs/cloudflare@14.1.7(@types/node@24.13.3)(astro@7.1.6(@emnapi/core@2.0.0-alpha.3)(@emnapi/runtime@2.0.0-alpha.3)(@types/node@24.13.3)(jiti@2.7.0)(yaml@2.9.0))(esbuild@0.28.1)(jiti@2.7.0)(wrangler@4.118.0)(yaml@2.9.0)':
     dependencies:
       '@astrojs/internal-helpers': 0.10.2
       '@astrojs/underscore-redirects': 1.0.3
-      '@cloudflare/vite-plugin': 1.49.0(vite@8.2.0(@types/node@24.13.3)(esbuild@0.28.1)(jiti@2.7.0)(yaml@2.9.0))(wrangler@4.117.0)
+      '@cloudflare/vite-plugin': 1.49.0(vite@8.2.0(@types/node@24.13.3)(esbuild@0.28.1)(jiti@2.7.0)(yaml@2.9.0))(wrangler@4.118.0)
       astro: 7.1.6(@emnapi/core@2.0.0-alpha.3)(@emnapi/runtime@2.0.0-alpha.3)(@types/node@24.13.3)(jiti@2.7.0)(yaml@2.9.0)
       piccolore: 0.1.3
       vite: 8.2.0(@types/node@24.13.3)(esbuild@0.28.1)(jiti@2.7.0)(yaml@2.9.0)
-      wrangler: 4.117.0
+      wrangler: 4.118.0
     transitivePeerDependencies:
       - '@types/node'
       - '@vitejs/devtools'
@@ -5356,14 +5356,14 @@ snapshots:
     optionalDependencies:
       workerd: 1.20260730.1
 
-  '@cloudflare/vite-plugin@1.49.0(vite@8.2.0(@types/node@24.13.3)(esbuild@0.28.1)(jiti@2.7.0)(yaml@2.9.0))(wrangler@4.117.0)':
+  '@cloudflare/vite-plugin@1.49.0(vite@8.2.0(@types/node@24.13.3)(esbuild@0.28.1)(jiti@2.7.0)(yaml@2.9.0))(wrangler@4.118.0)':
     dependencies:
       '@cloudflare/unenv-preset': 2.16.1(unenv@2.0.0-rc.24)(workerd@1.20260730.1)
       miniflare: 4.20260730.0
       unenv: 2.0.0-rc.24
       vite: 8.2.0(@types/node@24.13.3)(esbuild@0.28.1)(jiti@2.7.0)(yaml@2.9.0)
       workerd: 1.20260730.1
-      wrangler: 4.117.0
+      wrangler: 4.118.0
       ws: 8.21.0
     transitivePeerDependencies:
       - bufferutil
@@ -9988,7 +9988,7 @@ snapshots:
       '@cloudflare/workerd-linux-arm64': 1.20260730.1
       '@cloudflare/workerd-windows-64': 1.20260730.1
 
-  wrangler@4.117.0:
+  wrangler@4.118.0:
     dependencies:
       '@cloudflare/kv-asset-handler': 0.5.0
       '@cloudflare/unenv-preset': 2.16.1(unenv@2.0.0-rc.24)(workerd@1.20260730.1)
