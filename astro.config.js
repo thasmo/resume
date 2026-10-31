@@ -28,12 +28,6 @@ export default defineConfig({
 		sitemap(),
 	],
 	output: 'static',
-	redirects: {
-		'/': {
-			status: 301,
-			destination: '/en',
-		},
-	},
 	prefetch: {
 		defaultStrategy: 'tap',
 		prefetchAll: true,
