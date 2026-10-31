@@ -5,15 +5,14 @@ import { defineConfig } from 'astro/config';
 import process from 'node:process';
 import unocss from 'unocss/astro';
 import { loadEnv } from 'vite';
+import { voidPlugin } from 'void';
 
 const env = loadEnv(process.env.NODE_ENV, process.cwd(), '');
 
 export default defineConfig({
 	adapter: cloudflare({
+		configPath: './.void-wrangler.jsonc',
 		imageService: 'compile',
-		platformProxy: {
-			enabled: true,
-		},
 	}),
 	base: '/',
 	i18n: {
@@ -41,4 +40,8 @@ export default defineConfig({
 	},
 	site: env.APPLICATION_SITE,
 	trailingSlash: 'never',
+	session: false,
+	vite: {
+		plugins: [voidPlugin()],
+	},
 });

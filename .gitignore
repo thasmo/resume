@@ -1,3 +1,6 @@
+/.void/
+/.void-wrangler.jsonc
+/.vite-hooks/_/
 /.astro/
 /.netlify/
 /.wrangler/

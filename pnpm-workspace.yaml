@@ -1,4 +1,5 @@
 allowBuilds:
+  better-sqlite3: true
   esbuild: true
   sharp: true
   workerd: true
@@ -7,5 +8,7 @@ enablePrePostScripts: false
 optimisticRepeatInstall: true
 shellEmulator: true
 trustPolicy: no-downgrade
+overrides:
+  vite@*: npm:@voidzero-dev/vite-plus-core@1.4.0
 trustPolicyIgnoreAfter: 10080
 verifyDepsBeforeRun: install

@@ -8,3 +8,4 @@ opengraph
 esbuild
 workerd
 fredmansky
+voidzero
