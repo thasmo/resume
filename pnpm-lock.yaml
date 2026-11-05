@@ -247,7 +247,7 @@ importers:
         version: 1.5.0(@astrojs/compiler-rs@0.5.2)(@types/node@24.19.2)(@vitest/ui@5.1.0)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(typescript@6.0.3)(yaml@2.9.1)
       void:
         specifier: ^1.4.0
-        version: 1.5.0(@types/node@24.19.2)(@voidzero-dev/vite-plus-core@1.5.0(@types/node@24.19.2)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(typescript@6.0.3)(yaml@2.9.1))(arktype@2.2.9)(kysely@0.29.7)(valibot@1.5.0(typescript@6.0.3))(vitest@5.1.0)(vue@3.5.44(typescript@6.0.3))(workerd@1.20261103.1)(zod@4.6.7)
+        version: 1.6.1(@types/node@24.19.2)(@voidzero-dev/vite-plus-core@1.5.0(@types/node@24.19.2)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(typescript@6.0.3)(yaml@2.9.1))(arktype@2.2.9)(kysely@0.29.7)(valibot@1.5.0(typescript@6.0.3))(vitest@5.1.0)(vue@3.5.44(typescript@6.0.3))(workerd@1.20261103.1)(zod@4.6.7)
       wrangler:
         specifier: ^4.155.0
         version: 4.157.0(@cloudflare/workers-types@5.20261102.1)(@types/node@24.19.2)
@@ -3443,20 +3443,20 @@ packages:
   '@vitest/utils@5.1.0':
     resolution: {integrity: sha512-V+qgCwkvVw+s1t1S5TaoBHsLi5Sz/YmohCMoOu0mZ8ZQst2bKhRYARAQucWpVg8D0mv0x5MHcWXY5QdOsoiGBQ==}
 
-  '@void/deploy-cloudflare@1.5.0':
-    resolution: {integrity: sha512-xAc+kKcVDEp4kSk+ZEam+7PRFah6Z7KEmix/gMlhCGieglS2KTR8zDu6rGEHZ3gABwip8gU4ur5o/iz/A15Fpw==}
+  '@void/deploy-cloudflare@1.6.1':
+    resolution: {integrity: sha512-4xI04uxsLSvD8WJQHLdiDTMpaJ/BA0rqzj5FYJsp4l/zI9FBYUTNEYEBzFlgY4lrB+3c3Gh9h8J/rxY2RZxQJw==}
 
-  '@void/deploy-core@1.5.0':
-    resolution: {integrity: sha512-DJEHmbWETZsFpCtDRFIQ3DGiPSkMUESluFpEKeJ6qfMhz/zV3uTa0WqRiLLBzUOyXRNpjhqFayXsJNAPjw+kvw==}
+  '@void/deploy-core@1.6.1':
+    resolution: {integrity: sha512-RVlo37YyFWqRo8hePquKS+1lhWMpPz8Oqp0OdidA6+N7mhKX1Vz6XSGPuVX7v8GhCz6SsnA8oL7l9x8g/uMDfg==}
 
-  '@void/edge@1.5.0':
-    resolution: {integrity: sha512-C6XY19bscTzX9jm5r73alB1DujQ1gaeQOGuik0BbiSiDOZk3jpmEcSX7Ma+UuG8BwEQgHw30/+B6O6oC0o39vw==}
+  '@void/edge@1.6.1':
+    resolution: {integrity: sha512-utwwrLWHRPIGQUXXoCnuWpgVRzTDp906niM/QMZbCjvi6FsnNrBaMVHyw8wIp1ecvSVtTMABvkrT01Gu+GCHfg==}
 
-  '@void/isr@1.5.0':
-    resolution: {integrity: sha512-ieqt5pDrSgUXunifFbRFOY3D+ov3E1pyBHYrEGCvioFF//tkF47UNaEDTZms95jszOrpPE2BKgBbAYEI1n5yBw==}
+  '@void/isr@1.6.1':
+    resolution: {integrity: sha512-9iRc4DbzCwqlJ4YvRc/rmPMm934AL2lJslqIkdxvyKrve3XF0FigbTdvq+z8XGrB5rORIfUMRTSO6dAIRl1T0A==}
 
-  '@void/platform@1.5.0':
-    resolution: {integrity: sha512-lB0floJDyzvvfy36NdmTvTu1d9z/YSxAjSfHi1mn2t4EMYP1pDRa+ZUJaKnlTLGDuZXesRp9FmjPEK4hZAJxTA==}
+  '@void/platform@1.6.1':
+    resolution: {integrity: sha512-iXgVr1OTJQlQwzMyHGNFS6yc8YIFMzz7Z1yVcFhr822XwkxicQwPsGOsFHLS2OVKE0UHRITcfrDtGRG69rOM7g==}
 
   '@voidzero-dev/vite-plus-core@1.5.0':
     resolution: {integrity: sha512-Xq0tVwnkq9IYgD7Zgd9Ih8uvX84HOJlgKh4PVNpcT4IZ1AfGwNklExhFHLIc0EVt9mmWvTebuCEoHo39Xyer0g==}
@@ -3775,6 +3775,9 @@ packages:
 
   arg@5.0.2:
     resolution: {integrity: sha512-PYjyFOLKQ9y57JvQ6QLo8dAgNqswh8M1RMJYdQduT6xbWSgK36P/Z/v+p888pM69jMMfS8Xd8F6I1kQ/I9HUGg==}
+
+  argparse@1.0.10:
+    resolution: {integrity: sha512-o5Roy6tNG4SL/FOkCAN6RzjiakZS25RLYFrcMttJqbdd8BWrnA+fGz57iN5Pb06pvBGvl5gQ0B48dJlslXvoTg==}
 
   argparse@2.0.1:
     resolution: {integrity: sha512-8+9WqebbFzpX9OR+Wa6O29asIogeRMzcGtAINdpMHHyAg10f05aSFVBbcEqGf/PXw1EjAZ+q2/bEBg3DvurK3Q==}
@@ -4805,6 +4808,10 @@ packages:
   exsolve@1.2.0:
     resolution: {integrity: sha512-h1pQPR9XoeSMdntRNCjyTznaume4UpfXrULBnlkZ2CUM/G5eSa+pBByGldO5uR8dxbPC+OuJXsPPNf+JZ81ADg==}
 
+  extend-shallow@2.0.1:
+    resolution: {integrity: sha512-zCnTtlxNoAiDc3gqY2aYAWFx7XWWiasuF2K8Me5WbN8otHKTUKBwjPtNpRs/rbUZm7KxWAaNj7P1a/p52GbVug==}
+    engines: {node: '>=0.10.0'}
+
   extend@3.0.2:
     resolution: {integrity: sha512-fjquC59cD7CyW6urNXK0FBufkZcoiGG80wTuPujX590cB5Ttln20E2UB4S/WARVqhXffZl2LNgS+gQdPIIim/g==}
 
@@ -4972,6 +4979,10 @@ packages:
   graceful-fs@4.2.11:
     resolution: {integrity: sha512-RbJ5/jmFcNNCcDV5o9eTnBLJ/HszWV0P73bc+Ff4nS/rJj+YaS6IGyiOL0VoBYX+l1Wrl3k63h/KrH+nhJ0XvQ==}
 
+  gray-matter@4.0.3:
+    resolution: {integrity: sha512-5v6yZd4JK3eMI3FqqCouswVqwugaA9r4dNZB1wwcmrD02QkV5H0y7XBQW8QwQqEaZY1pM9aqORSORhJRdNK44Q==}
+    engines: {node: '>=6.0'}
+
   h3@1.15.11:
     resolution: {integrity: sha512-L3THSe2MPeBwgIZVSH5zLdBBU90TOxarvhK9d04IDY2AmVS8j2Jz2LIWtwsGOU3lu2I5jCN7FNvVfY2+XyF+mg==}
 
@@ -5088,6 +5099,10 @@ packages:
     engines: {node: '>=20'}
     hasBin: true
 
+  is-extendable@0.1.1:
+    resolution: {integrity: sha512-5BMULNob1vgFX6EjQw5izWDxrecWK9AM72rugNr0TFldMOi0fj6Jk+zeKIt0xGj4cEfQIJth4w3OKWOJ4f+AFw==}
+    engines: {node: '>=0.10.0'}
+
   is-extglob@2.1.1:
     resolution: {integrity: sha512-SbKbANkN603Vi4jEZv49LeVJMn4yGwsbzZworEoyEiutsN3nJYdbO36zfhGJ6QEDpOZIFkDtnq5JRxmvl3jsoQ==}
     engines: {node: '>=0.10.0'}
@@ -5143,6 +5158,10 @@ packages:
   js-tokens@4.0.0:
     resolution: {integrity: sha512-RdJUflcE3cUzKiMqQgsCu06FPu9UdIJO0beYbPhHN4k6apgJtifcoCtT9bcxOpYBtpD2kCM6Sbzg4CausW/PKQ==}
 
+  js-yaml@3.15.2:
+    resolution: {integrity: sha512-6EuL879VkRA+1Cz578mKMiKvjPNEuk6+r1JaFzoSWejZmtf7xWbIyw1e3KkxlkzTIt9Taw6JBhEppG7utc1P+w==}
+    hasBin: true
+
   js-yaml@4.3.2:
     resolution: {integrity: sha512-SFNOvSJ+Dgf/9An904Yx+CgSlIPCkIpao4qo51lpee25TIRejdH3rhR4EZMGoNx3/TP3O+wzWuiTFl4sqbltzA==}
     hasBin: true
@@ -5186,6 +5205,10 @@ packages:
 
   keyv@5.6.0:
     resolution: {integrity: sha512-CYDD3SOtsHtyXeEORYRx2qBtpDJFjRTGXUtmNEMGyzYOKj1TE3tycdlho7kA1Ufx9OYWZzg52QFBGALTirzDSw==}
+
+  kind-of@6.0.3:
+    resolution: {integrity: sha512-dcS1ul+9tmeD95T+x28/ehLgd9mENa3LsvDTtzm3vyBEO7RPptvAD+t44WVXaUjTBRcrpFeFlC8WCruUR456hw==}
+    engines: {node: '>=0.10.0'}
 
   kleur@4.1.5:
     resolution: {integrity: sha512-o+NO+8WrRiQEE4/7nwRJhN1HWpVmJm511pBHUxPLtp0BUISzlBplORYSmTclCnJvQq2tKu/sgl3xVpkc7ZWuQQ==}
@@ -5986,6 +6009,10 @@ packages:
     resolution: {integrity: sha512-3A6sD0WYP7+QrjbfNA2FN3FsOaGGFoekCVgTyypy53gPxhbkCIjtO6YWgdrfM+n/8sI8JeXZOIxsHjMTNxQ4nQ==}
     engines: {node: ^14.0.0 || >=16.0.0}
 
+  section-matter@1.0.0:
+    resolution: {integrity: sha512-vfD3pmTzGpufjScBh50YHKzEu2lxBWhVEHsNGoEXmCmn2hKGfeNLYMzCJpe8cD7gqX7TJluOVpBkAequ6dgMmA==}
+    engines: {node: '>=4'}
+
   semver@6.3.1:
     resolution: {integrity: sha512-BR7VvDCVHO+q2xBEWskxS6DJE1qRnb7DxzUrogb71CWoSficBxYsiAGd+Kl0mmq/MprG9yArRkyrQxTO6XjMzA==}
     hasBin: true
@@ -6069,6 +6096,9 @@ packages:
     resolution: {integrity: sha512-UcjcJOWknrNkF6PLX83qcHM6KHgVKNkV62Y8a5uYDVv9ydGQVwAHMKqHdJje1VTWpljG0WYpCDhrCdAOYH4TWg==}
     engines: {node: '>= 10.x'}
 
+  sprintf-js@1.0.3:
+    resolution: {integrity: sha512-D9cPgkvLlV3t3IzL0D0YLvGA9Ahk4PcvVwUbN0dSGr1aP0Nrt4AEnTUbuGvquEC0mA64Gqt1fzirlRs5ibXx8g==}
+
   sql-escaper@1.5.2:
     resolution: {integrity: sha512-6CKD38c31SENivxOADeMNLdukOnUxUcflKtzVWzace7Riv1v7cAEym5Cx9Q7gYZ3ezIJI7ZpqecQq8cqNeSSFg==}
     engines: {bun: '>=1.0.0', deno: '>=2.0.0', node: '>=12.0.0'}
@@ -6098,6 +6128,10 @@ packages:
   strip-ansi@7.2.0:
     resolution: {integrity: sha512-yDPMNjp4WyfYBkHnjIRLfca1i6KMyGCtsVgoKe/z1+6vukgaENdgGBZt+ZmKPc4gavvEZ5OgHfHdrazhgNyG7w==}
     engines: {node: '>=12'}
+
+  strip-bom-string@1.0.0:
+    resolution: {integrity: sha512-uCC2VHvQRYu+lMh4My/sFNmF2klFymLX1wHJeXnbEJERpV/ZsVuonzerjfrGpIGF7LBVa1O7i9kjiWvJiFck8g==}
+    engines: {node: '>=0.10.0'}
 
   strip-indent@4.1.1:
     resolution: {integrity: sha512-SlyRoSkdh1dYP0PzclLE7r0M9sgbFKKMFXpFRUMNuKhQSbC6VQIGzq3E0qsfvGJaUFJPGv6Ws1NZ/haTAjfbMA==}
@@ -6492,12 +6526,12 @@ packages:
       jsdom:
         optional: true
 
-  void@1.5.0:
-    resolution: {integrity: sha512-yhsdwcmneWB0mtd2wcpsQ719rr9gclvPuRq5vGrG/NYzPEJKUSCHKS0+o6hRcNCRu/WXj4GyjbqhzE9a1/r4tg==}
+  void@1.6.1:
+    resolution: {integrity: sha512-xK1q51jXUw2l0AWo+pdPe81Q9q5l1rrVdXWIg1B6lhdqkbuVDpzBU6mWzmBHoRZXSw5ltVbr4O50MHao1g/2/w==}
     engines: {node: ^24.22.0 || >=26.12.0}
     hasBin: true
     peerDependencies:
-      '@void/md': 1.5.0
+      '@void/md': 1.6.1
       arktype: '>=2.0.0'
       valibot: '>=1.0.0-beta.7'
       vite: ^8.0.0
@@ -9460,23 +9494,23 @@ snapshots:
       convert-source-map: 2.0.0
       tinyrainbow: 3.2.0
 
-  '@void/deploy-cloudflare@1.5.0':
+  '@void/deploy-cloudflare@1.6.1':
     dependencies:
-      '@void/deploy-core': 1.5.0
+      '@void/deploy-core': 1.6.1
       jsonc-parser: 3.3.1
 
-  '@void/deploy-core@1.5.0': {}
+  '@void/deploy-core@1.6.1': {}
 
-  '@void/edge@1.5.0':
+  '@void/edge@1.6.1':
     dependencies:
-      '@void/deploy-core': 1.5.0
+      '@void/deploy-core': 1.6.1
 
-  '@void/isr@1.5.0':
+  '@void/isr@1.6.1':
     dependencies:
       '@cloudflare/workers-types': 5.20261102.1
-      '@void/edge': 1.5.0
+      '@void/edge': 1.6.1
 
-  '@void/platform@1.5.0':
+  '@void/platform@1.6.1':
     dependencies:
       pathslash: 0.1.0
 
@@ -9743,6 +9777,10 @@ snapshots:
   are-docs-informative@0.0.2: {}
 
   arg@5.0.2: {}
+
+  argparse@1.0.10:
+    dependencies:
+      sprintf-js: 1.0.3
 
   argparse@2.0.1: {}
 
@@ -10943,6 +10981,10 @@ snapshots:
 
   exsolve@1.2.0: {}
 
+  extend-shallow@2.0.1:
+    dependencies:
+      is-extendable: 0.1.1
+
   extend@3.0.2: {}
 
   fast-deep-equal@3.1.3: {}
@@ -11084,6 +11126,13 @@ snapshots:
 
   graceful-fs@4.2.11: {}
 
+  gray-matter@4.0.3:
+    dependencies:
+      js-yaml: 3.15.2
+      kind-of: 6.0.3
+      section-matter: 1.0.0
+      strip-bom-string: 1.0.0
+
   h3@1.15.11:
     dependencies:
       cookie-es: 1.2.3
@@ -11184,6 +11233,8 @@ snapshots:
 
   is-docker@4.0.0: {}
 
+  is-extendable@0.1.1: {}
+
   is-extglob@2.1.1: {}
 
   is-glob@4.0.3:
@@ -11226,6 +11277,11 @@ snapshots:
 
   js-tokens@4.0.0: {}
 
+  js-yaml@3.15.2:
+    dependencies:
+      argparse: 1.0.10
+      esprima: 4.0.1
+
   js-yaml@4.3.2:
     dependencies:
       argparse: 2.0.1
@@ -11259,6 +11315,8 @@ snapshots:
   keyv@5.6.0:
     dependencies:
       '@keyv/serialize': 1.1.1
+
+  kind-of@6.0.3: {}
 
   kleur@4.1.5: {}
 
@@ -12336,6 +12394,11 @@ snapshots:
       refa: 0.12.1
       regexp-ast-analysis: 0.7.1
 
+  section-matter@1.0.0:
+    dependencies:
+      extend-shallow: 2.0.1
+      kind-of: 6.0.3
+
   semver@6.3.1: {}
 
   semver@7.8.5: {}
@@ -12435,6 +12498,8 @@ snapshots:
 
   split2@4.2.0: {}
 
+  sprintf-js@1.0.3: {}
+
   sql-escaper@1.5.2: {}
 
   srvx@1.0.8: {}
@@ -12462,6 +12527,8 @@ snapshots:
   strip-ansi@7.2.0:
     dependencies:
       ansi-regex: 6.5.0
+
+  strip-bom-string@1.0.0: {}
 
   strip-indent@4.1.1: {}
 
@@ -12858,7 +12925,7 @@ snapshots:
     transitivePeerDependencies:
       - msw
 
-  void@1.5.0(@types/node@24.19.2)(@voidzero-dev/vite-plus-core@1.5.0(@types/node@24.19.2)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(typescript@6.0.3)(yaml@2.9.1))(arktype@2.2.9)(kysely@0.29.7)(valibot@1.5.0(typescript@6.0.3))(vitest@5.1.0)(vue@3.5.44(typescript@6.0.3))(workerd@1.20261103.1)(zod@4.6.7):
+  void@1.6.1(@types/node@24.19.2)(@voidzero-dev/vite-plus-core@1.5.0(@types/node@24.19.2)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(typescript@6.0.3)(yaml@2.9.1))(arktype@2.2.9)(kysely@0.29.7)(valibot@1.5.0(typescript@6.0.3))(vitest@5.1.0)(vue@3.5.44(typescript@6.0.3))(workerd@1.20261103.1)(zod@4.6.7):
     dependencies:
       '@cloudflare/build-output-utils': 0.9.7
       '@cloudflare/codemods': 0.7.1
@@ -12869,11 +12936,11 @@ snapshots:
       '@cloudflare/workers-types': 5.20261102.1
       '@cloudflare/workers-utils': 0.50.2(vitest@5.1.0)
       '@napi-rs/keyring': 2.1.2
-      '@void/deploy-cloudflare': 1.5.0
-      '@void/deploy-core': 1.5.0
-      '@void/edge': 1.5.0
-      '@void/isr': 1.5.0
-      '@void/platform': 1.5.0
+      '@void/deploy-cloudflare': 1.6.1
+      '@void/deploy-core': 1.6.1
+      '@void/edge': 1.6.1
+      '@void/isr': 1.6.1
+      '@void/platform': 1.6.1
       better-auth: 1.7.14(drizzle-kit@0.31.11)(drizzle-orm@0.45.4(@cloudflare/workers-types@5.20261102.1)(better-sqlite3@13.0.3)(kysely@0.29.7)(mysql2@3.24.6(@types/node@24.19.2))(pg@8.23.1))(mysql2@3.24.6(@types/node@24.19.2))(pg@8.23.1)(vitest@5.1.0)(vue@3.5.44(typescript@6.0.3))
       better-sqlite3: 13.0.3
       blake3-jit: 1.1.0
@@ -12884,6 +12951,7 @@ snapshots:
       drizzle-valibot: 0.4.2(drizzle-orm@0.45.4(@cloudflare/workers-types@5.20261102.1)(better-sqlite3@13.0.3)(kysely@0.29.7)(mysql2@3.24.6(@types/node@24.19.2))(pg@8.23.1))(valibot@1.5.0(typescript@6.0.3))
       drizzle-zod: 0.8.3(drizzle-orm@0.45.4(@cloudflare/workers-types@5.20261102.1)(better-sqlite3@13.0.3)(kysely@0.29.7)(mysql2@3.24.6(@types/node@24.19.2))(pg@8.23.1))(zod@4.6.7)
       email-validator: 2.0.4
+      gray-matter: 4.0.3
       hono: 4.13.16
       ignore: 7.0.14
       jiti: 2.7.0
