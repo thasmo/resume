@@ -8,7 +8,9 @@ enablePrePostScripts: false
 optimisticRepeatInstall: true
 shellEmulator: true
 trustPolicy: no-downgrade
+trustPolicyIgnoreAfter: 10080
+trustPolicyExclude:
+  - tsrs@7.1.0-beta.tsrs2
 overrides:
   vite@*: npm:@voidzero-dev/vite-plus-core@8.3.8000
-trustPolicyIgnoreAfter: 10080
 verifyDepsBeforeRun: install
