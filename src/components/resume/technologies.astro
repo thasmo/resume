@@ -27,7 +27,7 @@ const m = useMessages(locale);
 				.map(technology => (
 					<li>
 						<Link url={technology.url} external>
-							<Tag label={technology.name} icon={['i-ri-arrow-up-s-line', 'i-ri-arrow-up-double-line'][technology.level - 2]} class="hover:(bg-gray-300) dark:(hover:bg-gray-700)" />
+							<Tag label={technology.name} icon={['i-ri-arrow-up-s-line', 'i-ri-arrow-up-double-line'][technology.level - 2] ?? ''} class="hover:(bg-gray-300) dark:(hover:bg-gray-700)" />
 						</Link>
 					</li>
 				))}

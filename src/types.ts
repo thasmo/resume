@@ -10,6 +10,7 @@ export interface Contact {
 
 export interface Experience {
 	company: string;
+	name: string;
 	positions: Position[];
 	tasks?: string[];
 	technologies: string[];
