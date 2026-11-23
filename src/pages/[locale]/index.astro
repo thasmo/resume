@@ -27,8 +27,12 @@ const {
 
 export async function getStaticPaths() {
 	return [
-		{ params: { locale: 'en' } },
-		{ params: { locale: 'de' } },
+		{
+			params: { locale: 'en' },
+		},
+		{
+			params: { locale: 'de' },
+		},
 	];
 }
 ---

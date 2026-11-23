@@ -54,9 +54,17 @@ function getMessageKey(handle: string): keyof typeof m {
 				target="_blank"
 				rel="noopener noreferrer"
 				aria-label={m(getMessageKey(profile.handle))}
-				style={{ '--color': getColor(profile.handle) }}
+				style={{
+					'--color': getColor(profile.handle),
+				}}
 			>
-				<Pill icon={getIcon(profile.handle)} style={{ '--color': getColor(profile.handle) }} class="hover:(text-[--color] bg-white)" />
+				<Pill
+					icon={getIcon(profile.handle)}
+					style={{
+						'--color': getColor(profile.handle),
+					}}
+					class="hover:(text-[--color] bg-white)"
+				/>
 			</a>
 		</Tooltip>
 	))}

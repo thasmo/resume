@@ -25,7 +25,9 @@ const d = useDate(locale);
 	)}
 
 	<Label icon="i-ri-calendar-schedule-line">
-		{d(project.start)}{project.end ? ` — ${d(project.end)}` : ` — ${m('present')}`}
+		{d(project.start)}{project.end
+			? ` — ${d(project.end)}`
+			: ` — ${m('present')}`}
 	</Label>
 
 	<Label icon="i-ri-tools-line">

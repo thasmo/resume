@@ -36,6 +36,8 @@ export default defineConfig({
 	trailingSlash: 'never',
 	session: false,
 	vite: {
-		plugins: [voidPlugin()],
+		plugins: [
+			voidPlugin(),
+		],
 	},
 });

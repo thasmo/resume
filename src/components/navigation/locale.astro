@@ -6,7 +6,9 @@ const locale = getCurrentLocale(Astro.currentLocale);
 
 const m = useMessages(locale);
 
-const newLocale = locale === 'en' ? 'de' : 'en';
+const newLocale = locale === 'en'
+	? 'de'
+	: 'en';
 ---
 <Tooltip label={m('change_locale')} slot="suffix" class="font-400 font-sans">
 	<a href=`/${newLocale}` aria-label={m('change_locale')}>

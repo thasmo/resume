@@ -15,7 +15,13 @@ const d = useDate(locale);
 ---
 <div class="flex flex-col gap-0.5rem items-start print:(gap-0.25rem break-inside-avoid)">
 	<Heading level={3} size={5} class="group flex flex-row gap-0.5rem items-center">
-		<Link url={experience.url} text={`${experience.name}${experience.name === 'Fredmansky' ? '😜' : ''}`} external />
+		<Link
+			url={experience.url}
+			text={`${experience.name}${experience.name === 'Fredmansky'
+				? '😜'
+				: ''}`}
+			external
+		/>
 	</Heading>
 
 	<div class="flex flex-col gap-1rem items-start print:(gap-0.5rem)">
@@ -26,7 +32,9 @@ const d = useDate(locale);
 				</Text>
 
 				<Label icon="i-ri-calendar-schedule-line">
-					{d(position.start)}{position.end ? ` — ${d(position.end)}` : ` — ${m('present')}`}
+					{d(position.start)}{position.end
+						? ` — ${d(position.end)}`
+						: ` — ${m('present')}`}
 				</Label>
 			</div>
 		))}
