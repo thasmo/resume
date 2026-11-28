@@ -269,7 +269,7 @@ importers:
         version: 1.7.0(@astrojs/compiler-rs@0.5.3)(@types/node@26.6.11)(@vitest/ui@5.1.0)(@volar/typescript@2.4.31(typescript@6.0.3))(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(typescript@6.0.3)(yaml@2.9.1)
       void:
         specifier: ^1.4.0
-        version: 1.12.0(@types/node@26.6.11)(@voidzero-dev/vite-plus-core@8.3.8000(@types/node@26.6.11)(@volar/typescript@2.4.31(typescript@6.0.3))(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(typescript@6.0.3)(yaml@2.9.1))(arktype@2.2.9)(kysely@0.29.7)(valibot@1.5.0(typescript@6.0.3))(vitest@5.1.0)(vue@3.5.46(typescript@6.0.3))(workerd@1.20261123.1)(zod@4.6.7)
+        version: 1.12.2(@types/node@26.6.11)(@voidzero-dev/vite-plus-core@8.3.8000(@types/node@26.6.11)(@volar/typescript@2.4.31(typescript@6.0.3))(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(typescript@6.0.3)(yaml@2.9.1))(arktype@2.2.9)(kysely@0.29.7)(valibot@1.5.0(typescript@6.0.3))(vitest@5.1.0)(vue@3.5.46(typescript@6.0.3))(workerd@1.20261123.1)(zod@4.6.7)
       wrangler:
         specifier: ^4.155.0
         version: 4.168.0(@cloudflare/workers-types@5.20261125.1)(@types/node@26.6.11)(vitest@5.1.0)
@@ -3736,20 +3736,20 @@ packages:
   '@vitest/utils@5.1.0':
     resolution: {integrity: sha512-V+qgCwkvVw+s1t1S5TaoBHsLi5Sz/YmohCMoOu0mZ8ZQst2bKhRYARAQucWpVg8D0mv0x5MHcWXY5QdOsoiGBQ==}
 
-  '@void/deploy-cloudflare@1.12.0':
-    resolution: {integrity: sha512-cLctoTHeEM/FwU6ToRha07eanX4o61kySSkx2PKtWTq/y3yRyfKtfR6IR/9Wj+DFkcRTUa1TfSM8o0tovBpZww==}
+  '@void/deploy-cloudflare@1.12.2':
+    resolution: {integrity: sha512-e7b2Fssd2JWew5qwtgxpzBiWAxBpWeJl3WNkSJ4wqEjWVkh+dUgkIV9yAHDWA9C4+GT503s0Bbs8okmNsq8Rjg==}
 
-  '@void/deploy-core@1.12.0':
-    resolution: {integrity: sha512-R5A9n2fQrRGWIfu1QMkdv91I6wAMfID7P5+ktFDFz2RQsZmRQi3fVGXqbz2eQh1rU73HZLJioplZ1Kjf8gPG3Q==}
+  '@void/deploy-core@1.12.2':
+    resolution: {integrity: sha512-VP9PKF6nZeCg2mB6RyaHanflRTThb4YD23Yjh/MdhkGOS72Su5Z9iS/D9NkDjaZeMOXmjt+hn2NuaXdMgV/PdQ==}
 
-  '@void/edge@1.12.0':
-    resolution: {integrity: sha512-83OkrJIjkjQtZt/+FcoC6+WiKv+8qOb/GGvpAHLvhEv1RmnmzESkS4UUb2bUYNWB/mekosAcX0aSBjsBZOVT/A==}
+  '@void/edge@1.12.2':
+    resolution: {integrity: sha512-R/kqFosWYVZBS1SmJ88XJYGN5pRMPHaFkM1xwjXQ+Cfv6SY96ET5ibBHVzlXqGDNY7eyrNTy6YiHtAw4YvZMhg==}
 
-  '@void/isr@1.12.0':
-    resolution: {integrity: sha512-RbltWd/jijjoL0Lum/yR1C6UFYl1TO2qACZI/Q94+a3HgvpI1+fb8IFgdOR8/nWZ20MIg543Rl8f8GBljM1MzQ==}
+  '@void/isr@1.12.2':
+    resolution: {integrity: sha512-Nyl4H+EuHQP+3lc0tWr6F8u3ABXlE2/jbhQVKPzuD5gCv2dmAmruVc0GvnWZ4pRGfdVOKTnMwh0sMK/wY1gFXg==}
 
-  '@void/platform@1.12.0':
-    resolution: {integrity: sha512-rjd2+KtgGLTyaGOO4vRSVducihGrzXw0UkNee+peBchvu4Yb1vTIoaIm1x32vACPhKXNZb2FIz/DLeOcD9FqZQ==}
+  '@void/platform@1.12.2':
+    resolution: {integrity: sha512-uJH2NqwqkZTu7lTKQMj2mMVs6Zn/r2YZ2wFnpEyIRFxPVg0Vr4eNH/1vZHvtwkEf6IT/MhtxGBMfRGLEA3p5WA==}
 
   '@voidzero-dev/vite-plus-core@8.3.8000':
     resolution: {integrity: sha512-kWOoI7ut3UE83p87jJxcxxg92pbipmC/aakCm6mfm1nkPyPnEZngNaRjiVRPrvxk3vSgy54A4fdlTeb++dSKfg==}
@@ -7028,12 +7028,12 @@ packages:
       jsdom:
         optional: true
 
-  void@1.12.0:
-    resolution: {integrity: sha512-C6qQoNO/IBDJvenlDwjKn6xjX/DSAsHpEvdHWzgVx/LlEVBfPHdYl8D9WEEowpk8DK5DNG2nNcIBUndeu+LriA==}
+  void@1.12.2:
+    resolution: {integrity: sha512-Eha5fa4cCKkYqipCcgneZdbGEQcZOiruvG9xqcEOa8LDyTMb8SoFOMYwwkp+doBJjRRA5pnqDT7/ZNdY7WJ8xw==}
     engines: {node: ^24.22.0 || >=26.12.0}
     hasBin: true
     peerDependencies:
-      '@void/md': 1.12.0
+      '@void/md': 1.12.2
       arktype: '>=2.0.0'
       valibot: '>=1.0.0-beta.7'
       vite: ^8.0.0
@@ -10396,25 +10396,25 @@ snapshots:
       convert-source-map: 2.0.0
       tinyrainbow: 3.2.0
 
-  '@void/deploy-cloudflare@1.12.0':
+  '@void/deploy-cloudflare@1.12.2':
     dependencies:
-      '@void/deploy-core': 1.12.0
+      '@void/deploy-core': 1.12.2
       jsonc-parser: 3.3.1
 
-  '@void/deploy-core@1.12.0': {}
+  '@void/deploy-core@1.12.2': {}
 
-  '@void/edge@1.12.0':
+  '@void/edge@1.12.2':
     dependencies:
-      '@void/deploy-core': 1.12.0
+      '@void/deploy-core': 1.12.2
 
-  '@void/isr@1.12.0':
+  '@void/isr@1.12.2':
     dependencies:
       '@cloudflare/workers-types': 5.20261125.1
-      '@void/edge': 1.12.0
+      '@void/edge': 1.12.2
 
-  '@void/platform@1.12.0':
+  '@void/platform@1.12.2':
     dependencies:
-      '@void/deploy-core': 1.12.0
+      '@void/deploy-core': 1.12.2
       pathslash: 0.1.0
 
   '@voidzero-dev/vite-plus-core@8.3.8000(@types/node@26.6.11)(@volar/typescript@2.4.31(typescript@6.0.3))(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(typescript@6.0.3)(yaml@2.9.1)':
@@ -14014,7 +14014,7 @@ snapshots:
     transitivePeerDependencies:
       - msw
 
-  void@1.12.0(@types/node@26.6.11)(@voidzero-dev/vite-plus-core@8.3.8000(@types/node@26.6.11)(@volar/typescript@2.4.31(typescript@6.0.3))(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(typescript@6.0.3)(yaml@2.9.1))(arktype@2.2.9)(kysely@0.29.7)(valibot@1.5.0(typescript@6.0.3))(vitest@5.1.0)(vue@3.5.46(typescript@6.0.3))(workerd@1.20261123.1)(zod@4.6.7):
+  void@1.12.2(@types/node@26.6.11)(@voidzero-dev/vite-plus-core@8.3.8000(@types/node@26.6.11)(@volar/typescript@2.4.31(typescript@6.0.3))(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(typescript@6.0.3)(yaml@2.9.1))(arktype@2.2.9)(kysely@0.29.7)(valibot@1.5.0(typescript@6.0.3))(vitest@5.1.0)(vue@3.5.46(typescript@6.0.3))(workerd@1.20261123.1)(zod@4.6.7):
     dependencies:
       '@cloudflare/build-output-utils': 1.0.0-rc.4
       '@cloudflare/config': 1.0.0-rc.4
@@ -14024,11 +14024,11 @@ snapshots:
       '@cloudflare/workers-types': 5.20261125.1
       '@cloudflare/workers-utils': 0.57.0(vitest@5.1.0)
       '@napi-rs/keyring': 2.1.2
-      '@void/deploy-cloudflare': 1.12.0
-      '@void/deploy-core': 1.12.0
-      '@void/edge': 1.12.0
-      '@void/isr': 1.12.0
-      '@void/platform': 1.12.0
+      '@void/deploy-cloudflare': 1.12.2
+      '@void/deploy-core': 1.12.2
+      '@void/edge': 1.12.2
+      '@void/isr': 1.12.2
+      '@void/platform': 1.12.2
       better-auth: 1.7.28(drizzle-kit@0.31.11)(drizzle-orm@0.45.4(@cloudflare/workers-types@5.20261125.1)(better-sqlite3@13.2.0)(kysely@0.29.7)(mysql2@3.24.6(@types/node@26.6.11))(pg@8.23.1))(mysql2@3.24.6(@types/node@26.6.11))(pg@8.23.1)(vitest@5.1.0)(vue@3.5.46(typescript@6.0.3))
       better-sqlite3: 13.2.0
       blake3-jit: 1.1.1
